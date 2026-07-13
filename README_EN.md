@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="KnowIt Logo" src="./assets/images/brand/logo-dark.png" width="320">
+  <img alt="KnowIt Logo" src="./assets//logo.png" width="320">
 </p>
 
 <p align="center">
