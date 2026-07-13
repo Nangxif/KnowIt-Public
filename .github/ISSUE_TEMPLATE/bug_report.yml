@@ -1,0 +1,103 @@
+name: 🐛 Bug Report / 故障反馈
+description: Report a bug or issue in KnowIt / 反馈在使用 KnowIt 过程中遇到的问题或错误
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢你提交问题！请尽可能详细地填写以下信息，以帮助我们快速定位和解决问题。
+        Thank you for reporting! Please fill in the details below to help us debug and resolve the issue.
+
+  - type: dropdown
+    id: affected-tool
+    attributes:
+      label: "发生问题的工具 / Affected Tool"
+      description: "请选择发生问题的具体模块或工具 / Which modular tool is causing the problem?"
+      options:
+        - "None / 其他 / 全局问题"
+        - "🔍 Enhanced Text Search / 增强文本搜索"
+        - "📄 Smart Page Exporter / 网页智能导出"
+        - "📥 Web Media Downloader / 网页媒体下载"
+        - "📝 Web AI Summarization / 网页 AI 总结"
+        - "🌐 Bilingual Selection Translation / 划词双语翻译"
+        - "📖 Vocabulary Inspector / 生词助手"
+        - "✍️ Smart Writing & Polishing / 智能写作与润色"
+        - "🧩 App Marketplace / 插件市场"
+        - "⚙️ Settings & API Configuration / 设置与 API 配置"
+    validations:
+      required: true
+
+  - type: input
+    id: target-website
+    attributes:
+      label: "目标网页链接 / Target Website URL"
+      description: "发生问题时的具体网页链接（如果适用） / The specific URL where the issue occurred (if applicable)"
+      placeholder: "https://example.com/page"
+    validations:
+      required: false
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "问题描述 / Description of the Bug"
+      description: "请清晰、简洁地描述你遇到的问题 / A clear and concise description of what the bug is."
+      placeholder: "当我使用划词翻译时，在某某网站上翻译结果显示为空白..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: "重现步骤 / Steps To Reproduce"
+      description: "请提供重现该问题的具体步骤 / Steps to reproduce the behavior."
+      placeholder: |
+        1. 打开网页 ...
+        2. 选中文字 ...
+        3. 点击 ...
+        4. 看到错误 ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: "预期行为 / Expected Behavior"
+      description: "你期望发生什么？ / A clear and concise description of what you expected to happen."
+      placeholder: "应该能够正常翻译并显示双语对照"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: browser-env
+    attributes:
+      label: "浏览器环境 / Browser Environment"
+      description: "请选择你使用的浏览器类型 / What browser are you using?"
+      options:
+        - "Chrome"
+        - "Edge"
+        - "Safari"
+        - "Firefox"
+        - "Brave"
+        - "Arc"
+        - "Other / 其他"
+    validations:
+      required: true
+
+  - type: input
+    id: extension-version
+    attributes:
+      label: "KnowIt 版本 / KnowIt Version"
+      description: "例如 v1.0.0，可在插件详细信息中查看 / e.g., v1.0.0, you can find this in extension details"
+      placeholder: "v1.0.0"
+    validations:
+      required: false
+
+  - type: textarea
+    id: console-logs
+    attributes:
+      label: "控制台日志或截图 / Console Logs or Screenshots"
+      description: "如果可以，请粘贴浏览器控制台（F12 -> Console）的错误日志，或者拖入相关截图 / If possible, paste console error logs or drag-and-drop screenshots here."
+      placeholder: "Paste logs here..."
+    validations:
+      required: false

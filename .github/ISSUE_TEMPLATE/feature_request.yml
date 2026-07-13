@@ -1,0 +1,64 @@
+name: 💡 Feature Request / 需求与建议
+description: Suggest an idea or feature for KnowIt / 提出新的功能建议或改进想法
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢你为 KnowIt 提出改进建议！请填写以下信息。
+        Thank you for suggesting improvements! Please fill in the details below.
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: "建议针对的模块 / Target Module"
+      description: "该建议主要适用于哪个模块？ / Which part of the extension does this suggestion apply to?"
+      options:
+        - "Core Platform / 核心框架"
+        - "🧩 App Marketplace / 插件市场"
+        - "🔍 Enhanced Text Search / 增强文本搜索"
+        - "📄 Smart Page Exporter / 网页智能导出"
+        - "📥 Web Media Downloader / 网页媒体下载"
+        - "📝 Web AI Summarization / 网页 AI 总结"
+        - "🌐 Bilingual Selection Translation / 划词双语翻译"
+        - "📖 Vocabulary Inspector / 生词助手"
+        - "✍️ Smart Writing & Polishing / 智能写作与润色"
+        - "✨ New Tool Suggestion / 全新工具提议"
+        - "Other / 其他"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem-statement
+    attributes:
+      label: "你的需求是否与某个问题相关？ / Is your feature request related to a problem?"
+      description: "请描述现有功能中让你感到不便或缺失的地方 / A clear and concise description of what the problem is."
+      placeholder: "当我想做某事时，现有的功能并不支持..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: "你希望的解决方案 / Proposed Solution"
+      description: "请详细描述你期望的新功能或改进 / A clear and concise description of what you want to happen."
+      placeholder: "我希望增加一个功能，能够自动..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: "其他可替代的方案 / Alternatives Considered"
+      description: "你是否考虑过其他的临时替代方案？ / A clear and concise description of any alternative solutions or features you've considered."
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: "其他上下文信息 / Additional Context"
+      description: "可以提供任何原型图、截图或者相关的参考资料 / Add any other context or screenshots about the feature request here."
+    validations:
+      required: false
