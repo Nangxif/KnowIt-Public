@@ -66,8 +66,3 @@
 
 [![Star History Chart](https://api.star-history.com/svg?repos=Nangxif/KnowIt-Public&type=Date)](https://star-history.com/#Nangxif/KnowIt-Public&Date)
 
----
-
-## 📄 开源协议
-
-本项目基于 **MIT** 许可证开源，欢迎 Stargazers 提交 Issue 或 Pull Request！

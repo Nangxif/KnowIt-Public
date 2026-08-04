@@ -66,8 +66,3 @@ Do you often encounter these paint points when browsing, reading research papers
 
 [![Star History Chart](https://api.star-history.com/svg?repos=Nangxif/KnowIt-Public&type=Date)](https://star-history.com/#Nangxif/KnowIt-Public&Date)
 
----
-
-## 📄 License
-
-This project is licensed under the **MIT** License. Contributions and issues are welcome!
