@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN" data-knowit-theme="vscode-dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/brand/icon-128.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="KnowIt — 读懂网页，也让网页更好用。一站式、隐私优先的模块化网页效率工作台。"
+    />
+    <title>KnowIt</title>
+    <script>
+      try {
+        var theme = localStorage.getItem("knowItTheme");
+        if (theme === "vscode-dark" || theme === "vscode-light") {
+          document.documentElement.dataset.knowitTheme = theme;
+          document.documentElement.style.colorScheme =
+            theme === "vscode-dark" ? "dark" : "light";
+        }
+        var locale = localStorage.getItem("knowItLocale");
+        if (locale === "zh-CN" || locale === "zh-TW" || locale === "en-US") {
+          document.documentElement.lang =
+            locale === "en-US" ? "en" : locale;
+        }
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

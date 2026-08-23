@@ -1,0 +1,16 @@
+.trigger {
+  display: inline-flex;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-width: 128px;
+}
+
+.menuCheck {
+  color: var(--vscode-textLink-foreground, #3794ff);
+  font-size: 12px;
+}

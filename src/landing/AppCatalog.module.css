@@ -1,0 +1,159 @@
+.section {
+  padding: 24px 0 48px;
+  scroll-margin-top: 88px;
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 780;
+  letter-spacing: -0.04em;
+}
+
+.header p {
+  margin: 8px 0 0;
+  color: var(--vscode-descriptionForeground);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  min-height: 248px;
+  padding: 20px;
+  flex-direction: column;
+  background: var(--vscode-sideBar-background);
+  border: 1px solid var(--vscode-widget-border);
+  border-radius: 22px;
+  cursor: pointer;
+  transition:
+    border-color 150ms ease,
+    transform 150ms ease,
+    box-shadow 150ms ease;
+}
+
+.card:hover {
+  border-color: color-mix(
+    in srgb,
+    var(--vscode-textLink-foreground) 48%,
+    var(--vscode-widget-border)
+  );
+  box-shadow: 0 18px 50px var(--vscode-shadow);
+  transform: translateY(-3px);
+}
+
+.premiumRibbon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.premiumRibbon span {
+  position: absolute;
+  display: block;
+  width: 90px;
+  padding: 3px 0;
+  background: linear-gradient(135deg, #ff4b2b 0%, #ff416c 100%);
+  color: #ffffff;
+  font-size: 9px;
+  font-weight: 700;
+  text-align: center;
+  right: -24px;
+  top: 10px;
+  transform: rotate(45deg);
+  letter-spacing: 1px;
+}
+
+.cardTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  min-height: 44px;
+}
+
+.appIcon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  background: var(--vscode-editor-background);
+  border: 1px solid var(--vscode-widget-border);
+  border-radius: 14px;
+  font-size: 20px;
+}
+
+.card h3 {
+  margin: 18px 0 0;
+  font-size: 20px;
+  font-weight: 780;
+  letter-spacing: -0.5px;
+}
+
+.category {
+  margin-top: 6px;
+  color: var(--vscode-descriptionForeground);
+  font-size: 12px;
+}
+
+.card p {
+  margin: 12px 0 0;
+  color: var(--vscode-descriptionForeground);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.detail {
+  padding: 4px 0;
+}
+
+.detailHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.detailHeader h3 {
+  margin: 0 0 6px;
+  font-size: 20px;
+}
+
+.detailTags {
+  display: flex;
+  gap: 6px;
+}
+
+.detail p {
+  margin: 0;
+  color: var(--vscode-descriptionForeground);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+@media (max-width: 1080px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

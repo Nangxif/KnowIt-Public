@@ -19,6 +19,8 @@
 </p>
 
 <p align="center">
+  <a href="https://nangxif.github.io/KnowIt-Public/">Official site</a>
+  &nbsp;·&nbsp;
   English | <a href="./README.md">简体中文</a>
 </p>
 

@@ -1,0 +1,74 @@
+.section {
+  padding: 24px 0 48px;
+  scroll-margin-top: 88px;
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 780;
+  letter-spacing: -0.04em;
+}
+
+.header p {
+  margin: 8px 0 0;
+  color: var(--vscode-descriptionForeground);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.card {
+  min-height: 196px;
+  padding: 20px;
+  background: var(--vscode-sideBar-background);
+  border: 1px solid var(--vscode-widget-border);
+  border-radius: 22px;
+}
+
+.icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  margin-bottom: 16px;
+  background: var(--vscode-editor-background);
+  border: 1px solid var(--vscode-widget-border);
+  border-radius: 14px;
+  font-size: 20px;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 740;
+  letter-spacing: -0.03em;
+}
+
+.card p {
+  margin: 10px 0 0;
+  color: var(--vscode-descriptionForeground);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+@media (max-width: 1080px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,74 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 72px 0 48px;
+  text-align: center;
+}
+
+.logo {
+  width: 72px;
+  height: 72px;
+  margin-bottom: 20px;
+  border-radius: 18px;
+}
+
+.logoLight {
+  display: none;
+}
+
+:global([data-knowit-theme="vscode-light"]) .logo:not(.logoLight) {
+  display: none;
+}
+
+:global([data-knowit-theme="vscode-light"]) .logoLight {
+  display: block;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--vscode-descriptionForeground);
+  font-family: var(--knowit-mono-font);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  max-width: 760px;
+  margin: 0;
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.15;
+}
+
+.subtitle {
+  max-width: 640px;
+  margin: 18px 0 0;
+  color: var(--vscode-descriptionForeground);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.primaryAction,
+.secondaryAction {
+  height: 40px;
+  padding: 0 18px;
+  border-radius: 999px !important;
+  font-weight: 600;
+}
+
+.secondaryAction {
+  color: var(--vscode-editor-foreground);
+  background: color-mix(in srgb, var(--vscode-sideBar-background) 70%, transparent);
+  border-color: var(--vscode-widget-border);
+}

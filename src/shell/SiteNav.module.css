@@ -1,0 +1,215 @@
+.navShell {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  padding: 12px 0;
+}
+
+.nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: calc(100% - 40px);
+  max-width: 1180px;
+  height: 48px;
+  margin: 0 auto;
+  transition:
+    width 300ms cubic-bezier(0.22, 1, 0.36, 1),
+    max-width 300ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.navScrolled {
+  width: calc(100% - 96px);
+  max-width: 1060px;
+}
+
+.nav::before {
+  position: absolute;
+  inset: -5px -18px;
+  z-index: -1;
+  content: "";
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, #ffffff 11%, transparent),
+      color-mix(in srgb, #ffffff 5%, transparent)
+    ),
+    color-mix(in srgb, var(--vscode-editor-background) 58%, transparent);
+  border: 1px solid color-mix(in srgb, #ffffff 14%, transparent);
+  border-radius: 999px;
+  box-shadow:
+    inset 0 1px 0 color-mix(in srgb, #ffffff 18%, transparent),
+    0 12px 32px color-mix(in srgb, var(--vscode-shadow) 55%, transparent);
+  opacity: 0;
+  transform: scaleY(0.86);
+  transition:
+    opacity 220ms ease,
+    transform 260ms cubic-bezier(0.22, 1, 0.36, 1),
+    backdrop-filter 260ms ease;
+}
+
+.navScrolled::before {
+  opacity: 1;
+  transform: none;
+  backdrop-filter: blur(26px) saturate(1.5);
+  -webkit-backdrop-filter: blur(26px) saturate(1.5);
+}
+
+:global([data-knowit-theme="vscode-light"]) .nav::before {
+  background: color-mix(in srgb, #ffffff 72%, transparent);
+  border-color: rgba(26, 42, 62, 0.08);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.7),
+    0 12px 30px rgba(26, 42, 62, 0.12);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav,
+  .nav::before {
+    transition: none;
+  }
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 10px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.brand span {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  background:
+    linear-gradient(180deg, #ffffff 4%, #d7d7d7 46%, #9ba2a7 100%),
+    linear-gradient(90deg, #7c73ff, #2ec99d);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+  transform: translateY(1.5px);
+  display: inline-block;
+}
+
+:global([data-knowit-theme="vscode-light"]) .brand span {
+  background:
+    linear-gradient(180deg, #45515b 0%, #222a31 50%, #6b7580 100%),
+    linear-gradient(90deg, #0067c0, #2b8f76);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+}
+
+.logoLight {
+  display: none;
+}
+
+:global([data-knowit-theme="vscode-light"]) .logo:not(.logoLight) {
+  display: none;
+}
+
+:global([data-knowit-theme="vscode-light"]) .logoLight {
+  display: block;
+}
+
+.sectionLinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+
+.sectionLink {
+  padding: 6px 12px;
+  color: var(--vscode-descriptionForeground);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 999px;
+  transition: color 150ms ease, background 150ms ease;
+}
+
+.sectionLink:hover {
+  color: var(--vscode-editor-foreground);
+  background: color-mix(in srgb, #ffffff 10%, transparent);
+}
+
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.installButton {
+  height: 32px;
+  padding: 0 14px;
+  border-radius: 999px !important;
+  font-weight: 600;
+}
+
+.controlButton,
+.iconButton {
+  height: 32px;
+  color: var(--vscode-descriptionForeground);
+  border-radius: 999px !important;
+}
+
+.controlButton {
+  min-width: 52px;
+  padding: 0 10px;
+  font-family: var(--knowit-mono-font);
+  font-size: 11px;
+}
+
+.iconButton {
+  width: 32px;
+  padding: 0;
+}
+
+.controlButton:hover,
+.iconButton:hover {
+  color: var(--vscode-editor-foreground) !important;
+  background: color-mix(in srgb, #ffffff 12%, transparent) !important;
+}
+
+@media (max-width: 820px) {
+  .nav {
+    width: min(100% - 28px, 1180px);
+    height: auto;
+    min-height: 52px;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  .navScrolled {
+    width: min(100% - 48px, 1180px);
+  }
+
+  .nav::before {
+    inset: -2px -10px;
+    border-radius: 22px;
+  }
+
+  .sectionLinks {
+    order: 3;
+    flex: 1 1 100%;
+    justify-content: flex-start;
+    overflow-x: auto;
+  }
+}

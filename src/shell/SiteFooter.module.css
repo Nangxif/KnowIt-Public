@@ -1,0 +1,416 @@
+.footer {
+  width: min(var(--app-footer-width), calc(100% - 40px));
+  margin: 0 auto;
+  padding: 36px 0 42px;
+  color: var(--vscode-disabledForeground);
+  font-size: 13px;
+}
+
+.footerGrid {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 48px 64px;
+}
+
+.brandColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  min-width: 180px;
+  max-width: 280px;
+}
+
+.brandRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  object-fit: contain;
+}
+
+.logoLight {
+  display: none;
+}
+
+:global([data-knowit-theme="vscode-light"]) .logo:not(.logoLight) {
+  display: none;
+}
+
+:global([data-knowit-theme="vscode-light"]) .logoLight {
+  display: block;
+}
+
+.brandName {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--vscode-sideBar-foreground);
+}
+
+.socialRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.githubButton {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border: 1px solid var(--vscode-widget-border);
+  border-radius: 999px;
+  color: var(--vscode-descriptionForeground);
+  background: color-mix(in srgb, var(--vscode-sideBar-background) 55%, transparent);
+  font-size: 15px;
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.githubButton:hover {
+  color: var(--vscode-sideBar-foreground);
+  border-color: color-mix(in srgb, var(--vscode-focusBorder) 45%, var(--vscode-widget-border));
+  background: color-mix(in srgb, var(--vscode-sideBar-background) 80%, transparent);
+}
+
+.copyright,
+.versionLabel {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--vscode-disabledForeground);
+}
+
+.versionLabel {
+  margin-top: -6px;
+}
+
+.linkColumns {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  gap: 56px;
+  min-width: 0;
+}
+
+.linkColumn {
+  min-width: 140px;
+}
+
+.columnTitle {
+  margin: 0 0 14px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--vscode-sideBar-foreground);
+}
+
+.columnLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footerLink {
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--vscode-descriptionForeground);
+  font: inherit;
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: left;
+  text-decoration: none;
+  word-break: break-all;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.footerLink:hover {
+  color: var(--vscode-sideBar-foreground);
+}
+
+.legalModal :global(.ant-modal-content) {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-height: min(78vh, 720px);
+  padding: 0;
+  background: var(--vscode-editor-background);
+}
+
+.legalModal :global(.ant-modal-body) {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+.legalModal :global(.ant-modal-close) {
+  top: 14px;
+  inset-inline-end: 14px;
+}
+
+.legalLayout {
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr);
+  height: min(78vh, 720px);
+  min-height: 0;
+  overflow: hidden;
+}
+
+.legalSidebar {
+  min-height: 0;
+  padding: 28px 16px;
+  border-right: 1px solid var(--vscode-panel-border);
+  background: color-mix(in srgb, var(--vscode-sideBar-background) 72%, transparent);
+  overflow-y: auto;
+}
+
+.legalNav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.legalNavItem {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--vscode-descriptionForeground);
+  font: inherit;
+  font-size: 14px;
+  line-height: 1.45;
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.legalNavItem:hover {
+  color: var(--vscode-sideBar-foreground);
+  background: color-mix(in srgb, var(--vscode-list-hoverBackground, var(--vscode-sideBar-background)) 80%, transparent);
+}
+
+.legalNavItemActive {
+  color: var(--vscode-textLink-foreground, #1677ff);
+  font-weight: 600;
+  background: color-mix(
+    in srgb,
+    var(--vscode-textLink-foreground, #1677ff) 10%,
+    transparent
+  );
+}
+
+.legalContent {
+  min-width: 0;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 36px 40px 40px;
+  color: var(--vscode-editor-foreground);
+  overscroll-behavior: contain;
+}
+
+.docArticle {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.docHeader {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.docTitle {
+  margin: 0 0 12px;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--vscode-sideBar-foreground);
+}
+
+.docMeta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 20px;
+  font-size: 13px;
+  color: var(--vscode-disabledForeground);
+}
+
+.docIntro,
+.docParagraph {
+  margin: 0 0 14px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--vscode-descriptionForeground);
+}
+
+.docSection + .docSection {
+  margin-top: 22px;
+}
+
+.docSectionTitle {
+  margin: 0 0 12px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--vscode-sideBar-foreground);
+}
+
+.docItemList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.docItemList li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+  margin: 0 0 10px;
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--vscode-descriptionForeground);
+}
+
+.docItemList li:last-child {
+  margin-bottom: 0;
+}
+
+.docItemId {
+  font-weight: 600;
+  color: var(--vscode-sideBar-foreground);
+}
+
+.changelogEntry + .changelogEntry {
+  margin-top: 22px;
+  padding-top: 22px;
+  border-top: 1px solid var(--vscode-panel-border);
+}
+
+.changelogHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.changelogHeader h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--vscode-sideBar-foreground);
+}
+
+.changelogHeader time {
+  flex-shrink: 0;
+  font-size: 12px;
+  color: var(--vscode-disabledForeground);
+}
+
+.changelogList {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--vscode-descriptionForeground);
+}
+
+.changelogList li {
+  margin: 0 0 6px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.changelogList li:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 820px) {
+  .footerGrid {
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .linkColumns {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 28px 40px;
+    width: 100%;
+  }
+
+  .legalModal :global(.ant-modal-content),
+  .legalLayout {
+    height: min(78vh, 720px);
+    max-height: min(78vh, 720px);
+  }
+
+  .legalLayout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto minmax(0, 1fr);
+  }
+
+  .legalSidebar {
+    padding: 16px 16px 8px;
+    border-right: 0;
+    border-bottom: 1px solid var(--vscode-panel-border);
+    overflow: visible;
+  }
+
+  .legalNav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .legalNavItem {
+    width: auto;
+    padding: 8px 12px;
+  }
+
+  .legalContent {
+    padding: 24px 20px 28px;
+  }
+
+  .docTitle {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer {
+    width: calc(100% - 28px);
+    padding: 28px 0 32px;
+  }
+
+  .linkColumns {
+    gap: 24px;
+  }
+
+  .linkColumn {
+    min-width: calc(50% - 12px);
+  }
+
+  .changelogHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .docMeta {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
