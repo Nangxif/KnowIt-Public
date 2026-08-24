@@ -32,9 +32,11 @@ export default function AppCatalog() {
               <div className={styles.appIcon} style={{ color: app.color }}>
                 {app.icon}
               </div>
-              <Tag bordered={false} color={app.premium ? "magenta" : "blue"}>
-                {app.premium ? text.premiumTag : text.freeTag}
-              </Tag>
+              {app.premium ? null : (
+                <Tag bordered={false} color="blue">
+                  {text.freeTag}
+                </Tag>
+              )}
             </div>
             <h3>{text.appNames[app.id]}</h3>
             <div className={styles.category}>

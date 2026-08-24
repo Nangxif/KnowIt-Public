@@ -1,0 +1,21 @@
+.caret {
+  margin-inline-start: 6px;
+  font-size: 10px;
+  opacity: 0.85;
+}
+
+.menuLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 168px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.brandIcon {
+  width: 14px;
+  height: 14px;
+  font-size: 14px;
+  flex-shrink: 0;
+}

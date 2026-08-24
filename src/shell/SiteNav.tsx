@@ -2,10 +2,11 @@ import { MoonOutlined, SunOutlined } from "@ant-design/icons";
 import { Button, Tooltip } from "antd";
 import { useEffect, useState } from "react";
 
-import { assetUrl, getInstallUrl } from "@/config/site";
+import { assetUrl } from "@/config/site";
 import { useTranslation } from "@/i18n/context";
 import { useTheme } from "@/theme/theme";
 
+import InstallMenu from "./InstallMenu";
 import LocaleSwitcher from "./LocaleSwitcher";
 import styles from "./SiteNav.module.css";
 
@@ -76,15 +77,11 @@ export default function SiteNav() {
         </nav>
 
         <div className={styles.navRight}>
-          <Button
-            type="primary"
+          <InstallMenu
+            label={text.navInstall}
             className={styles.installButton}
-            href={getInstallUrl()}
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            {text.navInstall}
-          </Button>
+            showCaret={false}
+          />
           <LocaleSwitcher buttonClassName={styles.controlButton} />
           <Tooltip
             title={

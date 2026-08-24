@@ -7,10 +7,10 @@
 }
 
 .logo {
-  width: 72px;
-  height: 72px;
-  margin-bottom: 20px;
-  border-radius: 18px;
+  width: 168px;
+  height: 168px;
+  margin-bottom: 32px;
+  border-radius: 36px;
 }
 
 .logoLight {
@@ -23,15 +23,6 @@
 
 :global([data-knowit-theme="vscode-light"]) .logoLight {
   display: block;
-}
-
-.eyebrow {
-  margin: 0 0 12px;
-  color: var(--vscode-descriptionForeground);
-  font-family: var(--knowit-mono-font);
-  font-size: 12px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
 }
 
 .hero h1 {

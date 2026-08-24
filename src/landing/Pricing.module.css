@@ -88,11 +88,11 @@
 }
 
 .hint {
-  max-width: 760px;
   margin: 20px 0 0;
   color: var(--vscode-descriptionForeground);
   font-size: 13px;
   line-height: 1.7;
+  text-wrap: pretty;
 }
 
 @media (max-width: 820px) {

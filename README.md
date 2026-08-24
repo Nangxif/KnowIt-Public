@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="KnowIt Logo" src="./assets/logo.png" width="320">
+  <img alt="KnowIt Logo" src="./assets/logo-dark.png" width="320">
 </p>
 
 <p align="center">
@@ -12,9 +12,6 @@
   </a>
   <a href="https://github.com/Nangxif/KnowIt-Public/issues">
     <img src="https://img.shields.io/github/issues/Nangxif/KnowIt-Public.svg?style=flat-square&color=red" alt="GitHub issues" />
-  </a>
-  <a href="https://github.com/Nangxif/KnowIt-Public/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/Nangxif/KnowIt-Public.svg?style=flat-square&color=green" alt="GitHub license" />
   </a>
 </p>
 

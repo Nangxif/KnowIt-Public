@@ -60,8 +60,10 @@ export type Messages = {
   navApps: string;
   navPricing: string;
   navInstall: string;
+  installChrome: string;
+  installEdge: string;
+  installGithub: string;
   brandHomeLabel: string;
-  heroEyebrow: string;
   heroTitle: string;
   heroSubtitle: string;
   heroInstall: string;
