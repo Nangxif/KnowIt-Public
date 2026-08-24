@@ -3,6 +3,7 @@ import { FontSizeOutlined, TranslationOutlined } from "@ant-design/icons";
 import { useTranslation } from "@/i18n/context";
 
 import BrowserFrame, { SkeletonLine } from "./BrowserFrame";
+import { SHOWCASE_ANCHORS } from "./calloutPlacements";
 import styles from "./mocks.module.css";
 
 export default function SelectionTranslateMock() {
@@ -18,7 +19,10 @@ export default function SelectionTranslateMock() {
         </div>
 
         <div className={styles.selectionScene}>
-          <div className={styles.floatToolbar}>
+          <div
+            className={styles.floatToolbar}
+            data-showcase-anchor={SHOWCASE_ANCHORS.floatToolbar}
+          >
             <span className={`${styles.toolbarBtn} ${styles.toolbarBtnActive}`}>
               <TranslationOutlined />
               {mock.toolbarTranslate}

@@ -6,11 +6,13 @@ import type { AppId } from "@/i18n/types";
 
 import { catalogApps } from "./apps";
 import styles from "./Showcase.module.css";
+import { CALLOUT_CONFIGS } from "./showcase/calloutPlacements";
 import ContentSummaryMock from "./showcase/ContentSummaryMock";
 import MediaDownloaderMock from "./showcase/MediaDownloaderMock";
 import PageExportMock from "./showcase/PageExportMock";
 import SelectionTranslateMock from "./showcase/SelectionTranslateMock";
 import SmartWriterMock from "./showcase/SmartWriterMock";
+import ShowcaseCallout from "./showcase/ShowcaseCallout";
 import TextSearchMock from "./showcase/TextSearchMock";
 import WordInspectorMock from "./showcase/WordInspectorMock";
 
@@ -27,8 +29,6 @@ const MOCKS: Record<AppId, ReactNode> = {
 export default function Showcase() {
   const { text } = useTranslation();
   const [activeId, setActiveId] = useState<AppId>("text-search");
-
-  const activeApp = catalogApps.find((app) => app.id === activeId)!;
 
   return (
     <section className={styles.section} id="showcase">
@@ -65,11 +65,14 @@ export default function Showcase() {
         </div>
 
         <div className={styles.stageArea}>
-          <div className={styles.stage}>{MOCKS[activeId]}</div>
-          <p className={styles.caption}>
-            <span className={styles.captionDot} style={{ background: activeApp.color }} />
-            {text.showcaseCaptions[activeId]}
-          </p>
+          <div className={styles.stage} data-showcase-stage>
+            <div className={styles.stageMock}>{MOCKS[activeId]}</div>
+            <ShowcaseCallout
+              key={activeId}
+              text={text.showcaseCaptions[activeId]}
+              config={CALLOUT_CONFIGS[activeId]}
+            />
+          </div>
         </div>
       </div>
     </section>

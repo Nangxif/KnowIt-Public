@@ -1,8 +1,8 @@
-import { MoonOutlined, SunOutlined } from "@ant-design/icons";
+import { GithubOutlined, MoonOutlined, SunOutlined } from "@ant-design/icons";
 import { Button, Tooltip } from "antd";
 import { useEffect, useState } from "react";
 
-import { assetUrl } from "@/config/site";
+import { assetUrl, siteConfig } from "@/config/site";
 import { useTranslation } from "@/i18n/context";
 import { useTheme } from "@/theme/theme";
 
@@ -83,6 +83,17 @@ export default function SiteNav() {
             className={styles.installButton}
             showCaret={false}
           />
+          <Tooltip title={text.footerGithubLabel}>
+            <Button
+              type="text"
+              className={styles.iconButton}
+              aria-label={text.footerGithubLabel}
+              icon={<GithubOutlined />}
+              href={siteConfig.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            />
+          </Tooltip>
           <LocaleSwitcher buttonClassName={styles.controlButton} />
           <Tooltip
             title={

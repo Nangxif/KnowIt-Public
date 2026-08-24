@@ -1,0 +1,95 @@
+.callout {
+  --tail-align: 50%;
+
+  position: absolute;
+  z-index: 5;
+  width: max-content;
+  max-width: min(248px, 46%);
+  height: auto;
+  padding: 9px 12px;
+  color: var(--vscode-editor-foreground);
+  font-size: 12px;
+  line-height: 1.55;
+  background: var(--vscode-dropdown-background);
+  border: 1px solid var(--vscode-dropdown-border);
+  border-radius: 10px;
+  box-shadow: 0 10px 28px color-mix(in srgb, var(--vscode-shadow) 70%, transparent);
+  pointer-events: none;
+  animation: calloutLoop 10s ease-in-out infinite;
+}
+
+.callout::before {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  content: "";
+  background: var(--vscode-dropdown-background);
+  border: 1px solid var(--vscode-dropdown-border);
+}
+
+.tailTop::before {
+  top: -5px;
+  left: var(--tail-align);
+  border-right: 0;
+  border-bottom: 0;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.tailRight::before {
+  top: var(--tail-align);
+  right: -5px;
+  border-bottom: 0;
+  border-left: 0;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.tailBottom::before {
+  bottom: -5px;
+  left: var(--tail-align);
+  border-top: 0;
+  border-left: 0;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.tailLeft::before {
+  top: var(--tail-align);
+  left: -5px;
+  border-top: 0;
+  border-right: 0;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+@keyframes calloutLoop {
+  0%,
+  5% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+
+  10%,
+  82% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  88%,
+  100% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .callout {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .callout {
+    max-width: min(220px, 58%);
+    font-size: 11px;
+  }
+}
