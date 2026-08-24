@@ -86,10 +86,3 @@
     animation: none;
   }
 }
-
-@media (max-width: 900px) {
-  .callout {
-    max-width: min(220px, 58%);
-    font-size: 11px;
-  }
-}

@@ -9,11 +9,13 @@
 .nav {
   position: relative;
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
   width: calc(100% - 40px);
   max-width: 1180px;
   height: 48px;
   margin: 0 auto;
+  white-space: nowrap;
   transition:
     width 300ms cubic-bezier(0.22, 1, 0.36, 1),
     max-width 300ms cubic-bezier(0.22, 1, 0.36, 1);
@@ -128,6 +130,7 @@
   position: absolute;
   left: 50%;
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
   gap: 8px;
@@ -140,6 +143,7 @@
   font-size: 13px;
   font-weight: 600;
   text-decoration: none;
+  white-space: nowrap;
   border-radius: 999px;
   transition: color 150ms ease, background 150ms ease;
 }
@@ -151,10 +155,11 @@
 
 .navRight {
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   gap: 8px;
-  flex-shrink: 0;
   margin-left: auto;
+  white-space: nowrap;
   z-index: 1;
 }
 
@@ -188,33 +193,4 @@
 .iconButton:hover {
   color: var(--vscode-editor-foreground) !important;
   background: color-mix(in srgb, #ffffff 12%, transparent) !important;
-}
-
-@media (max-width: 820px) {
-  .nav {
-    width: min(100% - 28px, 1180px);
-    height: auto;
-    min-height: 52px;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 10px 0;
-  }
-
-  .navScrolled {
-    width: min(100% - 48px, 1180px);
-  }
-
-  .nav::before {
-    inset: -2px -10px;
-    border-radius: 22px;
-  }
-
-  .sectionLinks {
-    position: static;
-    order: 3;
-    flex: 1 1 100%;
-    justify-content: flex-start;
-    transform: none;
-    overflow-x: auto;
-  }
 }

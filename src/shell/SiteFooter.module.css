@@ -339,18 +339,6 @@
 }
 
 @media (max-width: 820px) {
-  .footerGrid {
-    flex-direction: column;
-    gap: 28px;
-  }
-
-  .linkColumns {
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 28px 40px;
-    width: 100%;
-  }
-
   .legalModal :global(.ant-modal-content),
   .legalLayout {
     height: min(78vh, 720px);
@@ -386,31 +374,5 @@
 
   .docTitle {
     font-size: 22px;
-  }
-}
-
-@media (max-width: 640px) {
-  .footer {
-    width: calc(100% - 28px);
-    padding: 28px 0 32px;
-  }
-
-  .linkColumns {
-    gap: 24px;
-  }
-
-  .linkColumn {
-    min-width: calc(50% - 12px);
-  }
-
-  .changelogHeader {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-  }
-
-  .docMeta {
-    flex-direction: column;
-    gap: 4px;
   }
 }

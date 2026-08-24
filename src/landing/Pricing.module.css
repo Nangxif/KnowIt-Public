@@ -94,9 +94,3 @@
   line-height: 1.7;
   text-wrap: pretty;
 }
-
-@media (max-width: 820px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-}
