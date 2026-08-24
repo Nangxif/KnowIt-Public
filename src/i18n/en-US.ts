@@ -7,6 +7,7 @@ export const enUS: Messages = {
   switchToLight: "Switch to light mode",
   switchToDark: "Switch to dark mode",
   navHighlights: "Features",
+  navShowcase: "Showcase",
   navApps: "Apps",
   navPricing: "Pricing",
   navInstall: "Install",
@@ -64,6 +65,76 @@ export const enUS: Messages = {
       "Show Pinyin and detailed definitions for selected text to aid reading and learning.",
     "smart-writer":
       "AI assistant for webpage inputs—polish, grammar fix, continue, expand, shorten, or custom prompts.",
+  },
+  showcaseTitle: "See the apps in action",
+  showcaseSubtitle:
+    "Interface mockups that follow the site theme and language—the real UI lives in the extension.",
+  showcaseCaptions: {
+    "text-search": "Press Ctrl + F and locate page keywords like in a code editor.",
+    "media-downloader":
+      "Open the side panel to filter, preview, and batch-download page assets.",
+    "page-export":
+      "Right-click “Generate Markdown” to preview and export a clean copy.",
+    "content-summary":
+      "Summarize the whole page or a selection; key points stream into the side panel.",
+    "selection-translate":
+      "Select text and hit Translate on the floating toolbar for an instant result.",
+    "word-inspector":
+      "Select an unfamiliar word to see its Pinyin and definition instantly.",
+    "smart-writer":
+      "Focus any input, summon the assistant, and polish or continue in one click.",
+  },
+  showcaseMock: {
+    textSearch: {
+      placeholder: "Search page text",
+      query: "modular",
+      matchCount: "2/8",
+    },
+    mediaDownloader: {
+      panelTitle: "Media Downloader",
+      filterAll: "All",
+      filterImages: "Images",
+      filterVideos: "Videos",
+      selectedCount: "4 selected",
+      downloadAction: "Download all",
+    },
+    pageExport: {
+      panelTitle: "Page Export",
+      previewLabel: "Markdown preview",
+      copyAction: "Copy",
+      exportAction: "Export .md",
+    },
+    contentSummary: {
+      panelTitle: "AI Summary",
+      generating: "Generating…",
+      keyPointsLabel: "Key points",
+      keyPoints: [
+        "Privacy-first: data stays local by default",
+        "Install apps on demand from the marketplace",
+        "Bring your own API key and pick any model",
+      ],
+    },
+    selectionTranslate: {
+      selectedText: "知识就是力量。",
+      toolbarTranslate: "Translate",
+      toolbarSummarize: "Summarize",
+      resultLabel: "Translation",
+      resultText: "Knowledge is power.",
+    },
+    wordInspector: {
+      selectedWord: "斟酌",
+      toolbarInspect: "Inspect",
+      pinyinLabel: "Pinyin",
+      pinyin: "zhēn zhuó",
+      meaningLabel: "Meaning",
+      meaning: "To weigh one's words; to consider carefully.",
+    },
+    smartWriter: {
+      draftText: "The plan looks okay-ish, maybe we can revisit it later.",
+      assistantTitle: "Writing assistant",
+      presets: ["Polish", "Proofread", "Continue", "Expand", "Shorten"],
+      applyAction: "Replace",
+    },
   },
   pricingTitle: "Free vs Lifetime",
   pricingSubtitle: "Start with free tools, then unlock every premium app with a one-time purchase.",

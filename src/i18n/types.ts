@@ -50,6 +50,55 @@ export type ChangelogEntry = {
   items: readonly string[];
 };
 
+export type ShowcaseMockMessages = {
+  textSearch: {
+    placeholder: string;
+    query: string;
+    matchCount: string;
+  };
+  mediaDownloader: {
+    panelTitle: string;
+    filterAll: string;
+    filterImages: string;
+    filterVideos: string;
+    selectedCount: string;
+    downloadAction: string;
+  };
+  pageExport: {
+    panelTitle: string;
+    previewLabel: string;
+    copyAction: string;
+    exportAction: string;
+  };
+  contentSummary: {
+    panelTitle: string;
+    generating: string;
+    keyPointsLabel: string;
+    keyPoints: readonly string[];
+  };
+  selectionTranslate: {
+    selectedText: string;
+    toolbarTranslate: string;
+    toolbarSummarize: string;
+    resultLabel: string;
+    resultText: string;
+  };
+  wordInspector: {
+    selectedWord: string;
+    toolbarInspect: string;
+    pinyinLabel: string;
+    pinyin: string;
+    meaningLabel: string;
+    meaning: string;
+  };
+  smartWriter: {
+    draftText: string;
+    assistantTitle: string;
+    presets: readonly string[];
+    applyAction: string;
+  };
+};
+
 export type Messages = {
   documentTitle: string;
   localeLabel: string;
@@ -57,6 +106,7 @@ export type Messages = {
   switchToLight: string;
   switchToDark: string;
   navHighlights: string;
+  navShowcase: string;
   navApps: string;
   navPricing: string;
   navInstall: string;
@@ -88,6 +138,10 @@ export type Messages = {
   categoryAi: string;
   appNames: Record<AppId, string>;
   appDescriptions: Record<AppId, string>;
+  showcaseTitle: string;
+  showcaseSubtitle: string;
+  showcaseCaptions: Record<AppId, string>;
+  showcaseMock: ShowcaseMockMessages;
   pricingTitle: string;
   pricingSubtitle: string;
   freePlan: string;

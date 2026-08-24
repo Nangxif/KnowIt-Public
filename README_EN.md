@@ -73,7 +73,7 @@ After installing the extension, click the KnowIt icon to open the home page and 
   2. Enter keywords to jump and highlight matches
   3. Customize the shortcut and highlight style in app settings
 
-#### 2. Media Downloader
+#### 2. Media Downloader (installed by default)
 
 * **What it does**: Scan and extract images and videos from the current page, with preview and batch download.
 * **How to use**:

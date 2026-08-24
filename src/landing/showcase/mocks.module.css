@@ -1,0 +1,477 @@
+/* ---- 页面布局 ---- */
+
+.page {
+  position: relative;
+  height: 100%;
+  padding: clamp(14px, 4%, 24px);
+  overflow: hidden;
+}
+
+.split {
+  display: flex;
+  height: 100%;
+}
+
+.pageCol {
+  flex: 1;
+  min-width: 0;
+  padding: clamp(14px, 4%, 24px);
+}
+
+.sidePanel {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  width: clamp(180px, 52%, 280px);
+  min-width: 0;
+  background: var(--vscode-sideBar-background);
+  border-left: 1px solid var(--vscode-panel-border);
+}
+
+.panelHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 14px;
+  color: var(--vscode-sideBar-foreground);
+  font-size: 12px;
+  font-weight: 700;
+  border-bottom: 1px solid var(--vscode-panel-border);
+}
+
+.panelHeaderIcon {
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  color: var(--vscode-button-foreground);
+  font-size: 11px;
+  background: var(--vscode-button-background);
+  border-radius: 6px;
+}
+
+.panelBody {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 0;
+  padding: 14px;
+  overflow: hidden;
+}
+
+.panelFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 12px 14px;
+  border-top: 1px solid var(--vscode-panel-border);
+}
+
+.panelMeta {
+  color: var(--vscode-descriptionForeground);
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+/* ---- 按钮与标签 ---- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  color: var(--vscode-button-foreground);
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+  background: var(--vscode-button-background);
+  border-radius: 7px;
+}
+
+.btnGhost {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  color: var(--vscode-editor-foreground);
+  font-size: 11px;
+  white-space: nowrap;
+  background: var(--vscode-input-background);
+  border: 1px solid var(--vscode-input-border);
+  border-radius: 7px;
+}
+
+.chipRow {
+  display: flex;
+  gap: 6px;
+}
+
+.chip {
+  padding: 3px 10px;
+  color: var(--vscode-descriptionForeground);
+  font-size: 11px;
+  white-space: nowrap;
+  background: var(--vscode-input-background);
+  border: 1px solid var(--vscode-input-border);
+  border-radius: 999px;
+}
+
+.chipActive {
+  color: var(--vscode-list-activeSelectionForeground);
+  background: var(--vscode-list-activeSelectionBackground);
+  border-color: transparent;
+}
+
+/* ---- 文字搜索 ---- */
+
+.searchBar {
+  position: absolute;
+  top: clamp(10px, 3%, 18px);
+  right: clamp(10px, 3%, 18px);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px;
+  background: var(--vscode-dropdown-background);
+  border: 1px solid var(--vscode-dropdown-border);
+  border-radius: 9px;
+  box-shadow: 0 8px 24px var(--vscode-shadow);
+}
+
+.searchIcon {
+  color: var(--vscode-descriptionForeground);
+  font-size: 12px;
+}
+
+.searchQuery {
+  min-width: 64px;
+  color: var(--vscode-input-foreground);
+  font-size: 12px;
+}
+
+.searchCount {
+  color: var(--vscode-descriptionForeground);
+  font-family: var(--knowit-mono-font);
+  font-size: 11px;
+}
+
+.searchNav {
+  display: flex;
+  gap: 4px;
+  color: var(--vscode-descriptionForeground);
+  font-size: 11px;
+}
+
+.textLine {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.textLine:first-of-type {
+  margin-top: 0;
+}
+
+.paragraphGap {
+  height: 14px;
+}
+
+.inlineBar {
+  display: inline-block;
+  flex: none;
+  height: 10px;
+  background: var(--vscode-list-hoverBackground);
+  border-radius: 5px;
+}
+
+.hit {
+  padding: 1px 4px;
+  color: var(--vscode-editor-foreground);
+  font-size: 12px;
+  background: color-mix(
+    in srgb,
+    var(--vscode-editorWarning-foreground) 32%,
+    transparent
+  );
+  border-radius: 4px;
+}
+
+.hitActive {
+  outline: 1px solid var(--vscode-editorWarning-foreground);
+}
+
+/* ---- 资源下载器 ---- */
+
+.mediaGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.mediaTile {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  color: var(--vscode-descriptionForeground);
+  font-size: 16px;
+  background: var(--vscode-list-hoverBackground);
+  border: 1px solid var(--vscode-widget-border);
+  border-radius: 8px;
+}
+
+.mediaCheck {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: grid;
+  place-items: center;
+  width: 14px;
+  height: 14px;
+  color: var(--vscode-button-foreground);
+  font-size: 9px;
+  background: var(--vscode-input-background);
+  border: 1px solid var(--vscode-input-border);
+  border-radius: 4px;
+}
+
+.mediaCheckOn {
+  background: var(--vscode-button-background);
+  border-color: transparent;
+}
+
+/* ---- 页面导出 ---- */
+
+.mdLine {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--knowit-mono-font);
+  font-size: 11px;
+}
+
+.mdToken {
+  flex: none;
+  color: var(--vscode-textLink-foreground);
+}
+
+/* ---- 内容总结 ---- */
+
+.pulseDot {
+  width: 7px;
+  height: 7px;
+  background: var(--vscode-testing-iconPassed);
+  border-radius: 50%;
+  animation: mockPulse 1.4s ease-in-out infinite;
+}
+
+@keyframes mockPulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.25;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulseDot {
+    animation: none;
+  }
+}
+
+.panelLabel {
+  color: var(--vscode-descriptionForeground);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.pointList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pointItem {
+  display: flex;
+  gap: 7px;
+  align-items: flex-start;
+  color: var(--vscode-sideBar-foreground);
+  font-size: 11.5px;
+  line-height: 1.55;
+}
+
+.pointMarker {
+  flex: none;
+  margin-top: 6px;
+  width: 5px;
+  height: 5px;
+  background: var(--vscode-textLink-foreground);
+  border-radius: 50%;
+}
+
+.caret {
+  display: inline-block;
+  width: 7px;
+  height: 12px;
+  vertical-align: text-bottom;
+  background: var(--vscode-editor-foreground);
+  animation: mockPulse 1s step-end infinite;
+}
+
+/* ---- 划词类(翻译 / 识字) ---- */
+
+.selectionScene {
+  position: relative;
+  padding-top: 44px;
+}
+
+.selection {
+  padding: 2px 4px;
+  color: var(--vscode-list-activeSelectionForeground);
+  font-size: 12.5px;
+  background: var(--vscode-list-activeSelectionBackground);
+  border-radius: 4px;
+}
+
+.floatToolbar {
+  position: absolute;
+  top: 0;
+  left: clamp(8px, 6%, 40px);
+  z-index: 2;
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  background: var(--vscode-dropdown-background);
+  border: 1px solid var(--vscode-dropdown-border);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px var(--vscode-shadow);
+}
+
+.toolbarBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 9px;
+  color: var(--vscode-dropdown-foreground);
+  font-size: 11px;
+  white-space: nowrap;
+  border-radius: 5px;
+}
+
+.toolbarBtnActive {
+  color: var(--vscode-button-foreground);
+  background: var(--vscode-button-background);
+}
+
+.bubble {
+  position: relative;
+  z-index: 1;
+  max-width: 320px;
+  margin-top: 16px;
+  padding: 12px 14px;
+  background: var(--vscode-dropdown-background);
+  border: 1px solid var(--vscode-dropdown-border);
+  border-radius: 10px;
+  box-shadow: 0 12px 32px var(--vscode-shadow);
+}
+
+.bubbleLabel {
+  margin-bottom: 6px;
+  color: var(--vscode-descriptionForeground);
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.bubbleText {
+  color: var(--vscode-editor-foreground);
+  font-size: 12.5px;
+  line-height: 1.6;
+}
+
+.bubbleRow {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+  align-items: baseline;
+}
+
+.bubbleRow:first-of-type {
+  margin-top: 0;
+}
+
+.mono {
+  font-family: var(--knowit-mono-font);
+}
+
+/* ---- 智能写作 ---- */
+
+.writerScene {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  height: 100%;
+}
+
+.writerBox {
+  position: relative;
+  padding: 12px 14px 34px;
+  background: var(--vscode-input-background);
+  border: 1px solid var(--vscode-focusBorder);
+  border-radius: 10px;
+}
+
+.writerText {
+  color: var(--vscode-input-foreground);
+  font-size: 12.5px;
+  line-height: 1.6;
+}
+
+.writerFab {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  color: var(--vscode-button-foreground);
+  font-size: 12px;
+  background: var(--vscode-button-background);
+  border-radius: 50%;
+  box-shadow: 0 4px 12px var(--vscode-shadow);
+}
+
+.writerMenu {
+  align-self: flex-end;
+  width: min(240px, 88%);
+  padding: 12px;
+  background: var(--vscode-dropdown-background);
+  border: 1px solid var(--vscode-dropdown-border);
+  border-radius: 10px;
+  box-shadow: 0 12px 32px var(--vscode-shadow);
+}
+
+.writerMenuTitle {
+  margin-bottom: 8px;
+  color: var(--vscode-dropdown-foreground);
+  font-size: 11.5px;
+  font-weight: 700;
+}
+
+.writerPresets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}

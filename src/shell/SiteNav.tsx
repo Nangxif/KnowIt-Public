@@ -12,6 +12,7 @@ import styles from "./SiteNav.module.css";
 
 const SECTION_LINKS = [
   { href: "#highlights", labelKey: "navHighlights" },
+  { href: "#showcase", labelKey: "navShowcase" },
   { href: "#apps", labelKey: "navApps" },
   { href: "#pricing", labelKey: "navPricing" },
 ] as const;
