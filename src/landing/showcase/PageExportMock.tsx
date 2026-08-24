@@ -3,6 +3,7 @@ import { CopyOutlined, ExportOutlined } from "@ant-design/icons";
 import { useTranslation } from "@/i18n/context";
 
 import BrowserFrame, { SkeletonArticle } from "./BrowserFrame";
+import { SHOWCASE_ANCHORS } from "./calloutPlacements";
 import styles from "./mocks.module.css";
 
 const MD_LINES = [
@@ -25,7 +26,7 @@ export default function PageExportMock() {
         <div className={styles.pageCol}>
           <SkeletonArticle />
         </div>
-        <aside className={styles.sidePanel}>
+        <aside className={styles.sidePanel} data-showcase-anchor={SHOWCASE_ANCHORS.sidePanel}>
           <div className={styles.panelHeader}>
             <span className={styles.panelHeaderIcon}>
               <ExportOutlined />

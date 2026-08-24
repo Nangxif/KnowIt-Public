@@ -22,16 +22,18 @@
 }
 
 .layout {
-  display: grid;
-  grid-template-columns: 264px minmax(0, 1fr);
+  display: flex;
   gap: 16px;
   align-items: stretch;
 }
 
 .switcher {
   display: flex;
+  flex: none;
   flex-direction: column;
   gap: 6px;
+  width: 264px;
+  align-self: flex-start;
   padding: 10px;
   background: var(--vscode-sideBar-background);
   border: 1px solid var(--vscode-widget-border);
@@ -111,12 +113,15 @@
 
 .stageArea {
   display: flex;
+  flex: 1;
   flex-direction: column;
   min-width: 0;
+  min-height: 0;
 }
 
 .stage {
-  aspect-ratio: 16 / 9.4;
+  position: relative;
+  flex: 1;
   min-height: 0;
   padding: clamp(12px, 3.4%, 28px);
   background: var(--vscode-sideBar-background);
@@ -124,31 +129,20 @@
   border-radius: 22px;
 }
 
-.caption {
-  display: flex;
-  gap: 8px;
-  align-items: baseline;
-  margin: 14px 4px 0;
-  color: var(--vscode-descriptionForeground);
-  font-size: 13px;
-  line-height: 1.6;
-}
-
-.captionDot {
-  flex: none;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  transform: translateY(-1px);
+.stageMock {
+  height: 100%;
+  min-height: 0;
 }
 
 @media (max-width: 900px) {
   .layout {
-    grid-template-columns: minmax(0, 1fr);
+    flex-direction: column;
   }
 
   .switcher {
     flex-direction: row;
+    width: auto;
+    align-self: stretch;
     gap: 6px;
     padding: 8px;
     overflow-x: auto;
@@ -174,6 +168,7 @@
 
   .stage {
     aspect-ratio: 4 / 3.4;
+    flex: none;
     padding: 10px;
   }
 }

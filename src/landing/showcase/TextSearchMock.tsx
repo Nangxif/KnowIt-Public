@@ -8,6 +8,7 @@ import {
 import { useTranslation } from "@/i18n/context";
 
 import BrowserFrame, { SkeletonLine } from "./BrowserFrame";
+import { SHOWCASE_ANCHORS } from "./calloutPlacements";
 import styles from "./mocks.module.css";
 
 export default function TextSearchMock() {
@@ -17,7 +18,7 @@ export default function TextSearchMock() {
   return (
     <BrowserFrame>
       <div className={styles.page}>
-        <div className={styles.searchBar}>
+        <div className={styles.searchBar} data-showcase-anchor={SHOWCASE_ANCHORS.searchBar}>
           <SearchOutlined className={styles.searchIcon} />
           <span className={styles.searchQuery}>{mock.query}</span>
           <span className={styles.searchCount}>{mock.matchCount}</span>
