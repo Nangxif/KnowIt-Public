@@ -31,8 +31,10 @@
   display: flex;
   flex: none;
   flex-direction: column;
+  align-items: flex-start;
   gap: 6px;
-  width: 264px;
+  width: max-content;
+  min-width: 264px;
   align-self: flex-start;
   padding: 10px;
   background: var(--vscode-sideBar-background);
@@ -44,6 +46,9 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  box-sizing: border-box;
+  width: max-content;
+  min-width: 100%;
   padding: 10px 12px;
   color: var(--vscode-editor-foreground);
   font-family: var(--knowit-font);
@@ -88,12 +93,10 @@
 }
 
 .switchName {
-  flex: 1;
-  min-width: 0;
-  overflow: hidden;
+  flex: 1 0 auto;
+  min-width: min-content;
   font-weight: 600;
   white-space: nowrap;
-  text-overflow: ellipsis;
 }
 
 .switchTag {
@@ -132,43 +135,4 @@
 .stageMock {
   height: 100%;
   min-height: 0;
-}
-
-@media (max-width: 900px) {
-  .layout {
-    flex-direction: column;
-  }
-
-  .switcher {
-    flex-direction: row;
-    width: auto;
-    align-self: stretch;
-    gap: 6px;
-    padding: 8px;
-    overflow-x: auto;
-    border-radius: 16px;
-    scrollbar-width: none;
-  }
-
-  .switcher::-webkit-scrollbar {
-    display: none;
-  }
-
-  .switchItem {
-    flex: none;
-    padding: 8px 10px;
-    border-radius: 12px;
-  }
-
-  .switchIcon {
-    width: 24px;
-    height: 24px;
-    font-size: 13px;
-  }
-
-  .stage {
-    aspect-ratio: 4 / 3.4;
-    flex: none;
-    padding: 10px;
-  }
 }
