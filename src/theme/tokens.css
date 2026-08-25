@@ -92,7 +92,7 @@ body,
 }
 
 html {
-  overflow-x: auto;
+  /* Leave overflow visible so Modal body scroll-lock does not reset scrollTop. */
   scroll-behavior: smooth;
 }
 

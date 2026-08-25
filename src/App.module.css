@@ -12,7 +12,7 @@
     var(--vscode-editor-background);
 }
 
-.page > *:not([data-pixel-wave]) {
+.page > *:not([data-pixel-wave]):not([data-site-nav]) {
   position: relative;
   z-index: 1;
 }

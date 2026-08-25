@@ -48,7 +48,7 @@ export default function SiteNav() {
   };
 
   return (
-    <div className={styles.navShell}>
+    <div className={styles.navShell} data-site-nav="">
       <div className={`${styles.nav} ${isNavFloating ? styles.navScrolled : ""}`}>
         <button
           type="button"
