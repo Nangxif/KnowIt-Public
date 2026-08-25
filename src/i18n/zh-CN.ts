@@ -345,6 +345,15 @@ export const zhCN: Messages = {
   },
   changelogEntries: [
     {
+      version: "2.3.0",
+      date: "2026-08-25",
+      items: [
+        "新增用户引导",
+        "重新调整落地页",
+        "新 tab 页风格调整",
+      ],
+    },
+    {
       version: "2.2.0",
       date: "2026-08-20",
       items: [

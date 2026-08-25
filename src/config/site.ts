@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "KnowIt",
-  version: "2.2.0",
+  version: "2.3.0",
   githubUrl: "https://github.com/Nangxif/KnowIt-Public",
   releasesUrl: "https://github.com/Nangxif/KnowIt-Public/releases",
   issuesUrl: "https://github.com/Nangxif/KnowIt-Public/issues",

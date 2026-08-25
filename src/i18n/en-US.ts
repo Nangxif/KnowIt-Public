@@ -356,6 +356,15 @@ export const enUS: Messages = {
   },
   changelogEntries: [
     {
+      version: "2.3.0",
+      date: "2026-08-25",
+      items: [
+        "Added user onboarding",
+        "Redesigned the landing page",
+        "Updated the new tab page style",
+      ],
+    },
+    {
       version: "2.2.0",
       date: "2026-08-20",
       items: [

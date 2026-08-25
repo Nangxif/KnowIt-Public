@@ -345,6 +345,15 @@ export const zhTW: Messages = {
   },
   changelogEntries: [
     {
+      version: "2.3.0",
+      date: "2026-08-25",
+      items: [
+        "新增用戶引導",
+        "重新調整落地頁",
+        "新 tab 頁風格調整",
+      ],
+    },
+    {
       version: "2.2.0",
       date: "2026-08-20",
       items: [
