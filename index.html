@@ -24,7 +24,28 @@
           document.documentElement.style.colorScheme =
             theme === "vscode-dark" ? "dark" : "light";
         }
+        var localeParam = params.get("lang");
         var locale = localStorage.getItem("knowItLocale");
+        if (
+          localeParam === "zh-CN" ||
+          localeParam === "zh" ||
+          localeParam === "zh-cn" ||
+          localeParam === "cn"
+        ) {
+          locale = "zh-CN";
+        } else if (
+          localeParam === "zh-TW" ||
+          localeParam === "zh-tw" ||
+          localeParam === "tw"
+        ) {
+          locale = "zh-TW";
+        } else if (
+          localeParam === "en-US" ||
+          localeParam === "en" ||
+          localeParam === "en-us"
+        ) {
+          locale = "en-US";
+        }
         if (locale === "zh-CN" || locale === "zh-TW" || locale === "en-US") {
           document.documentElement.lang =
             locale === "en-US" ? "en" : locale;

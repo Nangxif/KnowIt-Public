@@ -144,7 +144,7 @@ export default function SiteFooter() {
                 key={`${activeTab}-${locale}-${themeName}`}
                 className={styles.legalFrame}
                 title={activeLabel}
-                src={legalPageSrc(activeTab, themeName)}
+                src={legalPageSrc(activeTab, themeName, locale)}
               />
             ) : null}
           </div>

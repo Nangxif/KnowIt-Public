@@ -24,7 +24,7 @@ export default function LegalPage({ kind }: { kind: LegalTab }) {
   }
 
   return (
-    <SiteLayout showNav={false}>
+    <SiteLayout showNav={false} showFooter={false}>
       <div className={styles.standalone}>
         <div className={styles.panel}>{documentView}</div>
       </div>

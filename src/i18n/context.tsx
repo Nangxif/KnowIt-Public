@@ -6,8 +6,10 @@ import {
   useState,
   type PropsWithChildren,
 } from "react";
+import { useSearchParams } from "react-router-dom";
 
 import { enUS } from "./en-US";
+import { parseLangParam, langParamValue } from "./params";
 import { zhCN } from "./zh-CN";
 import { zhTW } from "./zh-TW";
 import {
@@ -39,6 +41,16 @@ function readStoredLocale(): Locale {
   return DEFAULT_LOCALE;
 }
 
+function readUrlLocale(): Locale | null {
+  try {
+    return parseLangParam(
+      new URLSearchParams(window.location.search).get("lang"),
+    );
+  } catch {
+    return null;
+  }
+}
+
 function applyLocale(locale: Locale) {
   document.documentElement.lang = LOCALE_HTML_LANG[locale];
   document.title = dictionaries[locale].documentTitle;
@@ -53,13 +65,17 @@ type LocaleContextValue = {
 const LocaleContext = createContext<LocaleContextValue | null>(null);
 
 export function LocaleProvider({ children }: PropsWithChildren) {
-  const [locale, setLocale] = useState<Locale>(DEFAULT_LOCALE);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const urlLocale = parseLangParam(searchParams.get("lang"));
+  const [locale, setLocale] = useState<Locale>(
+    () => readUrlLocale() ?? DEFAULT_LOCALE,
+  );
 
   useEffect(() => {
-    const next = readStoredLocale();
+    const next = urlLocale ?? readStoredLocale();
     setLocale(next);
     applyLocale(next);
-  }, []);
+  }, [urlLocale]);
 
   useEffect(() => {
     applyLocale(locale);
@@ -76,9 +92,14 @@ export function LocaleProvider({ children }: PropsWithChildren) {
         } catch {
           // Ignore blocked storage.
         }
+        if (urlLocale) {
+          const nextParams = new URLSearchParams(searchParams);
+          nextParams.set("lang", langParamValue(next));
+          setSearchParams(nextParams, { replace: true });
+        }
       },
     }),
-    [locale],
+    [locale, urlLocale, searchParams, setSearchParams],
   );
 
   return (

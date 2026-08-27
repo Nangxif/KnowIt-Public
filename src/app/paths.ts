@@ -1,3 +1,5 @@
+import { langParamValue } from "@/i18n/params";
+import type { Locale } from "@/i18n/types";
 import { themeParamValue, type KnowItThemeName } from "@/theme/params";
 
 export const ROUTER_BASENAME =
@@ -17,7 +19,14 @@ export function withBasename(path: string) {
   return `${ROUTER_BASENAME}${normalized}`;
 }
 
-export function legalPageSrc(tab: LegalTab, themeName: KnowItThemeName) {
-  return withBasename(`${LEGAL_PATHS[tab]}?theme=${themeParamValue(themeName)}`);
+export function legalPageSrc(
+  tab: LegalTab,
+  themeName: KnowItThemeName,
+  locale: Locale,
+) {
+  const params = new URLSearchParams({
+    theme: themeParamValue(themeName),
+    lang: langParamValue(locale),
+  });
+  return withBasename(`${LEGAL_PATHS[tab]}?${params.toString()}`);
 }
-
