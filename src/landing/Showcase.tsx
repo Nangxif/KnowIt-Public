@@ -57,9 +57,19 @@ export default function Showcase() {
                 </span>
                 <span className={styles.switchName}>{text.appNames[app.id]}</span>
                 <span
-                  className={`${styles.switchTag} ${app.premium ? styles.switchTagPremium : ""}`}
+                  className={`${styles.switchTag} ${
+                    app.badge === "premium"
+                      ? styles.switchTagPremium
+                      : app.badge === "comingSoon"
+                        ? styles.switchTagComingSoon
+                        : ""
+                  }`}
                 >
-                  {app.premium ? text.premiumTag : text.freeTag}
+                  {app.badge === "premium"
+                    ? text.premiumTag
+                    : app.badge === "comingSoon"
+                      ? text.comingSoonTag
+                      : text.freeTag}
                 </span>
               </button>
             );

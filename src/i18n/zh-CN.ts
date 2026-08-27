@@ -36,6 +36,7 @@ export const zhCN: Messages = {
   appsSubtitle: "安装扩展后，在应用市场按需启用这些工具。",
   premiumTag: "高级",
   freeTag: "免费",
+  comingSoonTag: "准备上线",
   detailsTitle: "应用详情",
   detailsClose: "关闭",
   categoryEfficiency: "效率小工具",

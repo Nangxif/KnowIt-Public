@@ -7,9 +7,16 @@ import {
   useState,
   type PropsWithChildren,
 } from "react";
+import { useSearchParams } from "react-router-dom";
+
+import {
+  parseThemeParam,
+  themeParamValue,
+  type KnowItThemeName,
+} from "./params";
 
 export const THEME_STORAGE_KEY = "knowItTheme";
-export type KnowItThemeName = "vscode-dark" | "vscode-light";
+export type { KnowItThemeName } from "./params";
 
 const DEFAULT_THEME: KnowItThemeName = "vscode-dark";
 
@@ -32,6 +39,16 @@ function readStoredTheme(): KnowItThemeName {
   return DEFAULT_THEME;
 }
 
+function readUrlTheme(): KnowItThemeName | null {
+  try {
+    return parseThemeParam(
+      new URLSearchParams(window.location.search).get("theme"),
+    );
+  } catch {
+    return null;
+  }
+}
+
 type ThemeContextValue = {
   themeName: KnowItThemeName;
   setThemeName: (themeName: KnowItThemeName) => void;
@@ -41,13 +58,17 @@ type ThemeContextValue = {
 const ThemeContext = createContext<ThemeContextValue | null>(null);
 
 export function ThemeProvider({ children }: PropsWithChildren) {
-  const [themeName, setThemeNameState] = useState<KnowItThemeName>(DEFAULT_THEME);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const urlTheme = parseThemeParam(searchParams.get("theme"));
+  const [themeName, setThemeNameState] = useState<KnowItThemeName>(
+    () => readUrlTheme() ?? DEFAULT_THEME,
+  );
 
   useEffect(() => {
-    const next = readStoredTheme();
+    const next = urlTheme ?? readStoredTheme();
     setThemeNameState(next);
     applyTheme(next);
-  }, []);
+  }, [urlTheme]);
 
   const setThemeName = (next: KnowItThemeName) => {
     setThemeNameState(next);
@@ -56,6 +77,11 @@ export function ThemeProvider({ children }: PropsWithChildren) {
       window.localStorage.setItem(THEME_STORAGE_KEY, next);
     } catch {
       // Ignore blocked storage.
+    }
+    if (urlTheme) {
+      const nextParams = new URLSearchParams(searchParams);
+      nextParams.set("theme", themeParamValue(next));
+      setSearchParams(nextParams, { replace: true });
     }
   };
 
@@ -66,7 +92,7 @@ export function ThemeProvider({ children }: PropsWithChildren) {
       toggleTheme: () =>
         setThemeName(themeName === "vscode-dark" ? "vscode-light" : "vscode-dark"),
     }),
-    [themeName],
+    [themeName, urlTheme, searchParams],
   );
 
   const dark = themeName === "vscode-dark";

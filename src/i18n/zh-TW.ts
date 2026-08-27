@@ -36,6 +36,7 @@ export const zhTW: Messages = {
   appsSubtitle: "安裝擴展後，在應用市場按需啟用這些工具。",
   premiumTag: "高級",
   freeTag: "免費",
+  comingSoonTag: "準備上線",
   detailsTitle: "應用詳情",
   detailsClose: "關閉",
   categoryEfficiency: "效率小工具",

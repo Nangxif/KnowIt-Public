@@ -38,6 +38,7 @@ export const enUS: Messages = {
   appsSubtitle: "After installing the extension, enable these tools from the marketplace.",
   premiumTag: "Premium",
   freeTag: "Free",
+  comingSoonTag: "Coming soon",
   detailsTitle: "App details",
   detailsClose: "Close",
   categoryEfficiency: "Productivity",

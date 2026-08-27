@@ -1,6 +1,7 @@
 import { GithubOutlined, MoonOutlined, SunOutlined } from "@ant-design/icons";
 import { Button, Tooltip } from "antd";
-import { useEffect, useState } from "react";
+import { useEffect, useState, type MouseEvent } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import { assetUrl, siteConfig } from "@/config/site";
 import { useTranslation } from "@/i18n/context";
@@ -11,15 +12,17 @@ import LocaleSwitcher from "./LocaleSwitcher";
 import styles from "./SiteNav.module.css";
 
 const SECTION_LINKS = [
-  { href: "#highlights", labelKey: "navHighlights" },
-  { href: "#showcase", labelKey: "navShowcase" },
-  { href: "#apps", labelKey: "navApps" },
-  { href: "#pricing", labelKey: "navPricing" },
+  { hash: "highlights", labelKey: "navHighlights" },
+  { hash: "showcase", labelKey: "navShowcase" },
+  { hash: "apps", labelKey: "navApps" },
+  { hash: "pricing", labelKey: "navPricing" },
 ] as const;
 
 export default function SiteNav() {
   const { text } = useTranslation();
   const { themeName, toggleTheme } = useTheme();
+  const location = useLocation();
+  const navigate = useNavigate();
   const [isNavFloating, setIsNavFloating] = useState(false);
 
   useEffect(() => {
@@ -43,17 +46,22 @@ export default function SiteNav() {
     };
   }, []);
 
-  const scrollToTop = () => {
+  const goHome = (event: MouseEvent<HTMLAnchorElement>) => {
+    if (location.pathname !== "/") return;
+    event.preventDefault();
+    if (location.hash) {
+      navigate("/", { replace: true });
+    }
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   };
 
   return (
     <div className={styles.navShell} data-site-nav="">
       <div className={`${styles.nav} ${isNavFloating ? styles.navScrolled : ""}`}>
-        <button
-          type="button"
+        <Link
+          to="/"
           className={styles.brand}
-          onClick={scrollToTop}
+          onClick={goHome}
           aria-label={text.brandHomeLabel}
         >
           <img
@@ -67,13 +75,17 @@ export default function SiteNav() {
             className={`${styles.logo} ${styles.logoLight}`}
           />
           <span>KnowIt</span>
-        </button>
+        </Link>
 
         <nav className={styles.sectionLinks} aria-label="KnowIt">
           {SECTION_LINKS.map((link) => (
-            <a key={link.href} href={link.href} className={styles.sectionLink}>
+            <Link
+              key={link.hash}
+              to={{ pathname: "/", hash: `#${link.hash}` }}
+              className={styles.sectionLink}
+            >
               {text[link.labelKey]}
-            </a>
+            </Link>
           ))}
         </nav>
 

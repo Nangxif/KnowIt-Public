@@ -81,6 +81,8 @@
   padding: 0;
   border: 0;
   background: transparent;
+  color: inherit;
+  text-decoration: none;
   cursor: pointer;
   z-index: 1;
 }

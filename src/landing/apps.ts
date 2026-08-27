@@ -13,11 +13,13 @@ import { createElement } from "react";
 
 import type { AppCategory, AppId } from "@/i18n/types";
 
+export type AppBadge = "free" | "premium" | "comingSoon";
+
 export type CatalogApp = {
   id: AppId;
   category: AppCategory;
   color: string;
-  premium: boolean;
+  badge: AppBadge;
   icon: ReactNode;
 };
 
@@ -26,56 +28,56 @@ export const catalogApps: CatalogApp[] = [
     id: "text-search",
     category: "efficiency",
     color: "#7c73ff",
-    premium: false,
+    badge: "free",
     icon: createElement(SearchOutlined),
   },
   {
     id: "media-downloader",
     category: "efficiency",
     color: "#db5f86",
-    premium: false,
+    badge: "free",
     icon: createElement(DownloadOutlined),
   },
   {
     id: "ad-cleaner",
     category: "efficiency",
     color: "#e85d4c",
-    premium: false,
+    badge: "comingSoon",
     icon: createElement(ClearOutlined),
   },
   {
     id: "page-export",
     category: "efficiency",
     color: "#d9aa22",
-    premium: true,
+    badge: "premium",
     icon: createElement(ExportOutlined),
   },
   {
     id: "content-summary",
     category: "ai",
     color: "#2ec99d",
-    premium: true,
+    badge: "premium",
     icon: createElement(FontSizeOutlined),
   },
   {
     id: "selection-translate",
     category: "ai",
     color: "#3984ff",
-    premium: true,
+    badge: "premium",
     icon: createElement(TranslationOutlined),
   },
   {
     id: "word-inspector",
     category: "ai",
     color: "#a36cff",
-    premium: true,
+    badge: "premium",
     icon: createElement(FileSearchOutlined),
   },
   {
     id: "smart-writer",
     category: "ai",
     color: "#ff6c37",
-    premium: true,
+    badge: "premium",
     icon: createElement(EditOutlined),
   },
 ];

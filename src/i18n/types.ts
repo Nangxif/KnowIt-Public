@@ -139,6 +139,7 @@ export type Messages = {
   appsSubtitle: string;
   premiumTag: string;
   freeTag: string;
+  comingSoonTag: string;
   detailsTitle: string;
   detailsClose: string;
   categoryEfficiency: string;

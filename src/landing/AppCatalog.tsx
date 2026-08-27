@@ -23,7 +23,7 @@ export default function AppCatalog() {
             className={styles.card}
             onClick={() => setSelected(app)}
           >
-            {app.premium ? (
+            {app.badge === "premium" ? (
               <div className={styles.premiumRibbon}>
                 <span>{text.premiumTag}</span>
               </div>
@@ -32,11 +32,16 @@ export default function AppCatalog() {
               <div className={styles.appIcon} style={{ color: app.color }}>
                 {app.icon}
               </div>
-              {app.premium ? null : (
+              {app.badge === "free" ? (
                 <Tag bordered={false} color="blue">
                   {text.freeTag}
                 </Tag>
-              )}
+              ) : null}
+              {app.badge === "comingSoon" ? (
+                <Tag bordered={false} color="gold">
+                  {text.comingSoonTag}
+                </Tag>
+              ) : null}
             </div>
             <h3>{text.appNames[app.id]}</h3>
             <div className={styles.category}>
@@ -76,10 +81,20 @@ export default function AppCatalog() {
                       : text.categoryEfficiency}
                   </Tag>
                   <Tag
-                    color={selected.premium ? "magenta" : "blue"}
+                    color={
+                      selected.badge === "premium"
+                        ? "magenta"
+                        : selected.badge === "comingSoon"
+                          ? "gold"
+                          : "blue"
+                    }
                     bordered={false}
                   >
-                    {selected.premium ? text.premiumTag : text.freeTag}
+                    {selected.badge === "premium"
+                      ? text.premiumTag
+                      : selected.badge === "comingSoon"
+                        ? text.comingSoonTag
+                        : text.freeTag}
                   </Tag>
                 </div>
               </div>

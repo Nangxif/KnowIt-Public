@@ -11,7 +11,14 @@
     <title>KnowIt</title>
     <script>
       try {
+        var params = new URLSearchParams(location.search);
+        var themeParam = params.get("theme");
         var theme = localStorage.getItem("knowItTheme");
+        if (themeParam === "light" || themeParam === "vscode-light") {
+          theme = "vscode-light";
+        } else if (themeParam === "dark" || themeParam === "vscode-dark") {
+          theme = "vscode-dark";
+        }
         if (theme === "vscode-dark" || theme === "vscode-light") {
           document.documentElement.dataset.knowitTheme = theme;
           document.documentElement.style.colorScheme =
