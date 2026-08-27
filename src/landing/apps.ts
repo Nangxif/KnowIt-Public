@@ -1,4 +1,5 @@
 import {
+  ClearOutlined,
   DownloadOutlined,
   EditOutlined,
   ExportOutlined,
@@ -34,6 +35,13 @@ export const catalogApps: CatalogApp[] = [
     color: "#db5f86",
     premium: false,
     icon: createElement(DownloadOutlined),
+  },
+  {
+    id: "ad-cleaner",
+    category: "efficiency",
+    color: "#e85d4c",
+    premium: false,
+    icon: createElement(ClearOutlined),
   },
   {
     id: "page-export",

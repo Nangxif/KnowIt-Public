@@ -23,8 +23,8 @@
 
 .layout {
   display: flex;
-  gap: 16px;
   align-items: stretch;
+  gap: 16px;
 }
 
 .switcher {
@@ -35,7 +35,6 @@
   gap: 6px;
   width: max-content;
   min-width: 264px;
-  align-self: flex-start;
   padding: 10px;
   background: var(--vscode-sideBar-background);
   border: 1px solid var(--vscode-widget-border);
@@ -115,16 +114,16 @@
 }
 
 .stageArea {
-  display: flex;
+  position: relative;
   flex: 1;
-  flex-direction: column;
   min-width: 0;
-  min-height: 0;
 }
 
 .stage {
-  position: relative;
-  flex: 1;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
   min-height: 0;
   padding: clamp(12px, 3.4%, 28px);
   background: var(--vscode-sideBar-background);
@@ -133,6 +132,10 @@
 }
 
 .stageMock {
-  height: 100%;
+  flex: 1;
   min-height: 0;
+}
+
+.stageMock > * {
+  height: 100%;
 }

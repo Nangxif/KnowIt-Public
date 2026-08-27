@@ -7,6 +7,7 @@ import type { AppId } from "@/i18n/types";
 import { catalogApps } from "./apps";
 import styles from "./Showcase.module.css";
 import { CALLOUT_CONFIGS } from "./showcase/calloutPlacements";
+import AdCleanerMock from "./showcase/AdCleanerMock";
 import ContentSummaryMock from "./showcase/ContentSummaryMock";
 import MediaDownloaderMock from "./showcase/MediaDownloaderMock";
 import PageExportMock from "./showcase/PageExportMock";
@@ -19,6 +20,7 @@ import WordInspectorMock from "./showcase/WordInspectorMock";
 const MOCKS: Record<AppId, ReactNode> = {
   "text-search": <TextSearchMock />,
   "media-downloader": <MediaDownloaderMock />,
+  "ad-cleaner": <AdCleanerMock />,
   "page-export": <PageExportMock />,
   "content-summary": <ContentSummaryMock />,
   "selection-translate": <SelectionTranslateMock />,

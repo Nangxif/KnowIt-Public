@@ -22,6 +22,7 @@ export const LOCALE_LABELS: Record<Locale, string> = {
 export type AppId =
   | "text-search"
   | "media-downloader"
+  | "ad-cleaner"
   | "page-export"
   | "content-summary"
   | "selection-translate"
@@ -96,6 +97,12 @@ export type ShowcaseMockMessages = {
     assistantTitle: string;
     presets: readonly string[];
     applyAction: string;
+  };
+  adCleaner: {
+    promoLabel: string;
+    adLabel: string;
+    cleaned: string;
+    undo: string;
   };
 };
 

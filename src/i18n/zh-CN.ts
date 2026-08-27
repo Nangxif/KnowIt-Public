@@ -43,6 +43,7 @@ export const zhCN: Messages = {
   appNames: {
     "text-search": "文字搜索",
     "media-downloader": "资源下载器",
+    "ad-cleaner": "广告清除",
     "page-export": "页面导出",
     "content-summary": "内容总结",
     "selection-translate": "划词翻译",
@@ -54,6 +55,8 @@ export const zhCN: Messages = {
       "像代码编辑器一样搜索网页文字，支持大小写匹配、结果跳转与自定义高亮。",
     "media-downloader":
       "一键扫描并提取网页中的图片、视频等资源，支持预览与批量下载。",
+    "ad-cleaner":
+      "隐藏当前网页上的广告和推广浮层，让阅读更干净。打开即可自动清除，也可右键操作，支持撤销。",
     "page-export": "整理网页正文并导出为 Markdown，保存干净、可编辑的副本。",
     "content-summary": "用 AI 总结整篇网页或选中内容，快速提炼重点与核心结论。",
     "selection-translate":
@@ -68,6 +71,7 @@ export const zhCN: Messages = {
   showcaseCaptions: {
     "text-search": "按下 Ctrl + F，像在代码编辑器里一样定位网页关键词。",
     "media-downloader": "右键打开侧边栏，筛选、预览并批量下载页面资源。",
+    "ad-cleaner": "打开网页自动隐藏广告和推广浮层，也可右键清除，随时撤销。",
     "page-export": "右键「生成 Markdown」，在侧边栏预览并导出干净副本。",
     "content-summary": "右键整页总结或划词总结，要点在侧边栏流式呈现。",
     "selection-translate": "选中文字，点击悬浮工具栏「翻译」，译文即刻出现。",
@@ -125,12 +129,18 @@ export const zhCN: Messages = {
       presets: ["润色", "纠错", "续写", "扩写", "精简"],
       applyAction: "替换原文",
     },
+    adCleaner: {
+      promoLabel: "推广",
+      adLabel: "广告",
+      cleaned: "已隐藏 3 处广告",
+      undo: "撤销",
+    },
   },
   pricingTitle: "免费与终身版",
   pricingSubtitle: "先免费使用基础工具，需要时一次买断全部高级能力。",
   freePlan: "免费",
   freePrice: "¥ 0",
-  freeDescription: "文字搜索、资源下载器。",
+  freeDescription: "文字搜索、资源下载器、广告清除。",
   lifetimePlan: "终身版",
   lifetimePrice: "¥ 6.66",
   lifetimeDescription: "一次买断，解锁全部高级工具。后续高级工具可继续使用，无订阅。",

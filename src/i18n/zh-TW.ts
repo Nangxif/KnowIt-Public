@@ -43,6 +43,7 @@ export const zhTW: Messages = {
   appNames: {
     "text-search": "文字搜索",
     "media-downloader": "資源下載器",
+    "ad-cleaner": "廣告清除",
     "page-export": "頁面導出",
     "content-summary": "內容總結",
     "selection-translate": "劃詞翻譯",
@@ -54,6 +55,8 @@ export const zhTW: Messages = {
       "像代碼編輯器一樣搜索網頁文字，支持大小寫匹配、結果跳轉與自定義高亮。",
     "media-downloader":
       "一鍵掃描並提取網頁中的圖片、視頻等資源，支持預覽與批量下載。",
+    "ad-cleaner":
+      "隱藏當前網頁上的廣告和推廣浮層，讓閱讀更乾淨。打開即可自動清除，也可右鍵操作，支持撤銷。",
     "page-export": "整理網頁正文並導出為 Markdown，保存乾淨、可編輯的副本。",
     "content-summary": "用 AI 總結整篇網頁或選中內容，快速提煉重點與核心結論。",
     "selection-translate":
@@ -68,6 +71,7 @@ export const zhTW: Messages = {
   showcaseCaptions: {
     "text-search": "按下 Ctrl + F，像在代碼編輯器裡一樣定位網頁關鍵詞。",
     "media-downloader": "右鍵打開側邊欄，篩選、預覽並批量下載頁面資源。",
+    "ad-cleaner": "打開網頁自動隱藏廣告和推廣浮層，也可右鍵清除，隨時撤銷。",
     "page-export": "右鍵「生成 Markdown」，在側邊欄預覽並導出乾淨副本。",
     "content-summary": "右鍵整頁總結或劃詞總結，要點在側邊欄流式呈現。",
     "selection-translate": "選中文字，點擊懸浮工具欄「翻譯」，譯文即刻出現。",
@@ -125,12 +129,18 @@ export const zhTW: Messages = {
       presets: ["潤色", "糾錯", "續寫", "擴寫", "精簡"],
       applyAction: "替換原文",
     },
+    adCleaner: {
+      promoLabel: "推廣",
+      adLabel: "廣告",
+      cleaned: "已隱藏 3 處廣告",
+      undo: "撤銷",
+    },
   },
   pricingTitle: "免費與終身版",
   pricingSubtitle: "先免費使用基礎工具，需要時一次買斷全部高級能力。",
   freePlan: "免費",
   freePrice: "¥ 0",
-  freeDescription: "文字搜索、資源下載器。",
+  freeDescription: "文字搜索、資源下載器、廣告清除。",
   lifetimePlan: "終身版",
   lifetimePrice: "¥ 6.66",
   lifetimeDescription: "一次買斷，解鎖全部高級工具。後續高級工具可繼續使用，無訂閱。",

@@ -475,3 +475,129 @@
   gap: 6px;
   margin-bottom: 10px;
 }
+
+/* ---- 广告清除 ---- */
+
+.adCleanerScene {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+  padding-bottom: 46px;
+}
+
+.adSlot {
+  --ad-slot-height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58%;
+  height: var(--ad-slot-height);
+  overflow: hidden;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  background: repeating-linear-gradient(
+    -45deg,
+    color-mix(in srgb, #e85d4c 82%, #000),
+    color-mix(in srgb, #e85d4c 82%, #000) 8px,
+    color-mix(in srgb, #e85d4c 68%, #000) 8px,
+    color-mix(in srgb, #e85d4c 68%, #000) 16px
+  );
+  border-radius: 8px;
+  transform-origin: center;
+  animation: adCleanerHide 5.6s ease-in-out infinite both;
+}
+
+.adSlotPromo {
+  --ad-slot-height: 34px;
+  width: 76%;
+  background: repeating-linear-gradient(
+    -45deg,
+    color-mix(in srgb, #db5f86 82%, #000),
+    color-mix(in srgb, #db5f86 82%, #000) 8px,
+    color-mix(in srgb, #db5f86 68%, #000) 8px,
+    color-mix(in srgb, #db5f86 68%, #000) 16px
+  );
+  animation-delay: 0.12s;
+}
+
+.adSlotWide {
+  width: 100%;
+  animation-delay: 0.24s;
+}
+
+.adToast {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 100%;
+  padding: 8px 10px 8px 8px;
+  background: var(--vscode-dropdown-background);
+  border: 1px solid var(--vscode-dropdown-border);
+  border-radius: 10px;
+  box-shadow: 0 12px 32px var(--vscode-shadow);
+}
+
+.adToastIcon {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  color: var(--vscode-testing-iconPassed);
+  font-size: 13px;
+}
+
+.adToastTitle {
+  color: var(--vscode-dropdown-foreground);
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+@keyframes adCleanerHide {
+  0%,
+  18% {
+    height: var(--ad-slot-height);
+    margin: 0;
+    opacity: 1;
+    transform: scale(1);
+  }
+  36%,
+  72% {
+    height: 0;
+    margin: -5px 0;
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  88%,
+  100% {
+    height: var(--ad-slot-height);
+    margin: 0;
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .adSlot,
+  .adSlotPromo,
+  .adSlotWide {
+    height: 0;
+    margin: -5px 0;
+    opacity: 0;
+    animation: none;
+  }
+
+  .adToast {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}

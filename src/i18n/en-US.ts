@@ -45,6 +45,7 @@ export const enUS: Messages = {
   appNames: {
     "text-search": "Text Search",
     "media-downloader": "Media Downloader",
+    "ad-cleaner": "Ad Cleaner",
     "page-export": "Page Export",
     "content-summary": "Content Summary",
     "selection-translate": "Selection Translate",
@@ -56,6 +57,8 @@ export const enUS: Messages = {
       "Search webpage text like a code editor, with case matching, result navigation, and custom highlights.",
     "media-downloader":
       "Scan and extract images and videos from the current page, with preview and batch download.",
+    "ad-cleaner":
+      "Hide ads and promotional overlays on the current page. Auto-cleans on load, or right-click to clean, with undo.",
     "page-export": "Clean up page body content and export an editable Markdown copy.",
     "content-summary":
       "Summarize a full page or selection with AI and extract key points quickly.",
@@ -73,6 +76,8 @@ export const enUS: Messages = {
     "text-search": "Press Ctrl + F and locate page keywords like in a code editor.",
     "media-downloader":
       "Open the side panel to filter, preview, and batch-download page assets.",
+    "ad-cleaner":
+      "Ads and promo overlays hide automatically—or right-click to clean, then undo anytime.",
     "page-export":
       "Right-click “Generate Markdown” to preview and export a clean copy.",
     "content-summary":
@@ -135,12 +140,18 @@ export const enUS: Messages = {
       presets: ["Polish", "Proofread", "Continue", "Expand", "Shorten"],
       applyAction: "Replace",
     },
+    adCleaner: {
+      promoLabel: "Promo",
+      adLabel: "Ad",
+      cleaned: "Hid 3 ads",
+      undo: "Undo",
+    },
   },
   pricingTitle: "Free vs Lifetime",
   pricingSubtitle: "Start with free tools, then unlock every premium app with a one-time purchase.",
   freePlan: "Free",
   freePrice: "¥ 0",
-  freeDescription: "Text Search and Media Downloader.",
+  freeDescription: "Text Search, Media Downloader, and Ad Cleaner.",
   lifetimePlan: "Lifetime",
   lifetimePrice: "¥ 6.66",
   lifetimeDescription:

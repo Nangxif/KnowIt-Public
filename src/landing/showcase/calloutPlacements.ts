@@ -5,6 +5,7 @@ export const SHOWCASE_ANCHORS = {
   sidePanel: "side-panel",
   floatToolbar: "float-toolbar",
   writerFab: "writer-fab",
+  toast: "toast",
 } as const;
 
 export type CalloutSide = "top" | "right" | "bottom" | "left";
@@ -32,6 +33,13 @@ export const CALLOUT_CONFIGS: Record<AppId, CalloutConfig> = {
     align: "center",
     gap: 10,
     maxWidth: 200,
+  },
+  "ad-cleaner": {
+    anchor: SHOWCASE_ANCHORS.toast,
+    side: "left",
+    align: "center",
+    gap: 10,
+    maxWidth: 220,
   },
   "page-export": {
     anchor: SHOWCASE_ANCHORS.sidePanel,
