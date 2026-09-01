@@ -11,7 +11,7 @@ const FRAME_MS = 1000 / 28;
 const BAND_WIDTH = 0.26;
 const STATIC_TIME = 0.2;
 const MAX_DPR = 2;
-const CORE_FILL = 0.78;
+const CORE_FILL = 0.58;
 
 type PixelWaveBackgroundProps = {
   themeName: KnowItThemeName;
@@ -44,16 +44,16 @@ function bandAt(col: number, row: number, time: number, span: number) {
 function themeColors(themeName: KnowItThemeName) {
   if (themeName === "vscode-light") {
     return {
-      fill: "28, 28, 30",
-      peakAlpha: 0.3,
-      grid: "rgba(0, 0, 0, 0.045)",
+      fill: "132, 152, 176",
+      peakAlpha: 0.1,
+      grid: "rgba(15, 23, 42, 0.024)",
     };
   }
 
   return {
-    fill: "236, 236, 240",
-    peakAlpha: 0.16,
-    grid: "rgba(255, 255, 255, 0.045)",
+    fill: "188, 200, 216",
+    peakAlpha: 0.07,
+    grid: "rgba(255, 255, 255, 0.028)",
   };
 }
 

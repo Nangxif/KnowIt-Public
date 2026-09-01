@@ -23,7 +23,7 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
 }
 
@@ -31,7 +31,6 @@
   position: relative;
   overflow: hidden;
   display: flex;
-  min-height: 248px;
   padding: 20px;
   flex-direction: column;
   background: var(--vscode-sideBar-background);
@@ -54,30 +53,31 @@
   transform: translateY(-3px);
 }
 
-.premiumRibbon {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 60px;
-  height: 60px;
-  overflow: hidden;
-  pointer-events: none;
+.badge {
+  display: inline-flex;
+  align-items: center;
+  height: 20px;
+  padding: 0 8px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  border-radius: 4px;
 }
 
-.premiumRibbon span {
-  position: absolute;
-  display: block;
-  width: 90px;
-  padding: 3px 0;
-  background: linear-gradient(135deg, #ff4b2b 0%, #ff416c 100%);
-  color: #ffffff;
-  font-size: 9px;
-  font-weight: 700;
-  text-align: center;
-  right: -24px;
-  top: 10px;
-  transform: rotate(45deg);
-  letter-spacing: 1px;
+.badgeFree {
+  color: var(--vscode-descriptionForeground);
+  background: color-mix(in srgb, var(--vscode-editor-foreground) 8%, transparent);
+}
+
+.badgePaid {
+  color: #1c1810;
+  background: #c9a55a;
+}
+
+:global([data-knowit-theme="vscode-light"]) .badgePaid {
+  color: #2a2112;
+  background: #c4a15a;
 }
 
 .cardTop {
@@ -92,10 +92,17 @@
   width: 42px;
   height: 42px;
   place-items: center;
-  background: var(--vscode-editor-background);
-  border: 1px solid var(--vscode-widget-border);
+  color: #f7f8fa;
+  background: var(--app-icon-bg);
+  border: 1px solid color-mix(in srgb, var(--app-icon-bg) 42%, var(--vscode-widget-border));
   border-radius: 14px;
   font-size: 20px;
+}
+
+.appIcon svg {
+  display: block;
+  width: 1em;
+  height: 1em;
 }
 
 .card h3 {
@@ -129,6 +136,12 @@
   margin-bottom: 16px;
 }
 
+.detailHeader .appIcon {
+  width: 56px;
+  height: 56px;
+  font-size: 26px;
+}
+
 .detailHeader h3 {
   margin: 0 0 6px;
   font-size: 20px;
@@ -144,4 +157,10 @@
   color: var(--vscode-descriptionForeground);
   font-size: 14px;
   line-height: 1.65;
+}
+
+@media (max-width: 820px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }

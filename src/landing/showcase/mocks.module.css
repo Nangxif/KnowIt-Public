@@ -601,3 +601,155 @@
     animation: none;
   }
 }
+
+/* ---- 元素检查器 ---- */
+
+.inspectorScene {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+  padding-right: clamp(148px, 42%, 220px);
+  padding-bottom: 44px;
+}
+
+.inspectorCode {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 6px;
+  padding: 12px 14px;
+  color: #abb2bf;
+  font-family: var(--knowit-mono-font);
+  font-size: 11px;
+  line-height: 1.55;
+  background: #282c34;
+  border: 1.5px solid #18a0fb;
+  border-radius: 6px;
+  box-shadow: 0 0 0 3px color-mix(in srgb, #18a0fb 22%, transparent);
+}
+
+.inspectorCodeLine {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.inspectorPanel {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  width: clamp(148px, 40%, 210px);
+  max-height: calc(100% - 56px);
+  overflow: hidden;
+  background: var(--vscode-dropdown-background);
+  border: 1px solid var(--vscode-dropdown-border);
+  border-radius: 10px;
+  box-shadow: 0 12px 32px var(--vscode-shadow);
+}
+
+.inspectorPanelHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 10px;
+  color: var(--vscode-dropdown-foreground);
+  font-size: 12px;
+  border-bottom: 1px solid var(--vscode-panel-border);
+}
+
+.inspectorCopy {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--vscode-descriptionForeground);
+  font-size: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.inspectorGroup {
+  padding: 7px 10px 8px;
+  border-bottom: 1px solid var(--vscode-panel-border);
+}
+
+.inspectorGroup:last-child {
+  border-bottom: none;
+}
+
+.inspectorGroupTitle {
+  margin-bottom: 5px;
+  color: var(--vscode-descriptionForeground);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.inspectorRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 3px;
+}
+
+.inspectorKey {
+  color: var(--vscode-descriptionForeground);
+  font-size: 10.5px;
+}
+
+.inspectorValue {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--vscode-editor-foreground);
+  font-size: 10.5px;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.inspectorToolbar {
+  position: absolute;
+  left: 50%;
+  bottom: 8px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  background: var(--vscode-dropdown-background);
+  border: 1px solid var(--vscode-dropdown-border);
+  border-radius: 999px;
+  box-shadow: 0 8px 24px var(--vscode-shadow);
+  transform: translateX(-50%);
+}
+
+.inspectorTool {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 9px;
+  color: var(--vscode-dropdown-foreground);
+  font-size: 11px;
+  white-space: nowrap;
+  border-radius: 999px;
+}
+
+.inspectorToolActive {
+  color: var(--vscode-button-foreground);
+  background: var(--vscode-button-background);
+}
+
+.inspectorToolClose {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  color: var(--vscode-descriptionForeground);
+  font-size: 10px;
+}

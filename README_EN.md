@@ -46,7 +46,7 @@ Browsing, reading papers, studying, or creating content often comes with familia
 
 | Plan | Includes | Price |
 | --- | --- | --- |
-| **Free** | Text Search, Media Downloader | Free |
+| **Free** | Text Search, Media Downloader, Element Inspector | Free |
 | **Lifetime (Paid)** | Page Export, Content Summary, Selection Translate, Selection Word Inspector, Smart Writing & Polishing, plus future premium tools | **¥ 6.66** one-time |
 
 After payment, open the extension home → **Pricing / Activate**, then enter your **email + Afdian order number**. Each order number bound to an email can be activated up to **2** times. Switching to another order number will uninstall related premium tools.
@@ -81,11 +81,20 @@ After installing the extension, click the KnowIt icon to open the home page and 
   2. Right-click on the page and choose **Media Downloader**
   3. Filter, preview, and batch-download in the side panel
 
+#### 3. Element Inspector
+
+* **What it does**: Click a page element to view a Figma-like properties panel, and pick any on-screen pixel with the eyedropper.
+* **How to use**:
+  1. Install **Element Inspector** from the marketplace
+  2. Right-click a blank area and choose **Inspect page elements**, or press `Alt+Shift+C`
+  3. Hover to inspect properties, click to pin; use the bottom toolbar to switch Inspect / Eyedropper
+  4. Press `Esc` to exit
+
 ---
 
 ### Premium apps (Lifetime activation required)
 
-#### 3. Page Export
+#### 4. Page Export
 
 * **What it does**: Clean up page body content and export an editable Markdown copy.
 * **How to use**:
@@ -93,7 +102,7 @@ After installing the extension, click the KnowIt icon to open the home page and 
   2. Right-click on the page and choose **Generate Markdown**
   3. Review, edit, and export in the side panel; adjust options in settings
 
-#### 4. Content Summary
+#### 5. Content Summary
 
 * **What it does**: Summarize a full page or selection with AI and extract key points quickly.
 * **How to use**:
@@ -102,7 +111,7 @@ After installing the extension, click the KnowIt icon to open the home page and 
   3. **Selection summary**: select text → click **Summary** on the floating toolbar (enable in **Settings → Toolbar Display**)
   4. Results appear in the side panel; generation can be paused and history is kept locally
 
-#### 5. Selection Translate
+#### 6. Selection Translate
 
 * **What it does**: Translate selected text instantly, or run AI full-page translation under the originals.
 * **How to use**:
@@ -111,7 +120,7 @@ After installing the extension, click the KnowIt icon to open the home page and 
   3. **Full-page translate**: right-click → **AI Page Translation**
   4. Adjust target language and model in app settings
 
-#### 6. Selection Word Inspector
+#### 7. Selection Word Inspector
 
 * **What it does**: Show Pinyin and detailed definitions for selected text to aid reading and learning.
 * **How to use**:
@@ -119,7 +128,7 @@ After installing the extension, click the KnowIt icon to open the home page and 
   2. Select text → click **Inspector** on the floating toolbar
   3. View pronunciation and definitions in the panel; manage model and history in settings
 
-#### 7. Smart Writing & Polishing
+#### 8. Smart Writing & Polishing
 
 * **What it does**: AI assistant for webpage inputs—polish, grammar fix, continue, expand, shorten, or custom prompts.
 * **How to use**:

@@ -1,10 +1,26 @@
-import { Button, Modal, Tag } from "antd";
-import { useState } from "react";
+import { Button, Modal } from "antd";
+import { useState, type CSSProperties } from "react";
 
 import { useTranslation } from "@/i18n/context";
+import type { AppCategory, Messages } from "@/i18n/types";
 
-import { catalogApps, type CatalogApp } from "./apps";
+import { catalogApps, type AppBadge, type CatalogApp } from "./apps";
 import styles from "./AppCatalog.module.css";
+
+function categoryLabel(category: AppCategory, text: Messages) {
+  if (category === "ai") return text.categoryAi;
+  if (category === "development") return text.categoryDevelopment;
+  return text.categoryEfficiency;
+}
+
+function Badge({ badge, text }: { badge: AppBadge; text: Messages }) {
+  const paid = badge === "premium";
+  return (
+    <span className={`${styles.badge} ${paid ? styles.badgePaid : styles.badgeFree}`}>
+      {paid ? text.paidTag : text.freeTag}
+    </span>
+  );
+}
 
 export default function AppCatalog() {
   const { text } = useTranslation();
@@ -23,31 +39,18 @@ export default function AppCatalog() {
             className={styles.card}
             onClick={() => setSelected(app)}
           >
-            {app.badge === "premium" ? (
-              <div className={styles.premiumRibbon}>
-                <span>{text.premiumTag}</span>
-              </div>
-            ) : null}
             <div className={styles.cardTop}>
-              <div className={styles.appIcon} style={{ color: app.color }}>
+              <div
+                className={styles.appIcon}
+                style={{ "--app-icon-bg": app.color } as CSSProperties}
+              >
                 {app.icon}
               </div>
-              {app.badge === "free" ? (
-                <Tag bordered={false} color="blue">
-                  {text.freeTag}
-                </Tag>
-              ) : null}
-              {app.badge === "comingSoon" ? (
-                <Tag bordered={false} color="gold">
-                  {text.comingSoonTag}
-                </Tag>
-              ) : null}
+              <Badge badge={app.badge} text={text} />
             </div>
             <h3>{text.appNames[app.id]}</h3>
             <div className={styles.category}>
-              {app.category === "ai"
-                ? text.categoryAi
-                : text.categoryEfficiency}
+              {categoryLabel(app.category, text)}
             </div>
             <p>{text.appDescriptions[app.id]}</p>
           </article>
@@ -69,33 +72,19 @@ export default function AppCatalog() {
         {selected ? (
           <div className={styles.detail}>
             <div className={styles.detailHeader}>
-              <div className={styles.appIcon} style={{ color: selected.color }}>
+              <div
+                className={styles.appIcon}
+                style={{ "--app-icon-bg": selected.color } as CSSProperties}
+              >
                 {selected.icon}
               </div>
               <div>
                 <h3>{text.appNames[selected.id]}</h3>
                 <div className={styles.detailTags}>
-                  <Tag color={selected.color} bordered={false}>
-                    {selected.category === "ai"
-                      ? text.categoryAi
-                      : text.categoryEfficiency}
-                  </Tag>
-                  <Tag
-                    color={
-                      selected.badge === "premium"
-                        ? "magenta"
-                        : selected.badge === "comingSoon"
-                          ? "gold"
-                          : "blue"
-                    }
-                    bordered={false}
-                  >
-                    {selected.badge === "premium"
-                      ? text.premiumTag
-                      : selected.badge === "comingSoon"
-                        ? text.comingSoonTag
-                        : text.freeTag}
-                  </Tag>
+                  <span className={`${styles.badge} ${styles.badgeFree}`}>
+                    {categoryLabel(selected.category, text)}
+                  </span>
+                  <Badge badge={selected.badge} text={text} />
                 </div>
               </div>
             </div>

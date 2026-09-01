@@ -36,17 +36,18 @@ export const enUS: Messages = {
     "Shortcuts, context menus, a selection toolbar, a side panel, and light/dark themes.",
   appsTitle: "Apps",
   appsSubtitle: "After installing the extension, enable these tools from the marketplace.",
-  premiumTag: "Premium",
+  paidTag: "Paid",
   freeTag: "Free",
-  comingSoonTag: "Coming soon",
   detailsTitle: "App details",
   detailsClose: "Close",
   categoryEfficiency: "Productivity",
   categoryAi: "AI tools",
+  categoryDevelopment: "Development",
   appNames: {
     "text-search": "Text Search",
     "media-downloader": "Media Downloader",
     "ad-cleaner": "Ad Cleaner",
+    "element-inspector": "Element Inspector",
     "page-export": "Page Export",
     "content-summary": "Content Summary",
     "selection-translate": "Selection Translate",
@@ -60,6 +61,8 @@ export const enUS: Messages = {
       "Scan and extract images and videos from the current page, with preview and batch download.",
     "ad-cleaner":
       "Hide ads and promotional overlays on the current page. Auto-cleans on load, or right-click to clean, with undo.",
+    "element-inspector":
+      "Click a page element to view a Figma-like properties panel, and pick any on-screen pixel with the eyedropper.",
     "page-export": "Clean up page body content and export an editable Markdown copy.",
     "content-summary":
       "Summarize a full page or selection with AI and extract key points quickly.",
@@ -79,6 +82,8 @@ export const enUS: Messages = {
       "Open the side panel to filter, preview, and batch-download page assets.",
     "ad-cleaner":
       "Ads and promo overlays hide automatically—or right-click to clean, then undo anytime.",
+    "element-inspector":
+      "Right-click “Inspect page elements” or press Alt+Shift+C, hover for properties, then pick a color from the toolbar.",
     "page-export":
       "Right-click “Generate Markdown” to preview and export a clean copy.",
     "content-summary":
@@ -147,12 +152,38 @@ export const enUS: Messages = {
       cleaned: "Hid 3 ads",
       undo: "Undo",
     },
+    elementInspector: {
+      tagName: "code",
+      copyCss: "Copy CSS",
+      sectionIdentity: "Layer",
+      sectionSize: "Position & size",
+      sectionLayout: "Layout",
+      sectionTypography: "Typography",
+      sectionFill: "Fill",
+      labelTag: "Tag",
+      labelClass: "Class",
+      classValue: "hljs language-js",
+      labelWidth: "Width",
+      labelHeight: "Height",
+      widthValue: "786px",
+      heightValue: "240px",
+      labelDisplay: "display",
+      displayValue: "block",
+      labelFont: "Font",
+      fontValue: "Menlo, 12px",
+      labelColor: "Color",
+      colorValue: "#ABB2BF",
+      labelBackground: "Fill",
+      backgroundValue: "#282C34",
+      modeInspect: "Inspect",
+      modeEyedropper: "Eyedropper",
+    },
   },
   pricingTitle: "Free vs Lifetime",
   pricingSubtitle: "Start with free tools, then unlock every premium app with a one-time purchase.",
   freePlan: "Free",
   freePrice: "¥ 0",
-  freeDescription: "Text Search, Media Downloader, and Ad Cleaner.",
+  freeDescription: "Text Search, Media Downloader, Ad Cleaner, and Element Inspector.",
   lifetimePlan: "Lifetime",
   lifetimePrice: "¥ 6.66",
   lifetimeDescription:
@@ -367,6 +398,17 @@ export const enUS: Messages = {
     ],
   },
   changelogEntries: [
+    {
+      version: "2.4.0",
+      date: "2026-09-01",
+      items: [
+        "Added the free Element Inspector app for inspecting page elements and picking colors",
+        "Added the free Ad Cleaner app to hide ads and promotional overlays, with undo support",
+        "Redesigned the app marketplace",
+        "Redesigned the new tab page",
+        "Fixed unused apps leaking styles onto the original page, and Media Downloader failing to open",
+      ],
+    },
     {
       version: "2.3.0",
       date: "2026-08-25",

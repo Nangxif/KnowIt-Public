@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 import { useState } from "react";
 
 import { useTranslation } from "@/i18n/context";
@@ -9,6 +9,7 @@ import styles from "./Showcase.module.css";
 import { CALLOUT_CONFIGS } from "./showcase/calloutPlacements";
 import AdCleanerMock from "./showcase/AdCleanerMock";
 import ContentSummaryMock from "./showcase/ContentSummaryMock";
+import ElementInspectorMock from "./showcase/ElementInspectorMock";
 import MediaDownloaderMock from "./showcase/MediaDownloaderMock";
 import PageExportMock from "./showcase/PageExportMock";
 import SelectionTranslateMock from "./showcase/SelectionTranslateMock";
@@ -21,6 +22,7 @@ const MOCKS: Record<AppId, ReactNode> = {
   "text-search": <TextSearchMock />,
   "media-downloader": <MediaDownloaderMock />,
   "ad-cleaner": <AdCleanerMock />,
+  "element-inspector": <ElementInspectorMock />,
   "page-export": <PageExportMock />,
   "content-summary": <ContentSummaryMock />,
   "selection-translate": <SelectionTranslateMock />,
@@ -52,24 +54,19 @@ export default function Showcase() {
                 className={`${styles.switchItem} ${isActive ? styles.switchItemActive : ""}`}
                 onClick={() => setActiveId(app.id)}
               >
-                <span className={styles.switchIcon} style={{ color: app.color }}>
+                <span
+                  className={styles.switchIcon}
+                  style={{ "--app-icon-bg": app.color } as CSSProperties}
+                >
                   {app.icon}
                 </span>
                 <span className={styles.switchName}>{text.appNames[app.id]}</span>
                 <span
                   className={`${styles.switchTag} ${
-                    app.badge === "premium"
-                      ? styles.switchTagPremium
-                      : app.badge === "comingSoon"
-                        ? styles.switchTagComingSoon
-                        : ""
+                    app.badge === "premium" ? styles.switchTagPaid : styles.switchTagFree
                   }`}
                 >
-                  {app.badge === "premium"
-                    ? text.premiumTag
-                    : app.badge === "comingSoon"
-                      ? text.comingSoonTag
-                      : text.freeTag}
+                  {app.badge === "premium" ? text.paidTag : text.freeTag}
                 </span>
               </button>
             );

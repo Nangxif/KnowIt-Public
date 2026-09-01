@@ -1,0 +1,15 @@
+.icon {
+  display: inline-flex;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  line-height: 1;
+  color: inherit;
+}
+
+.icon svg {
+  display: block;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}

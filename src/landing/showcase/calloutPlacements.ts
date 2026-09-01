@@ -6,6 +6,7 @@ export const SHOWCASE_ANCHORS = {
   floatToolbar: "float-toolbar",
   writerFab: "writer-fab",
   toast: "toast",
+  inspectorPanel: "inspector-panel",
 } as const;
 
 export type CalloutSide = "top" | "right" | "bottom" | "left";
@@ -38,6 +39,13 @@ export const CALLOUT_CONFIGS: Record<AppId, CalloutConfig> = {
     anchor: SHOWCASE_ANCHORS.toast,
     side: "left",
     align: "center",
+    gap: 10,
+    maxWidth: 220,
+  },
+  "element-inspector": {
+    anchor: SHOWCASE_ANCHORS.inspectorPanel,
+    side: "left",
+    align: "start",
     gap: 10,
     maxWidth: 220,
   },

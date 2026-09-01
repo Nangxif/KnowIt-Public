@@ -23,13 +23,14 @@ export type AppId =
   | "text-search"
   | "media-downloader"
   | "ad-cleaner"
+  | "element-inspector"
   | "page-export"
   | "content-summary"
   | "selection-translate"
   | "word-inspector"
   | "smart-writer";
 
-export type AppCategory = "efficiency" | "ai";
+export type AppCategory = "efficiency" | "ai" | "development";
 
 export type LegalSection = {
   title: string;
@@ -104,6 +105,32 @@ export type ShowcaseMockMessages = {
     cleaned: string;
     undo: string;
   };
+  elementInspector: {
+    tagName: string;
+    copyCss: string;
+    sectionIdentity: string;
+    sectionSize: string;
+    sectionLayout: string;
+    sectionTypography: string;
+    sectionFill: string;
+    labelTag: string;
+    labelClass: string;
+    classValue: string;
+    labelWidth: string;
+    labelHeight: string;
+    widthValue: string;
+    heightValue: string;
+    labelDisplay: string;
+    displayValue: string;
+    labelFont: string;
+    fontValue: string;
+    labelColor: string;
+    colorValue: string;
+    labelBackground: string;
+    backgroundValue: string;
+    modeInspect: string;
+    modeEyedropper: string;
+  };
 };
 
 export type Messages = {
@@ -137,13 +164,13 @@ export type Messages = {
   highlightUxBody: string;
   appsTitle: string;
   appsSubtitle: string;
-  premiumTag: string;
+  paidTag: string;
   freeTag: string;
-  comingSoonTag: string;
   detailsTitle: string;
   detailsClose: string;
   categoryEfficiency: string;
   categoryAi: string;
+  categoryDevelopment: string;
   appNames: Record<AppId, string>;
   appDescriptions: Record<AppId, string>;
   showcaseTitle: string;

@@ -8,12 +8,12 @@
   pointer-events: none;
   background-image:
     linear-gradient(
-      var(--pixel-grid, rgba(255, 255, 255, 0.04)) 1px,
+      var(--pixel-grid, rgba(255, 255, 255, 0.028)) 1px,
       transparent 1px
     ),
     linear-gradient(
       90deg,
-      var(--pixel-grid, rgba(255, 255, 255, 0.04)) 1px,
+      var(--pixel-grid, rgba(255, 255, 255, 0.028)) 1px,
       transparent 1px
     );
   background-size: var(--pixel-cell, 12px) var(--pixel-cell, 12px);
