@@ -34,8 +34,13 @@
   --vscode-dropdown-background: #252526;
   --vscode-dropdown-border: #3c3c3c;
   --vscode-dropdown-foreground: #cccccc;
-  --knowit-radius-sm: 2px;
-  --knowit-radius-md: 4px;
+  --knowit-radius-none: 0;
+  --knowit-radius-xs: 4px;
+  --knowit-radius-sm: 8px;
+  --knowit-radius-md: 12px;
+  --knowit-radius-lg: 20px;
+  --knowit-radius-full: 999px;
+  --knowit-radius-circle: 50%;
   --knowit-min-page-width: 1100px;
   --knowit-font:
     -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
@@ -124,7 +129,7 @@ a {
 .ant-card,
 .ant-alert,
 .ant-segmented {
-  border-radius: var(--knowit-radius-sm) !important;
+  border-radius: var(--knowit-radius-xs) !important;
 }
 
 .ant-btn:focus-visible,

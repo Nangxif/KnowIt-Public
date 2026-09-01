@@ -6,7 +6,7 @@
   overflow: hidden;
   background: var(--vscode-editor-background);
   border: 1px solid var(--vscode-widget-border);
-  border-radius: 14px;
+  border-radius: var(--knowit-radius-md);
   box-shadow: 0 24px 60px var(--vscode-shadow);
   user-select: none;
 }
@@ -24,7 +24,7 @@
   flex: none;
   width: 11px;
   height: 11px;
-  border-radius: 50%;
+  border-radius: var(--knowit-radius-circle);
   border: 1px solid var(--vscode-widget-border);
   background: var(--vscode-badge-background);
 }
@@ -57,7 +57,7 @@
   text-overflow: ellipsis;
   background: var(--vscode-input-background);
   border: 1px solid var(--vscode-input-border);
-  border-radius: 8px;
+  border-radius: var(--knowit-radius-sm);
 }
 
 .viewport {
@@ -71,13 +71,13 @@
   display: block;
   height: 10px;
   background: var(--vscode-list-hoverBackground);
-  border-radius: 5px;
+  border-radius: var(--knowit-radius-xs);
 }
 
 .skeletonStrong {
   height: 16px;
   background: var(--vscode-badge-background);
-  border-radius: 8px;
+  border-radius: var(--knowit-radius-sm);
 }
 
 .skeletonArticle {

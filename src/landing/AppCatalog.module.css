@@ -11,7 +11,6 @@
   margin: 0;
   font-size: 28px;
   font-weight: 780;
-  letter-spacing: -0.04em;
 }
 
 .header p {
@@ -35,7 +34,7 @@
   flex-direction: column;
   background: var(--vscode-sideBar-background);
   border: 1px solid var(--vscode-widget-border);
-  border-radius: 22px;
+  border-radius: var(--knowit-radius-lg);
   cursor: pointer;
   transition:
     border-color 150ms ease,
@@ -60,9 +59,8 @@
   padding: 0 8px;
   font-size: 10px;
   font-weight: 600;
-  letter-spacing: 0.04em;
   line-height: 1;
-  border-radius: 4px;
+  border-radius: var(--knowit-radius-xs);
 }
 
 .badgeFree {
@@ -95,7 +93,7 @@
   color: #f7f8fa;
   background: var(--app-icon-bg);
   border: 1px solid color-mix(in srgb, var(--app-icon-bg) 42%, var(--vscode-widget-border));
-  border-radius: 14px;
+  border-radius: var(--knowit-radius-md);
   font-size: 20px;
 }
 
@@ -109,7 +107,6 @@
   margin: 18px 0 0;
   font-size: 20px;
   font-weight: 780;
-  letter-spacing: -0.5px;
 }
 
 .category {
@@ -157,6 +154,18 @@
   color: var(--vscode-descriptionForeground);
   font-size: 14px;
   line-height: 1.65;
+}
+
+.philosophyLink {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.philosophyLink:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 820px) {

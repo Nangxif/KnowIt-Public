@@ -3,6 +3,7 @@ import { Button, Tooltip } from "antd";
 import { useEffect, useState, type MouseEvent } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
+import { DOCS_INDEX_PATH } from "@/app/paths";
 import { assetUrl, siteConfig } from "@/config/site";
 import { useTranslation } from "@/i18n/context";
 import { useTheme } from "@/theme/theme";
@@ -44,7 +45,7 @@ export default function SiteNav() {
     return () => {
       document.removeEventListener("scroll", syncNavFloating, { capture: true });
     };
-  }, []);
+  }, [location.pathname]);
 
   const goHome = (event: MouseEvent<HTMLAnchorElement>) => {
     if (location.pathname !== "/") return;
@@ -54,6 +55,8 @@ export default function SiteNav() {
     }
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   };
+
+  const isDocsPage = location.pathname.startsWith("/docs");
 
   return (
     <div className={styles.navShell} data-site-nav="">
@@ -87,6 +90,14 @@ export default function SiteNav() {
               {text[link.labelKey]}
             </Link>
           ))}
+          <Link
+            to={DOCS_INDEX_PATH}
+            className={`${styles.sectionLink} ${
+              isDocsPage ? styles.sectionLinkActive : ""
+            }`}
+          >
+            {text.navDocs}
+          </Link>
         </nav>
 
         <div className={styles.navRight}>

@@ -34,15 +34,15 @@
   background:
     linear-gradient(
       180deg,
-      color-mix(in srgb, #ffffff 11%, transparent),
-      color-mix(in srgb, #ffffff 5%, transparent)
-    ),
-    color-mix(in srgb, var(--vscode-editor-background) 58%, transparent);
-  border: 1px solid color-mix(in srgb, #ffffff 14%, transparent);
-  border-radius: 999px;
+      color-mix(in srgb, #ffffff 8%, transparent) 0%,
+      color-mix(in srgb, #ffffff 3%, transparent) 55%,
+      color-mix(in srgb, #ffffff 1.5%, transparent) 100%
+    );
+  border: 1px solid color-mix(in srgb, #ffffff 3%, transparent);
+  border-radius: var(--knowit-radius-full);
   box-shadow:
-    inset 0 1px 0 color-mix(in srgb, #ffffff 18%, transparent),
-    0 12px 32px color-mix(in srgb, var(--vscode-shadow) 55%, transparent);
+    inset 0 1px 0 color-mix(in srgb, #ffffff 7%, transparent),
+    0 4px 14px color-mix(in srgb, var(--vscode-shadow) 16%, transparent);
   opacity: 0;
   transform: scaleY(0.86);
   transition:
@@ -54,16 +54,21 @@
 .navScrolled::before {
   opacity: 1;
   transform: none;
-  backdrop-filter: blur(26px) saturate(1.5);
-  -webkit-backdrop-filter: blur(26px) saturate(1.5);
+  backdrop-filter: blur(12px) saturate(1.12);
+  -webkit-backdrop-filter: blur(12px) saturate(1.12);
 }
 
 :global([data-knowit-theme="vscode-light"]) .nav::before {
-  background: color-mix(in srgb, #ffffff 72%, transparent);
-  border-color: rgba(26, 42, 62, 0.08);
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, #ffffff 42%, transparent) 0%,
+      color-mix(in srgb, #ffffff 22%, transparent) 100%
+    );
+  border-color: rgba(26, 42, 62, 0.025);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.7),
-    0 12px 30px rgba(26, 42, 62, 0.12);
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    0 4px 14px rgba(26, 42, 62, 0.05);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -90,7 +95,6 @@
 .brand span {
   font-size: 18px;
   font-weight: 800;
-  letter-spacing: -0.03em;
   background:
     linear-gradient(180deg, #ffffff 4%, #d7d7d7 46%, #9ba2a7 100%),
     linear-gradient(90deg, #7c73ff, #2ec99d);
@@ -113,7 +117,7 @@
 .logo {
   width: 30px;
   height: 30px;
-  border-radius: 8px;
+  border-radius: var(--knowit-radius-sm);
 }
 
 .logoLight {
@@ -146,11 +150,12 @@
   font-weight: 600;
   text-decoration: none;
   white-space: nowrap;
-  border-radius: 999px;
+  border-radius: var(--knowit-radius-full);
   transition: color 150ms ease, background 150ms ease;
 }
 
-.sectionLink:hover {
+.sectionLink:hover,
+.sectionLinkActive {
   color: var(--vscode-editor-foreground);
   background: color-mix(in srgb, #ffffff 10%, transparent);
 }
@@ -168,7 +173,7 @@
 .installButton {
   height: 32px;
   padding: 0 14px;
-  border-radius: 999px !important;
+  border-radius: var(--knowit-radius-full) !important;
   font-weight: 600;
 }
 
@@ -176,7 +181,7 @@
 .iconButton {
   height: 32px;
   color: var(--vscode-descriptionForeground);
-  border-radius: 999px !important;
+  border-radius: var(--knowit-radius-full) !important;
 }
 
 .controlButton {

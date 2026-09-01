@@ -10,6 +10,7 @@ export const enUS: Messages = {
   navShowcase: "Showcase",
   navApps: "Apps",
   navPricing: "Pricing",
+  navDocs: "Docs",
   navInstall: "Install",
   installChrome: "Chrome Web Store",
   installEdge: "Edge Add-ons",
@@ -196,6 +197,216 @@ export const enUS: Messages = {
   purchaseAction: "Open Afdian checkout",
   activationHint:
     "Activation happens inside the extension: enter your email and Afdian order number. Each order + bound email can be activated up to 2 times. AI features require your own model API key—KnowIt does not collect or proxy your keys.",
+  creatorNoteTitle: "A note from the creator",
+  creatorNoteSubtitle:
+    "For anyone still using KnowIt 2.3.0, and everyone who already has KnowIt installed.",
+  creatorNoteParagraphs: [
+    "If you're still using KnowIt 2.3.0, I owe you an apology. There was a design problem in that version: even if you hadn't opened a tool — even if you weren't using it at all — it could still mess up the layout of the page you were reading. Text might pile up, the page might look broken, and it would feel like the website itself had gone wrong. Because it happened in the background, a lot of people never connected it to KnowIt. You might have just thought, “Why did this page suddenly look weird?” The cause was on my side. I'm sorry.",
+    "This is fixed in KnowIt 2.4.0. If you haven't updated yet, installing the new version will stop it from happening again.",
+    "For now, I'm not planning to add new tools unless an idea comes along that's genuinely worth building on its own. I want to spend the time making what already exists better: smoother to use, more reliable, and less likely to get in your way.",
+    "Thank you for using KnowIt. If something still feels off, please keep telling me.",
+  ],
+  creatorNoteSignOff: "The KnowIt creator",
+  creatorNoteDate: "September 1, 2026",
+  docsTitle: "Docs",
+  docsNavLabel: "Document navigation",
+  docsGroupApps: "Tool design notes",
+  philosophyTitle: "Design notes: {name}",
+  philosophyWhyTitle: "Why it exists",
+  philosophyCraftTitle: "Why the interaction looks like this",
+  philosophyNotTitle: "What it refuses to be",
+  philosophyLink: "Read the design notes",
+  appPhilosophy: {
+    "text-search": {
+      sections: [
+        {
+          title: "Why this tool exists",
+          paragraphs: [
+            "The browser's built-in find-in-page carries a few limitations that have frustrated developers and heavy users for years:",
+          ],
+          items: [
+            {
+              label: "Fixed position: ",
+              text: "The search bar is locked to the top or bottom of the browser window and cannot be moved, so it regularly covers the content you are reading — especially awkward when you need to compare a match against the text around it.",
+            },
+            {
+              label: "Limited matching: ",
+              text: "There is no case-sensitive matching, so it cannot tell React from react, or API from api — distinctions that matter a great deal to developers.",
+            },
+            {
+              label: "No advanced patterns: ",
+              text: "Regular expressions are not supported, which leaves you stuck whenever the target is a complex pattern: every email address on the page, dates in a particular format, several keywords at once.",
+            },
+          ],
+        },
+        {
+          paragraphs: [
+            "Together these gaps make native find-in-page a poor fit for development work, document review, technical writing, and anything else that calls for precise text handling. Text Search aims to be a more flexible, more capable in-page search tool that matches how developers already work.",
+          ],
+        },
+        {
+          title: "Design direction",
+          paragraphs: [
+            "The UI borrows directly from VS Code's search experience. That is not an arbitrary choice — VS Code's find panel is an efficient interaction pattern validated daily by an enormous number of developers, and its layout, visual hierarchy, and feedback are all worth following. For a tool aimed at developers, reusing a familiar mental model cuts the learning curve to almost nothing.",
+          ],
+        },
+        { title: "Core principles" },
+        {
+          title: "1. Movable first",
+          level: 3,
+          paragraphs: [
+            "The search bar should not be an appendage bolted onto the page; it should be a panel you position yourself. Drag it wherever it stays out of your line of sight and within easy reach of what you are reading. A search tool should adapt to where your attention goes, rather than making you work around it.",
+          ],
+        },
+        {
+          title: "2. Precise matching, case included",
+          level: 3,
+          paragraphs: [
+            "For developers and technical writers, case is not a cosmetic difference — it is a semantic one. String is a type, string is a keyword; Apple is a company, apple is a fruit. Supporting case-sensitive matching is, at heart, respecting how precise text is.",
+          ],
+        },
+        {
+          title: "3. Leave room for power users",
+          level: 3,
+          paragraphs: [
+            "Regular expressions are the sharpest tool in text processing. This version focuses on the two most pressing pain points, movability and case matching, but the matching engine is designed to be extensible, with a clear interface reserved for regex. A tool should start from the simple cases without putting a ceiling on what it can do.",
+          ],
+        },
+        {
+          title: "4. Stay light, stay in the flow",
+          level: 3,
+          paragraphs: [
+            "Search is frequent, brief, and threaded between reading and editing. The tool should open instantly and close instantly, add no startup cost, and never break your concentration. A lightweight floating panel, rather than something that takes over the page, is what that principle looks like in practice.",
+          ],
+        },
+      ],
+    },
+    "media-downloader": {
+      sections: [
+        {
+          paragraphs: [
+            "There's a frustration a lot of people run into: you're browsing a page full of images you like — design references, useful assets, pictures worth keeping — and you have no idea where to start saving them. Right-click and save as? Too slow, one at a time. Drag them to the desktop? Plenty of pages simply don't allow it. Select everything first and download in one go? There's no “select multiple” anywhere to be found. These are supposed to be simple actions, yet for anyone who isn't fluent in the technical details they turn into a test of patience.",
+            "Media Downloader came out of watching those very real pain points. It isn't meant to hand power users another advanced tool. It's meant to let any ordinary computer user gather what's on a page as easily and intuitively as batch-saving photos in a phone gallery.",
+            "Three ideas sit at the center of the design:",
+          ],
+        },
+        {
+          title: "1. What you see is what you get",
+          paragraphs: [
+            "You shouldn't have to understand “page source,” “resource URLs,” or “request headers.” If you can see it, you can select it; if you can select it, you can download it. The interaction stays close to everyday habits, with fewer dialogs, fewer settings, and less jargon, so downloading comes back to the most natural sequence there is: select, confirm, save.",
+          ],
+        },
+        {
+          title: "2. Batch it, and skip the busywork",
+          paragraphs: [
+            "The assets on a page are rarely one or two. They come as a set, a batch, a whole page at once. Select-all and batch download exist to free you from mechanical clicking. Tick once, save once, and spend the time you get back on the work itself rather than on repetition that means nothing.",
+          ],
+        },
+        {
+          title: "3. Transparent and under your control",
+          paragraphs: [
+            "Before you press Download, you can see exactly which files are selected and how many there are, so nothing gets grabbed by mistake or quietly left behind. The goal isn't one-click automation; it's that you keep the right to choose and the right to confirm, and that every step stays clear and reassuring.",
+          ],
+        },
+        {
+          paragraphs: [
+            "Media Downloader isn't trying to show off. It's trying to be the kind of helper that understands you. Its reason for existing isn't to tell you how you ought to download things — it's to stand quietly beside you and make something that should always have been simple actually simple.",
+          ],
+        },
+      ],
+    },
+    "ad-cleaner": {
+      intro:
+        "The goal is not to win a war with ad networks. It is to give the reading surface back. Hide and undo matter more than “wipe it all out.”",
+      why: [
+        "Promo overlays cover the article, but false positives are real—nav, banners, paywalls often look like ads. Cleaning without undo makes people afraid to turn it on.",
+      ],
+      craft: [
+        "Once enabled, it works on its own, because ads should not cost a click every time. It hides instead of deleting, so undo is possible. The context menu is for the overlay that just appeared.",
+      ],
+      not: [
+        "Not a system-wide blocker, and not a militant filter list. It only deals with layers on the current page that get in the way of reading.",
+      ],
+    },
+    "element-inspector": {
+      intro:
+        "Chrome DevTools is for debugging. Often you only need width, color, type. Element Inspector splits “looking” apart from “investigating.”",
+      why: [
+        "Matching a mock, picking a color, checking spacing—none of that should start with a full console. The panel follows a Figma-like property grouping because visual work already lives in that shape.",
+      ],
+      craft: [
+        "Hover to inspect, click to lock; the toolbar switches inspect and eyedropper. Esc leaves. It is a light overlay. Use it, then go. It should not change the page.",
+      ],
+      not: [
+        "It does not replace DevTools: no breakpoints, no network panel, no DOM editing. That is a different job.",
+      ],
+    },
+    "page-export": {
+      intro:
+        "A piece worth keeping is often wrapped in nav, related links, and ads. Page Export pulls out the body and turns it into Markdown you can keep editing.",
+      why: [
+        "Bookmarks rot, screenshots are not searchable, and copy-paste brings junk markup. Markdown is a clean, editable halfway house that fits a notes app.",
+      ],
+      craft: [
+        "Preview in the side panel first, then copy or export. You should see what you are taking before you take it. It tidies the article, not a mirror of the whole site.",
+      ],
+      not: [
+        "Not a web-archiving tool, and not a pixel-perfect layout dump. Complex app pages were never meant to be exported as essays.",
+      ],
+    },
+    "content-summary": {
+      intro:
+        "Facing a long page, you often need to decide whether it is worth reading—not to read it twice. Summary should happen on this page, with the key staying in your hands.",
+      why: [
+        "Sending a whole page to a random summarizer website hands your reading to a stranger. Bring-your-own key and local history are the privacy floor. Full-page and selection cover “this article” and “this passage.”",
+      ],
+      craft: [
+        "The result streams in the side panel and can be paused. Generation should not hijack your scrolling. History is there because you may want the same page tomorrow.",
+      ],
+      not: [
+        "It does not pretend to have read the part you still need to read. A summary is an index, not a substitute. KnowIt also does not hold your model keys.",
+      ],
+    },
+    "selection-translate": {
+      intro:
+        "Translation should appear next to the words—not throw you into another website. One sentence at a time, or a bilingual reading of the whole page.",
+      why: [
+        "Tab-switching breaks reading. Instant selection covers “this word / this sentence.” Full-page bilingual covers “I want to finish this in my language.”",
+      ],
+      craft: [
+        "The floating toolbar shows up only after a selection, then gets out of the way. Full-page translation lives in the side panel; the original stays. Results can be cached locally so the same sentence is not billed twice.",
+      ],
+      not: [
+        "Not a dictionary, and not a KnowIt-hosted model. Word Inspector is a separate app. Translation only converts language.",
+      ],
+    },
+    "word-inspector": {
+      intro:
+        "You already know the language; you are just stuck on a word. Inspector gives pronunciation and meaning instead of turning the whole sentence into another language.",
+      why: [
+        "Translation pulls you out of the original. When learning, or reading Chinese on the web, people need “how is this read, what does it mean.” It is separate from Selection Translate so two jobs do not collapse into one button.",
+      ],
+      craft: [
+        "Select, then “inspect.” The panel appears in place—light, fast, dismissible. The model is yours to choose, because gloss quality varies and that choice should be yours.",
+      ],
+      not: [
+        "Not a full dictionary product, and not a quote-and-example mill. It only helps you over the word in front of you.",
+      ],
+    },
+    "smart-writer": {
+      intro:
+        "Writing happens in webpage inputs: comments, forms, admin, docs. The assistant should come to those fields, instead of making you copy into a chat window and paste back.",
+      why: [
+        "Copying back and forth drops context and hands a draft to another product. Presets (polish, grammar, continue, expand, shorten) cover the common “I know this needs a pass.” Custom prompts cover the rest.",
+      ],
+      craft: [
+        "It only appears when an input is focused, as a small control in the corner. Results can replace, insert, or copy—you decide what happens to the original. It never rewrites text you have not confirmed.",
+      ],
+      not: [
+        "Not a standalone editor, and not a popup while you are merely browsing. When the assistant is off, the page should feel as if it were never installed.",
+      ],
+    },
+  },
   footerAboutTitle: "About",
   footerContactTitle: "Contact",
   footerGithubLabel: "GitHub repository",

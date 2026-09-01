@@ -11,7 +11,6 @@
   margin: 0;
   font-size: 28px;
   font-weight: 780;
-  letter-spacing: -0.04em;
 }
 
 .header p {
@@ -38,7 +37,7 @@
   padding: 10px;
   background: var(--vscode-sideBar-background);
   border: 1px solid var(--vscode-widget-border);
-  border-radius: 22px;
+  border-radius: var(--knowit-radius-lg);
 }
 
 .switchItem {
@@ -55,7 +54,7 @@
   text-align: left;
   background: transparent;
   border: 1px solid transparent;
-  border-radius: 14px;
+  border-radius: var(--knowit-radius-sm);
   cursor: pointer;
   transition: background 0.15s ease;
 }
@@ -85,7 +84,7 @@
   color: #f7f8fa;
   background: var(--app-icon-bg);
   border: 1px solid color-mix(in srgb, var(--app-icon-bg) 42%, var(--vscode-widget-border));
-  border-radius: 10px;
+  border-radius: var(--knowit-radius-sm);
 }
 
 .switchIcon svg {
@@ -109,9 +108,8 @@
   padding: 0 7px;
   font-size: 10px;
   font-weight: 600;
-  letter-spacing: 0.04em;
   line-height: 1;
-  border-radius: 4px;
+  border-radius: var(--knowit-radius-xs);
 }
 
 .switchTagFree {
@@ -144,7 +142,7 @@
   padding: clamp(12px, 3.4%, 28px);
   background: var(--vscode-sideBar-background);
   border: 1px solid var(--vscode-widget-border);
-  border-radius: 22px;
+  border-radius: var(--knowit-radius-lg);
 }
 
 .stageMock {

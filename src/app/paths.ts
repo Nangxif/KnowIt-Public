@@ -11,6 +11,9 @@ export const LEGAL_PATHS = {
   changelog: "/changelog",
 } as const;
 
+export const DOCS_INDEX_PATH = "/docs";
+export const CREATOR_NOTE_DOC_ID = "creator-note";
+
 export type LegalTab = keyof typeof LEGAL_PATHS;
 
 export function withBasename(path: string) {

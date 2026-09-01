@@ -11,7 +11,6 @@
   margin: 0;
   font-size: 28px;
   font-weight: 780;
-  letter-spacing: -0.04em;
 }
 
 .header p {
@@ -32,7 +31,7 @@
   padding: 20px;
   background: var(--vscode-sideBar-background);
   border: 1px solid var(--vscode-widget-border);
-  border-radius: 22px;
+  border-radius: var(--knowit-radius-lg);
 }
 
 .icon {
@@ -43,7 +42,7 @@
   margin-bottom: 16px;
   background: var(--vscode-editor-background);
   border: 1px solid var(--vscode-widget-border);
-  border-radius: 14px;
+  border-radius: var(--knowit-radius-md);
   font-size: 20px;
 }
 
@@ -51,7 +50,6 @@
   margin: 0;
   font-size: 18px;
   font-weight: 740;
-  letter-spacing: -0.03em;
 }
 
 .card p {

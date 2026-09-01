@@ -31,7 +31,7 @@
 .logo {
   width: 28px;
   height: 28px;
-  border-radius: 7px;
+  border-radius: var(--knowit-radius-sm);
   object-fit: contain;
 }
 
@@ -50,7 +50,6 @@
 .brandName {
   font-size: 18px;
   font-weight: 700;
-  letter-spacing: 0.01em;
   color: var(--vscode-sideBar-foreground);
 }
 
@@ -66,7 +65,7 @@
   height: 32px;
   place-items: center;
   border: 1px solid var(--vscode-widget-border);
-  border-radius: 999px;
+  border-radius: var(--knowit-radius-full);
   color: var(--vscode-descriptionForeground);
   background: color-mix(in srgb, var(--vscode-sideBar-background) 55%, transparent);
   font-size: 15px;
@@ -188,7 +187,7 @@
   width: 100%;
   padding: 10px 12px;
   border: 0;
-  border-radius: 8px;
+  border-radius: var(--knowit-radius-sm);
   background: transparent;
   color: var(--vscode-descriptionForeground);
   font: inherit;

@@ -133,6 +133,22 @@ export type ShowcaseMockMessages = {
   };
 };
 
+export type PhilosophySection = {
+  title?: string;
+  /** 3 renders the heading as a nested subsection; defaults to 2. */
+  level?: 2 | 3;
+  paragraphs?: readonly string[];
+  items?: readonly { label: string; text: string }[];
+};
+
+export type PhilosophyDoc = {
+  intro?: string;
+  sections?: readonly PhilosophySection[];
+  why?: readonly string[];
+  craft?: readonly string[];
+  not?: readonly string[];
+};
+
 export type Messages = {
   documentTitle: string;
   localeLabel: string;
@@ -143,6 +159,7 @@ export type Messages = {
   navShowcase: string;
   navApps: string;
   navPricing: string;
+  navDocs: string;
   navInstall: string;
   installChrome: string;
   installEdge: string;
@@ -188,6 +205,20 @@ export type Messages = {
   pricingFeatures: readonly string[];
   purchaseAction: string;
   activationHint: string;
+  creatorNoteTitle: string;
+  creatorNoteSubtitle: string;
+  creatorNoteParagraphs: readonly string[];
+  creatorNoteSignOff: string;
+  creatorNoteDate: string;
+  docsTitle: string;
+  docsNavLabel: string;
+  docsGroupApps: string;
+  philosophyTitle: string;
+  philosophyWhyTitle: string;
+  philosophyCraftTitle: string;
+  philosophyNotTitle: string;
+  philosophyLink: string;
+  appPhilosophy: Record<AppId, PhilosophyDoc>;
   footerAboutTitle: string;
   footerContactTitle: string;
   footerGithubLabel: string;

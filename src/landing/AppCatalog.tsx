@@ -1,6 +1,8 @@
 import { Button, Modal } from "antd";
 import { useState, type CSSProperties } from "react";
+import { Link, useLocation } from "react-router-dom";
 
+import { docsPath } from "@/docs/docIds";
 import { useTranslation } from "@/i18n/context";
 import type { AppCategory, Messages } from "@/i18n/types";
 
@@ -24,6 +26,7 @@ function Badge({ badge, text }: { badge: AppBadge; text: Messages }) {
 
 export default function AppCatalog() {
   const { text } = useTranslation();
+  const location = useLocation();
   const [selected, setSelected] = useState<CatalogApp | null>(null);
 
   return (
@@ -89,6 +92,13 @@ export default function AppCatalog() {
               </div>
             </div>
             <p>{text.appDescriptions[selected.id]}</p>
+            <Link
+              to={{ pathname: docsPath(selected.id), search: location.search }}
+              className={styles.philosophyLink}
+              onClick={() => setSelected(null)}
+            >
+              {text.philosophyLink}
+            </Link>
           </div>
         ) : null}
       </Modal>
