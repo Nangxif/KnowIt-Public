@@ -220,7 +220,7 @@ export const enUS: Messages = {
     "text-search": {
       sections: [
         {
-          title: "Why this tool exists",
+          title: "1. Why this tool exists",
           paragraphs: [
             "The browser's built-in find-in-page carries a few limitations that have frustrated developers and heavy users for years:",
           ],
@@ -245,12 +245,12 @@ export const enUS: Messages = {
           ],
         },
         {
-          title: "Design direction",
+          title: "2. Design direction",
           paragraphs: [
             "The UI borrows directly from VS Code's search experience. That is not an arbitrary choice — VS Code's find panel is an efficient interaction pattern validated daily by an enormous number of developers, and its layout, visual hierarchy, and feedback are all worth following. For a tool aimed at developers, reusing a familiar mental model cuts the learning curve to almost nothing.",
           ],
         },
-        { title: "Core principles" },
+        { title: "3. Core principles" },
         {
           title: "1. Movable first",
           level: 3,
@@ -316,94 +316,212 @@ export const enUS: Messages = {
       ],
     },
     "ad-cleaner": {
-      intro:
-        "The goal is not to win a war with ad networks. It is to give the reading surface back. Hide and undo matter more than “wipe it all out.”",
-      why: [
-        "Promo overlays cover the article, but false positives are real—nav, banners, paywalls often look like ads. Cleaning without undo makes people afraid to turn it on.",
-      ],
-      craft: [
-        "Once enabled, it works on its own, because ads should not cost a click every time. It hides instead of deleting, so undo is possible. The context menu is for the overlay that just appeared.",
-      ],
-      not: [
-        "Not a system-wide blocker, and not a militant filter list. It only deals with layers on the current page that get in the way of reading.",
+      sections: [
+        {
+          paragraphs: [
+            "Ads are just about everywhere on the web. Pop-ups, sidebars, floating layers — they don't only break your concentration, they blur the line between what's content and what's promotion. There are plenty of ad filters out there, some paid, some technically formidable. As an early-stage extension built by one person, this one can't yet match those mature paid products on detection accuracy.",
+            "None of that stops me from building something honest, useful, and steadily getting better.",
+            "The thinking behind Ad Cleaner comes down to three ideas:",
+          ],
+        },
+        {
+          title: "1. Free as a stance, not a marketing tactic",
+          paragraphs: [
+            "“Free” isn't a hook to get you to install it; it's the basis on which the tool exists. Filtering ads should be a baseline capability available to everyone, not a “premium benefit” billed yearly. I made it free because I believe a good tool doesn't need a price tag to prove its worth — people using it and telling me what's wrong is the return I care about.",
+          ],
+        },
+        {
+          title: "2. Grant permission once, then forget about it",
+          paragraphs: [
+            "Ad structures on some sites are genuinely complex, and the extension has to read and parse page elements to filter them accurately. On first install it asks for the permissions it needs — not to over-reach, but so that filtering can happen automatically on every page afterwards.",
+            "After that one grant, day-to-day use takes zero effort. No subscribing to rule lists, no maintaining a blocklist, no tuning filter strength; ordinary users shouldn't have to spend energy on configuration. Install it, grant it, open a page, and leave the rest to me. You won't get stuck because you “don't know how to set it up.” I'd rather you simply notice, at some point, that pages feel a little cleaner today.",
+          ],
+        },
+        {
+          title: "3. Honest about the gaps, still improving",
+          paragraphs: [
+            "I won't pretend otherwise: what it catches today is limited, and some complex ads or newer placement formats still slip through. But I treat those misses as a direction for improvement rather than a flaw to explain away. Every page someone browses is a chance for me to learn something. Later versions will keep sharpening the detection and refining the rules, so the results get a little better each time.",
+          ],
+        },
       ],
     },
     "element-inspector": {
-      intro:
-        "Chrome DevTools is for debugging. Often you only need width, color, type. Element Inspector splits “looking” apart from “investigating.”",
-      why: [
-        "Matching a mock, picking a color, checking spacing—none of that should start with a full console. The panel follows a Figma-like property grouping because visual work already lives in that shape.",
-      ],
-      craft: [
-        "Hover to inspect, click to lock; the toolbar switches inspect and eyedropper. Esc leaves. It is a light overlay. Use it, then go. It should not change the page.",
-      ],
-      not: [
-        "It does not replace DevTools: no breakpoints, no network panel, no DOM editing. That is a different job.",
+      sections: [
+        {
+          paragraphs: [
+            "You're browsing, you come across a color scheme you like, a nice typeface, spacing that just feels right — and you want to note it down for later. The trouble is that all of it lives in the page's code, and the only way to see it is to open the browser's developer tools. That thing does far too much: screens of English and numbers that send any non-programmer straight back out.",
+            "This extension exists to fix that small annoyance. The idea is simple: skip the complicated parts, do one thing well.",
+          ],
+        },
+        {
+          title: "1. Turn heavyweight developer tools into a handy little one",
+          paragraphs: [
+            "The browser's built-in inspector is powerful, but it was built for developers, and its panels are stuffed with network requests, error logs, and source debugging that ordinary people never need. This extension cuts all of that away and keeps only what gets used most: pick a color, check a font size, measure some spacing, see what the corner radius is. The interface is clean, it works the moment you open it, and whatever your cursor lands on is what it shows you. Nothing to learn, no shortcuts to memorize.",
+          ],
+        },
+        {
+          title: "2. Install it and go, no thinking required",
+          paragraphs: [
+            "No account, no manual, nothing to configure. Once installed, click the icon on any page, move your mouse around, and the style information appears right on screen — colors as actual values, elements outlined automatically. The whole thing is as direct as taking a screenshot, with no technical barrier at all. Hand it to anyone and they'll figure it out.",
+          ],
+        },
+        {
+          title: "3. Later, not just one color — the whole style, packed up in one click",
+          paragraphs: [
+            "Today you can pick colors and read font sizes one at a time. But it will keep growing: eventually one action should identify every color, typeface, spacing value, and corner radius the page uses and lay them out as a clear reference card. See a page you like, click once, and take its entire visual language with you. Going from “grabbing one color” to “packing up a whole style” is what this is really meant to become.",
+          ],
+        },
+        {
+          paragraphs: [
+            "It's early, so it isn't especially powerful yet, and some things won't be detected accurately. But the direction is clear: a small tool a designer can pick up and use straight away, that feels good in the hand, and that keeps getting better.",
+          ],
+        },
       ],
     },
     "page-export": {
-      intro:
-        "A piece worth keeping is often wrapped in nav, related links, and ads. Page Export pulls out the body and turns it into Markdown you can keep editing.",
-      why: [
-        "Bookmarks rot, screenshots are not searchable, and copy-paste brings junk markup. Markdown is a clean, editable halfway house that fits a notes app.",
-      ],
-      craft: [
-        "Preview in the side panel first, then copy or export. You should see what you are taking before you take it. It tidies the article, not a mirror of the whole site.",
-      ],
-      not: [
-        "Not a web-archiving tool, and not a pixel-perfect layout dump. Complex app pages were never meant to be exported as essays.",
+      sections: [
+        {
+          title: "1. What you want to keep is the article, not the whole page",
+          paragraphs: [
+            "When you come across a piece worth archiving, the only part you actually want is the body text. But that body is wrapped in navigation, related-post rails, comment threads, and ads. Copy and paste and you drag along styling and links you'll never use; save a screenshot and you can't search it or edit it; leave it in your bookmarks and the link may rot at any time. So the first thing Page Export does is peel the article out of its packaging — headings, paragraphs, lists, quotes, and code blocks kept as they were, everything else dropped.",
+          ],
+        },
+        {
+          title: "2. Markdown, so you can still edit it later",
+          paragraphs: [
+            "The export format is Markdown, not because it's fashionable but because it's plain enough to last: text any editor can open, ready to drop straight into Obsidian, Notion, or a similar notes app, searchable, and easy to keep under version control. PDFs and screenshots, by contrast, are snapshots you can no longer touch. An article you saved should be material you can keep editing and quoting from, not a photograph you can only look at.",
+          ],
+        },
+        {
+          title: "3. See what you're taking before you decide",
+          paragraphs: [
+            "No tool can extract an article with perfect accuracy. So after you right-click a page and generate the Markdown, the result appears in the side panel first, and you can fix it on the spot: delete a stray paragraph, add a note of your own, adjust a heading level. Once it looks right, copy it or export the .md file. I deliberately didn't build the “one right-click and it's quietly on your disk” version — you should see what you're taking before you commit to it.",
+          ],
+        },
+        {
+          title: "4. It isn't a web archiver",
+          paragraphs: [
+            "It doesn't try to reproduce the original layout pixel for pixel, and it doesn't mirror whole sites. Admin consoles, dashboards, maps, and other complex app pages were never meant to be exported as articles; forcing them into Markdown just yields fragments. Page Export serves one purpose: taking the text worth keeping from this page, cleanly.",
+          ],
+        },
       ],
     },
     "content-summary": {
-      intro:
-        "Facing a long page, you often need to decide whether it is worth reading—not to read it twice. Summary should happen on this page, with the key staying in your hands.",
-      why: [
-        "Sending a whole page to a random summarizer website hands your reading to a stranger. Bring-your-own key and local history are the privacy floor. Full-page and selection cover “this article” and “this passage.”",
-      ],
-      craft: [
-        "The result streams in the side panel and can be paused. Generation should not hijack your scrolling. History is there because you may want the same page tomorrow.",
-      ],
-      not: [
-        "It does not pretend to have read the part you still need to read. A summary is an index, not a substitute. KnowIt also does not hold your model keys.",
+      sections: [
+        {
+          title: "1. Bring summarizing down from the whole page to a passage",
+          paragraphs: [
+            "Summarizing an entire article solves the problem of “reading all of this is exhausting,” but that's not where the need ends. Often you only want to work out what one long stretch in the middle is actually saying, or you're stuck on a single dense section — and yet, for a few hundred words of confusion, you're made to summarize the whole article and then dig through the result for your answer, which ends up slower. Summarizing a selection takes the grain from “the whole page” down to a paragraph, or even a couple of sentences. Highlight whatever isn't clear and hit exactly that, instead of processing a wall of text for one small part of it.",
+          ],
+        },
+        {
+          title: "2. There when called, never breaking your rhythm",
+          paragraphs: [
+            "While you're reading, your attention flows continuously. Jumping out to open another tool, pasting the text in, waiting for output, then switching back to read it — that interruption alone costs real energy. Select the text and a floating button appears; one click starts the summary. The whole path is compressed to its shortest form: you never leave the page, never switch apps, and barely move your eyes. This design tucks the tool entirely behind a gesture. When you want it, it's at hand; when you don't, it never shows up, so nothing intrudes on immersive reading.",
+          ],
+        },
+        {
+          title: "3. Make a thick book thin, and save your attention too",
+          paragraphs: [
+            "Whole-page or selected-passage, the underlying idea is the same: pull the substance out of redundant text. A full summary builds the wide view and lets you grasp the shape of a piece quickly; a passage summary is targeted, clearing one local obstacle at a time. The two work together — use the full summary to judge whether an article deserves a close read, then use passage summaries to chew through the hard parts while reading it properly. Throughout, you stay in charge: not dragged down by length, and not lost among fragments. Every bit of effort goes where it counts.",
+          ],
+        },
+        {
+          title: "4. Natural output, faithful to the source, and restrained",
+          paragraphs: [
+            "Every summary follows the same rules. The language should be fluent and natural, reading like something a person wrote, never stiff or awkward. The content stays strictly faithful to the original: nothing added, nothing altered, nothing twisted. And it says plainly that this is an assistive tool — when a decision matters, go back to the source text. Whether you summarize a whole article in one click or highlight a passage in passing, every summary should be worth the trust placed in it: no hand-waving, no fudging, and no promises it can't keep.",
+          ],
+        },
       ],
     },
     "selection-translate": {
-      intro:
-        "Translation should appear next to the words—not throw you into another website. One sentence at a time, or a bilingual reading of the whole page.",
-      why: [
-        "Tab-switching breaks reading. Instant selection covers “this word / this sentence.” Full-page bilingual covers “I want to finish this in my language.”",
-      ],
-      craft: [
-        "The floating toolbar shows up only after a selection, then gets out of the way. Full-page translation lives in the side panel; the original stays. Results can be cached locally so the same sentence is not billed twice.",
-      ],
-      not: [
-        "Not a dictionary, and not a KnowIt-hosted model. Word Inspector is a separate app. Translation only converts language.",
+      sections: [
+        {
+          title: "1. Why not just use Chrome's built-in translation",
+          paragraphs: [
+            "Chrome does ship with translation, but for users in mainland China there's a very practical problem: it needs a VPN to work at all. Plenty of people simply can't use it, and those who can often fight an unstable connection. On top of that, the entry point is tucked into the top-right corner of the browser, and the result appears in a panel that feels detached from the page you're reading — you have to dismiss it by hand when you're done. Translate a long passage and that little panel can't hold it, which leaves you scrolling inside a popup.",
+          ],
+        },
+        {
+          title: "2. Not just web pages — anywhere",
+          paragraphs: [
+            "Chrome's translation only handles text on a web page. Copy a foreign-language passage out of a PDF, a chat window, an email, or an image, and you're on your own. At that point the only option is to open Google Translate or DeepL, paste it in, and hit the button — too many steps. That's the problem Selection Translate is meant to solve: wherever the text came from, once it's on your clipboard, one shortcut gives you the translation without a detour through another site.",
+          ],
+        },
+        {
+          title: "3. The translation belongs right under your eyes",
+          paragraphs: [
+            "The point of translating is to help you understand what's in front of you, so the result should appear next to your cursor or beside the text you selected, with no need to move your eyes across the screen. When you trigger a clipboard translation by shortcut, the result should show up close at hand too, and disappear with another keypress once you've read it, leaving your workflow intact. That kind of immediate feedback feels far more natural than a new tab or a panel pinned to the corner.",
+          ],
+        },
       ],
     },
     "word-inspector": {
-      intro:
-        "You already know the language; you are just stuck on a word. Inspector gives pronunciation and meaning instead of turning the whole sentence into another language.",
-      why: [
-        "Translation pulls you out of the original. When learning, or reading Chinese on the web, people need “how is this read, what does it mean.” It is separate from Selection Translate so two jobs do not collapse into one button.",
-      ],
-      craft: [
-        "Select, then “inspect.” The panel appears in place—light, fast, dismissible. The model is yours to choose, because gloss quality varies and that choice should be yours.",
-      ],
-      not: [
-        "Not a full dictionary product, and not a quote-and-example mill. It only helps you over the word in front of you.",
+      sections: [
+        {
+          title: "1. It came from something small but real",
+          paragraphs: [
+            "There was no grand market research behind this feature, and no trend to chase. It came purely from a small habit of mine: when I'm reading a book or scanning the news and hit an obscure character or an idiom I've never met, I can't help stopping to look it up. That “can't help it” impulse is what made me realize that a need doesn't have to be widespread to deserve being taken seriously — it only has to be real.",
+          ],
+        },
+        {
+          title: "2. Built for the few who like to be exact",
+          paragraphs: [
+            "Honestly, this tool will never have a large audience. In an age of fast reading, most people skip the hard word and move on, and that's fine as long as the gist survives. But there's always a small group with a natural curiosity about language — people who like to pick at the exact wording, who enjoy the settled feeling of having fully digested every term. This tool was made for those lovely few.",
+          ],
+        },
+        {
+          title: "3. Make looking a word up cost nothing",
+          paragraphs: [
+            "If the point is to satisfy curiosity the moment it strikes, the process has to be fast. Reaching for a dictionary means switching apps and typing the word out, which breaks the rhythm of reading badly. The core idea here is “swipe once, and you know” — drag across the word with your mouse and the definition appears immediately. In the instant you want an answer, I want the distance to it to be as short as possible.",
+          ],
+        },
+        {
+          title: "4. Respect every moment you choose to pause",
+          paragraphs: [
+            "With information coming at everyone this fast, being willing to stop for a single word is a precious kind of attention. I don't want to spend that patience on pop-up ads, sprawling encyclopedia entries, or showy animations. The interface stays clean and restrained: the pronunciation and the meaning, stated precisely, and then it steps quietly aside and hands the reading back to you.",
+          ],
+        },
+        {
+          title: "5. A small tool, but an honest one",
+          paragraphs: [
+            "Rather than a powerful piece of productivity software, think of it as a quiet study companion. It won't interrupt you, but the moment you pause to ask, it's there. I believe a good tool doesn't have to please everyone — it only has to feel exactly right, in the moments it's needed, to the people who need it. That's enough.",
+          ],
+        },
       ],
     },
     "smart-writer": {
-      intro:
-        "Writing happens in webpage inputs: comments, forms, admin, docs. The assistant should come to those fields, instead of making you copy into a chat window and paste back.",
-      why: [
-        "Copying back and forth drops context and hands a draft to another product. Presets (polish, grammar, continue, expand, shorten) cover the common “I know this needs a pass.” Custom prompts cover the rest.",
-      ],
-      craft: [
-        "It only appears when an input is focused, as a small control in the corner. Results can replace, insert, or copy—you decide what happens to the original. It never rewrites text you have not confirmed.",
-      ],
-      not: [
-        "Not a standalone editor, and not a popup while you are merely browsing. When the assistant is off, the page should feel as if it were never installed.",
+      sections: [
+        {
+          title: "1. Where the idea came from",
+          paragraphs: [
+            "Writing in WPS Office, I found the built-in AI polish and expand features genuinely useful. A flat, lifeless sentence becomes smoother and fuller with a single click. The catch is that the feature only lives inside WPS. The moment you switch to a browser to write an email, post something, or fill in a form, it's gone.",
+          ],
+        },
+        {
+          title: "2. Where it hurts most",
+          paragraphs: [
+            "That second-guessing multiplies once the writing turns formal — a work email, a project summary, an application letter. You put down one sentence and read it over and over. Is the grammar off? Does the subject actually match the verb? Is the wording appropriate? Does it read gracefully? You already know exactly what you mean; you just can't be sure the sentence lands. So a paragraph that should take five minutes drags on for half an hour, edited and re-edited, each pass leaving you less confident than the last.",
+          ],
+        },
+        {
+          title: "3. The problem worth solving",
+          paragraphs: [
+            "The browser is where most people actually do their typing now, so why shouldn't good writing help be available there? That's what this extension does — it frees “let AI fix my wording” from office software and puts it wherever you happen to be typing. When the moment is formal and the words matter, having a level-headed assistant beside you to check the phrasing and the grammar makes the whole thing far less nerve-racking.",
+          ],
+        },
+        {
+          title: "4. How it works in practice",
+          paragraphs: [
+            "No switching between apps, no copying text somewhere else and pasting it back. Select the text right there in the browser, click once, and AI will smooth the sentence out, stretch it longer, or make it read more appropriately. Social posts, work emails, online forms — it's right there when you reach for it, without breaking your train of thought or making you fight the interface.",
+          ],
+        },
+        {
+          title: "5. What it's really for",
+          paragraphs: [
+            "To let people concentrate on the idea they're trying to express, instead of burning themselves out on word choice. Technology doesn't have to be dazzling. If it can help during the few seconds you're most stuck, that's plenty.",
+          ],
+        },
       ],
     },
   },
