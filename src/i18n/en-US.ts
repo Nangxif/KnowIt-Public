@@ -202,7 +202,7 @@ export const enUS: Messages = {
     "For anyone still using KnowIt 2.3.0, and everyone who already has KnowIt installed.",
   creatorNoteParagraphs: [
     "If you're still using KnowIt 2.3.0, I owe you an apology. There was a design problem in that version: even if you hadn't opened a tool — even if you weren't using it at all — it could still mess up the layout of the page you were reading. Text might pile up, the page might look broken, and it would feel like the website itself had gone wrong. Because it happened in the background, a lot of people never connected it to KnowIt. You might have just thought, “Why did this page suddenly look weird?” The cause was on my side. I'm sorry.",
-    "This is fixed in KnowIt 2.4.0. If you haven't updated yet, installing the new version will stop it from happening again.",
+    "This is fixed in KnowIt 3.0.0. If you haven't updated yet, installing the new version will stop it from happening again.",
     "For now, I'm not planning to add new tools unless an idea comes along that's genuinely worth building on its own. I want to spend the time making what already exists better: smoother to use, more reliable, and less likely to get in your way.",
     "Thank you for using KnowIt. If something still feels off, please keep telling me.",
   ],
@@ -728,13 +728,16 @@ export const enUS: Messages = {
   },
   changelogEntries: [
     {
-      version: "2.4.0",
+      version: "3.0.0",
       date: "2026-09-01",
       items: [
+        "Redesigned the workbench",
+        "Moved usage stats onto the workbench and redesigned them",
+        "Redesigned the history page",
+        "Redesigned the new tab page",
+        "Selection translation now supports a larger, zoomed-in view",
         "Added the free Element Inspector app for inspecting page elements and picking colors",
         "Added the free Ad Cleaner app to hide ads and promotional overlays, with undo support",
-        "Redesigned the app marketplace",
-        "Redesigned the new tab page",
         "Fixed unused apps leaking styles onto the original page, and Media Downloader failing to open",
       ],
     },
