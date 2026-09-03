@@ -23,7 +23,7 @@
   &nbsp;·&nbsp;
   <a href="https://microsoftedge.microsoft.com/addons/detail/knowit/enhdaccokoiadmddhlehmpkmeeaanlll">Edge 扩展商店</a>
   &nbsp;·&nbsp;
-  <a href="./README_EN.md">English</a> | 简体中文
+  <a href="./README_EN.md">English</a> | 简体中文 | <a href="./README_ZH_TW.md">繁體中文</a>
 </p>
 
 ---
