@@ -1,7 +1,7 @@
 import type { Messages } from "./types";
 
 export const enUS: Messages = {
-  documentTitle: "KnowIt — Understand webpages, and make them easier to use",
+  documentTitle: "KnowIt — Read any web page better",
   localeLabel: "EN",
   languageMenuTitle: "Choose language",
   switchToLight: "Switch to light mode",
@@ -16,9 +16,9 @@ export const enUS: Messages = {
   installEdge: "Edge Add-ons",
   installGithub: "GitHub repository",
   brandHomeLabel: "Back to top",
-  heroTitle: "Understand webpages, and make them easier to use",
+  heroTitle: "Read any web page better",
   heroSubtitle:
-    "A privacy-first, modular productivity workbench for the web. Install only the tools you need and assemble your own browser workbench.",
+    "In-page text find, AI summary, selection translation, word lookup, and clean article export. Install only what you need—privacy-first reading tools for the web.",
   heroInstall: "Install the extension",
   heroPurchase: "Buy Lifetime",
   highlightsTitle: "Why KnowIt",
@@ -28,7 +28,7 @@ export const enUS: Messages = {
     "Install only what you need and keep the extension light, tailored to your workflow.",
   highlightPrivacyTitle: "Privacy-first",
   highlightPrivacyBody:
-    "Page content, selections, search and generation history stay local by default—nothing is uploaded to KnowIt servers.",
+    "Page content, selections, in-page find history, and generation results stay local by default—nothing is uploaded to KnowIt servers.",
   highlightByokTitle: "Bring your own API key",
   highlightByokBody:
     "One model settings hub for DeepSeek, OpenAI, Gemini, Moonshot (Kimi), Alibaba DashScope, SiliconFlow, and more.",
@@ -538,17 +538,17 @@ export const enUS: Messages = {
   legalEffectiveAtLabel: "Effective",
   privacyPolicy: {
     title: "Privacy Policy",
-    updatedAt: "August 12, 2026",
-    effectiveAt: "August 12, 2026",
+    updatedAt: "September 6, 2026",
+    effectiveAt: "September 6, 2026",
     intro:
-      "Welcome to KnowIt. KnowIt is a browser extension designed with a local-first approach. This Privacy Policy explains how information related to your use of the product is handled, and where the boundaries lie among local storage, browser sync, and third-party services.",
+      "Welcome to KnowIt. KnowIt is a browser extension designed with a local-first approach and focused on helping you read web pages more effectively. This Privacy Policy explains how information related to your use of the product is handled, and where the boundaries lie among local storage, browser sync, and third-party services.",
     sections: [
       {
         title: "1. Definitions",
         items: [
           {
             id: "1.1",
-            text: "“KnowIt” means this browser extension and the installable tools in its marketplace, including but not limited to text search, summarization, selection translation, and page export.",
+            text: "“KnowIt” means this browser extension and the installable tools in its marketplace, including but not limited to in-page text find, summarization, selection translation, and page export.",
           },
           {
             id: "1.2",
@@ -565,7 +565,7 @@ export const enUS: Messages = {
         items: [
           {
             id: "2.1",
-            text: "Local-first: page content, selected text, search history, summaries, and generated results are processed locally by default and are not uploaded to KnowIt’s own servers.",
+            text: "Local-first: page content, selected text, in-page find history, summaries, and generated results are processed locally by default and are not uploaded to KnowIt’s own servers.",
           },
           {
             id: "2.2",
@@ -578,6 +578,10 @@ export const enUS: Messages = {
           {
             id: "2.4",
             text: "Activation info: when you purchase and activate premium features, you may need to provide an order number and bound email for authorization checks.",
+          },
+          {
+            id: "2.5",
+            text: "New tab web search: if you use the search box on the new tab page, queries are submitted through the browser’s Chrome Search API and handled by your default search provider. KnowIt does not replace, modify, or record your search provider settings or query content.",
           },
         ],
       },
@@ -626,8 +630,8 @@ export const enUS: Messages = {
   },
   userAgreement: {
     title: "User Agreement",
-    updatedAt: "August 12, 2026",
-    effectiveAt: "August 12, 2026",
+    updatedAt: "September 6, 2026",
+    effectiveAt: "September 6, 2026",
     intro:
       "This User Agreement is a legal agreement between you and KnowIt regarding your use of this extension and its tools. By using KnowIt, you confirm that you have read, understood, and agreed to this Agreement. If you do not agree, please stop using the product.",
     sections: [
@@ -636,7 +640,7 @@ export const enUS: Messages = {
         items: [
           {
             id: "1.1",
-            text: "KnowIt provides browser-extension productivity tools. You can install marketplace modules as needed to search, summarize, translate, export, and more.",
+            text: "KnowIt provides browser-extension reading productivity tools. You can install marketplace modules as needed for in-page find, summarization, translation, export, and more. Web search on the new tab page is handled by your browser’s default search provider; KnowIt does not provide or replace a default search service.",
           },
           {
             id: "1.2",
@@ -735,6 +739,7 @@ export const enUS: Messages = {
         "Moved usage stats onto the workbench and redesigned them",
         "Redesigned the history page",
         "Redesigned the new tab page",
+        "New tab search now uses your browser’s default search engine via the Chrome Search API instead of a built-in engine picker",
         "Selection translation now supports a larger, zoomed-in view",
         "Added the free Element Inspector app for inspecting page elements and picking colors",
         "Added the free Ad Cleaner app to hide ads and promotional overlays, with undo support",

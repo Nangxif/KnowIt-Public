@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <strong>Understand webpages, and make them easier to use. A privacy-first, modular productivity workbench for the web.</strong>
+  <strong>Read any web page better: in-page text find, AI summary, selection translation, word lookup, and clean article export.</strong>
 </p>
 
 <p align="center">
@@ -36,12 +36,12 @@ Browsing, reading papers, studying, or creating content often comes with familia
 * Worry that online AI or translation tools upload sensitive page data
 * Fragmented paid tools, or lock-in to a single AI vendor
 
-**KnowIt** is a privacy-first, modular browser toolkit that runs locally. Click the extension icon to open the **Workbench**, then install or remove tools like building blocks and assemble a personal web workbench.
+**KnowIt** is a browser extension focused on reading web pages more effectively. Click the extension icon to open the **Workbench**, install in-page find, AI summary, selection translation, and other tools on demand, and keep reading assistance local and private.
 
 **Highlights:**
 
 * **Modular workbench** — install only what you need
-* **Privacy-first** — page content, selections, search and generation history stay local by default; nothing is uploaded to KnowIt servers
+* **Privacy-first** — page content, selections, in-page find history, and generation results stay local by default; nothing is uploaded to KnowIt servers
 * **Bring your own API key** — unified model settings for DeepSeek, OpenAI, Gemini, Moonshot (Kimi), Alibaba DashScope, SiliconFlow, and more
 * **Polished UX** — shortcuts, context menus, selection toolbar, side panel, workbench, new tab page, and light/dark themes
 
@@ -52,7 +52,7 @@ Browsing, reading papers, studying, or creating content often comes with familia
 The current release is **3.0.0** (2026-09-01). Compared with 2.x:
 
 * **Workbench redesign** — the extension home is now a two-pane workbench for installing apps, configuring models, toolbar, blacklist, sync, activation, and usage stats
-* **New tab redesign** — every new tab can search the web, jump into common AI chats, and show daily headlines
+* **New tab redesign** — every new tab can search with your browser’s default search engine, jump into common AI chats, and show daily headlines; the search box uses the Chrome Search API instead of a built-in engine picker
 * **History redesign** — summaries, translations, word lookups, writing, and exports now live in the workbench
 * **New free app: Ad Cleaner** — after permission is granted, ads and promo overlays hide automatically; right-click to clean / restore, with undo
 * **New free app: Element Inspector** — inspect page element properties and pick any on-screen pixel color
@@ -97,7 +97,7 @@ The workbench is KnowIt’s control center:
 
 Every new tab lets you:
 
-* Search the web
+* Search with your browser’s default search engine (via the Chrome Search API, respecting your browser search settings)
 * Jump into DeepSeek, Kimi, Qwen, Doubao, ChatGPT, Claude, Gemini, Yuanbao, and other AI chats
 * Check daily headlines
 
@@ -218,7 +218,7 @@ Content Summary, Selection Translate, Word Inspector, Smart Writing, and Page Ex
 
 ## Usage Notice
 
-* **Local-first data**: Page content, selections, search history, summaries, and generation results are processed locally by default and are not uploaded to KnowIt servers.
+* **Local-first data**: Page content, selections, in-page find history, summaries, and generation results are processed locally by default and are not uploaded to KnowIt servers.
 * **API keys stay local**: Keys you configure are stored only in local browser settings.
 * **Config sync**: Install state and preferences may sync with your Google account via browser sync.
 * **Activation limits**: Each Afdian order + bound email supports up to 2 activations.

@@ -1,7 +1,7 @@
 import type { Messages } from "./types";
 
 export const zhCN: Messages = {
-  documentTitle: "KnowIt — 读懂网页，也让网页更好用",
+  documentTitle: "KnowIt — 专注帮你读懂网页",
   localeLabel: "简体",
   languageMenuTitle: "选择语言",
   switchToLight: "切换成浅色模式",
@@ -16,9 +16,9 @@ export const zhCN: Messages = {
   installEdge: "Edge 应用商店",
   installGithub: "GitHub 仓库",
   brandHomeLabel: "回到顶部",
-  heroTitle: "读懂网页，也让网页更好用",
+  heroTitle: "专注帮你读懂网页",
   heroSubtitle:
-    "一站式、隐私优先的模块化网页效率工作台。像搭积木一样安装工具，把浏览器变成你的超级工作台。",
+    "页内文字查找、AI 总结、划词翻译与查词、正文导出。按需安装，隐私优先，把浏览器变成你的网页阅读助手。",
   heroInstall: "安装扩展",
   heroPurchase: "购买终身版",
   highlightsTitle: "为什么选择 KnowIt",
@@ -27,7 +27,7 @@ export const zhCN: Messages = {
   highlightMarketplaceBody: "按需安装，保持扩展轻量流畅，只留下符合你工作流的工具。",
   highlightPrivacyTitle: "隐私优先",
   highlightPrivacyBody:
-    "网页内容、选中文字、搜索与生成记录默认只存本地，不上传至 KnowIt 服务器。",
+    "网页内容、选中文字、页内查找与生成记录默认只存本地，不上传至 KnowIt 服务器。",
   highlightByokTitle: "自备 API Key",
   highlightByokBody:
     "统一模型配置中心，支持 DeepSeek、OpenAI、Gemini、Moonshot、阿里云百炼、SiliconFlow 等。",
@@ -526,17 +526,17 @@ export const zhCN: Messages = {
   legalEffectiveAtLabel: "生效时间",
   privacyPolicy: {
     title: "隐私协议",
-    updatedAt: "2026年8月12日",
-    effectiveAt: "2026年8月12日",
+    updatedAt: "2026年9月6日",
+    effectiveAt: "2026年9月6日",
     intro:
-      "欢迎使用 KnowIt。KnowIt 是一款以本地优先为设计原则的浏览器扩展。本隐私协议旨在说明我如何处理与你使用产品相关的信息，以及这些信息在本地、浏览器同步与第三方服务之间的边界。",
+      "欢迎使用 KnowIt。KnowIt 是一款以本地优先为设计原则的浏览器扩展，专注提升网页阅读效率。本隐私协议旨在说明我如何处理与你使用产品相关的信息，以及这些信息在本地、浏览器同步与第三方服务之间的边界。",
     sections: [
       {
         title: "第1条 定义",
         items: [
           {
             id: "1.1",
-            text: "「KnowIt」指本浏览器扩展及其应用市场中可安装的各类工具，包括但不限于文字搜索、内容总结、划词翻译、页面导出等功能。",
+            text: "「KnowIt」指本浏览器扩展及其应用市场中可安装的各类工具，包括但不限于页内文字查找、内容总结、划词翻译、页面导出等功能。",
           },
           {
             id: "1.2",
@@ -553,7 +553,7 @@ export const zhCN: Messages = {
         items: [
           {
             id: "2.1",
-            text: "本地优先：网页内容、选中文字、搜索记录、总结文本、生成结果等，默认仅在本地处理，不会上传至 KnowIt 自有服务器。",
+            text: "本地优先：网页内容、选中文字、页内查找记录、总结文本、生成结果等，默认仅在本地处理，不会上传至 KnowIt 自有服务器。",
           },
           {
             id: "2.2",
@@ -566,6 +566,10 @@ export const zhCN: Messages = {
           {
             id: "2.4",
             text: "激活信息：当你购买并激活高级功能时，可能需要填写订单号与绑定邮箱，以便完成授权校验。请妥善保管相关信息。",
+          },
+          {
+            id: "2.5",
+            text: "新标签页联网搜索：若你在新标签页使用搜索框，查询将通过浏览器 Chrome Search API 提交，由你设置的默认搜索引擎处理；KnowIt 不会替换、修改或记录你的搜索提供商设置与查询内容。",
           },
         ],
       },
@@ -614,8 +618,8 @@ export const zhCN: Messages = {
   },
   userAgreement: {
     title: "用户协议",
-    updatedAt: "2026年8月12日",
-    effectiveAt: "2026年8月12日",
+    updatedAt: "2026年9月6日",
+    effectiveAt: "2026年9月6日",
     intro:
       "本用户协议是你与 KnowIt 之间关于使用本扩展及其中工具的法律协议。开始使用即表示你已阅读、理解并同意接受本协议。若你不同意，请停止使用本产品。",
     sections: [
@@ -624,7 +628,7 @@ export const zhCN: Messages = {
         items: [
           {
             id: "1.1",
-            text: "KnowIt 提供浏览器扩展形态的网页效率工具，支持按需安装应用市场中的功能模块，帮助你完成搜索、总结、翻译、导出等工作。",
+            text: "KnowIt 提供浏览器扩展形态的网页阅读效率工具，支持按需安装应用市场中的功能模块，帮助你完成页内查找、总结、翻译、导出等工作。新标签页中的联网搜索由浏览器默认搜索引擎处理，KnowIt 不提供或替换默认搜索服务。",
           },
           {
             id: "1.2",
@@ -723,6 +727,7 @@ export const zhCN: Messages = {
         "数据统计挪到工作台页面并重新设计",
         "重新设计历史记录页面",
         "重新设计新 tab 页",
+        "新标签页搜索改用浏览器默认搜索引擎（Chrome Search API），不再内置搜索引擎切换",
         "划词翻译支持放大查看",
         "新增免费应用「元素检查器」：检查页面元素并吸取颜色",
         "新增免费应用「广告清除」：自动隐藏网页广告与推广浮层，支持撤销",
