@@ -8,7 +8,7 @@ export const enUS: Messages = {
   switchToDark: "Switch to dark mode",
   navHighlights: "Features",
   navShowcase: "Showcase",
-  navApps: "Apps",
+  navApps: "Tools",
   navPricing: "Pricing",
   navDocs: "Docs",
   navInstall: "Install",
@@ -23,7 +23,7 @@ export const enUS: Messages = {
   heroPurchase: "Buy Lifetime",
   highlightsTitle: "Why KnowIt",
   highlightsSubtitle: "Fewer extensions. The capabilities you actually use stay local.",
-  highlightMarketplaceTitle: "Modular marketplace",
+  highlightMarketplaceTitle: "Modular tools",
   highlightMarketplaceBody:
     "Install only what you need and keep the extension light, tailored to your workflow.",
   highlightPrivacyTitle: "Privacy-first",
@@ -35,11 +35,11 @@ export const enUS: Messages = {
   highlightUxTitle: "Polished UX",
   highlightUxBody:
     "Shortcuts, context menus, a selection toolbar, a side panel, and light/dark themes.",
-  appsTitle: "Apps",
-  appsSubtitle: "After installing the extension, enable these tools from the marketplace.",
+  appsTitle: "Tools",
+  appsSubtitle: "After installing the extension, enable these tools from the workbench.",
   paidTag: "Paid",
   freeTag: "Free",
-  detailsTitle: "App details",
+  detailsTitle: "Tool details",
   detailsClose: "Close",
   categoryEfficiency: "Productivity",
   categoryAi: "AI tools",
@@ -74,7 +74,7 @@ export const enUS: Messages = {
     "smart-writer":
       "AI assistant for webpage inputs—polish, grammar fix, continue, expand, shorten, or custom prompts.",
   },
-  showcaseTitle: "See the apps in action",
+  showcaseTitle: "See the tools in action",
   showcaseSubtitle:
     "Interface mockups that follow the site theme and language—the real UI lives in the extension.",
   showcaseCaptions: {
@@ -122,7 +122,7 @@ export const enUS: Messages = {
       keyPointsLabel: "Key points",
       keyPoints: [
         "Privacy-first: data stays local by default",
-        "Install apps on demand from the marketplace",
+        "Install tools on demand from the workbench",
         "Bring your own API key and pick any model",
       ],
     },
@@ -181,14 +181,14 @@ export const enUS: Messages = {
     },
   },
   pricingTitle: "Free vs Lifetime",
-  pricingSubtitle: "Start with free tools, then unlock every premium app with a one-time purchase.",
+  pricingSubtitle: "Start with free tools, then unlock every premium tool with a one-time purchase.",
   freePlan: "Free",
   freePrice: "¥ 0",
   freeDescription: "Text Search, Media Downloader, Ad Cleaner, and Element Inspector.",
   lifetimePlan: "Lifetime",
   lifetimePrice: "¥ 6.66",
   lifetimeDescription:
-    "One-time purchase that unlocks all premium tools. Future premium apps stay included—no subscription.",
+    "One-time purchase that unlocks all premium tools. Future premium tools stay included—no subscription.",
   pricingFeatures: [
     "Page Export, Content Summary, Selection Translate, Word Inspector, Smart Writing & Polishing",
     "Plus future premium tools",
@@ -319,7 +319,7 @@ export const enUS: Messages = {
       sections: [
         {
           paragraphs: [
-            "Ads are just about everywhere on the web. Pop-ups, sidebars, floating layers — they don't only break your concentration, they blur the line between what's content and what's promotion. There are plenty of ad filters out there, some paid, some technically formidable. As an early-stage extension built by one person, this one can't yet match those mature paid products on detection accuracy.",
+            "Ads are just about everywhere on the web. Pop-ups, sidebars, floating layers — they don't only break your concentration, they blur the line between what's content and what's promotion. There are plenty of ad filters out there, some paid, some technically formidable. As an early-stage tool built by one person, this one can't yet match those mature paid products on detection accuracy.",
             "None of that stops me from building something honest, useful, and steadily getting better.",
             "The thinking behind Ad Cleaner comes down to three ideas:",
           ],
@@ -333,7 +333,7 @@ export const enUS: Messages = {
         {
           title: "2. Grant permission once, then forget about it",
           paragraphs: [
-            "Ad structures on some sites are genuinely complex, and the extension has to read and parse page elements to filter them accurately. On first install it asks for the permissions it needs — not to over-reach, but so that filtering can happen automatically on every page afterwards.",
+            "Ad structures on some sites are genuinely complex, and the tool has to read and parse page elements to filter them accurately. On first install it asks for the permissions it needs — not to over-reach, but so that filtering can happen automatically on every page afterwards.",
             "After that one grant, day-to-day use takes zero effort. No subscribing to rule lists, no maintaining a blocklist, no tuning filter strength; ordinary users shouldn't have to spend energy on configuration. Install it, grant it, open a page, and leave the rest to me. You won't get stuck because you “don't know how to set it up.” I'd rather you simply notice, at some point, that pages feel a little cleaner today.",
           ],
         },
@@ -350,13 +350,13 @@ export const enUS: Messages = {
         {
           paragraphs: [
             "You're browsing, you come across a color scheme you like, a nice typeface, spacing that just feels right — and you want to note it down for later. The trouble is that all of it lives in the page's code, and the only way to see it is to open the browser's developer tools. That thing does far too much: screens of English and numbers that send any non-programmer straight back out.",
-            "This extension exists to fix that small annoyance. The idea is simple: skip the complicated parts, do one thing well.",
+            "This tool exists to fix that small annoyance. The idea is simple: skip the complicated parts, do one thing well.",
           ],
         },
         {
           title: "1. Turn heavyweight developer tools into a handy little one",
           paragraphs: [
-            "The browser's built-in inspector is powerful, but it was built for developers, and its panels are stuffed with network requests, error logs, and source debugging that ordinary people never need. This extension cuts all of that away and keeps only what gets used most: pick a color, check a font size, measure some spacing, see what the corner radius is. The interface is clean, it works the moment you open it, and whatever your cursor lands on is what it shows you. Nothing to learn, no shortcuts to memorize.",
+            "The browser's built-in inspector is powerful, but it was built for developers, and its panels are stuffed with network requests, error logs, and source debugging that ordinary people never need. This tool cuts all of that away and keeps only what gets used most: pick a color, check a font size, measure some spacing, see what the corner radius is. The interface is clean, it works the moment you open it, and whatever your cursor lands on is what it shows you. Nothing to learn, no shortcuts to memorize.",
           ],
         },
         {
@@ -507,7 +507,7 @@ export const enUS: Messages = {
         {
           title: "3. The problem worth solving",
           paragraphs: [
-            "The browser is where most people actually do their typing now, so why shouldn't good writing help be available there? That's what this extension does — it frees “let AI fix my wording” from office software and puts it wherever you happen to be typing. When the moment is formal and the words matter, having a level-headed assistant beside you to check the phrasing and the grammar makes the whole thing far less nerve-racking.",
+            "The browser is where most people actually do their typing now, so why shouldn't good writing help be available there? That's what this tool does — it frees “let AI fix my wording” from office software and puts it wherever you happen to be typing. When the moment is formal and the words matter, having a level-headed assistant beside you to check the phrasing and the grammar makes the whole thing far less nerve-racking.",
           ],
         },
         {
@@ -548,7 +548,7 @@ export const enUS: Messages = {
         items: [
           {
             id: "1.1",
-            text: "“KnowIt” means this browser extension and the installable tools in its marketplace, including but not limited to in-page text find, summarization, selection translation, and page export.",
+            text: "“KnowIt” means this browser extension and its installable tools, including but not limited to in-page text find, summarization, selection translation, and page export.",
           },
           {
             id: "1.2",
@@ -573,7 +573,7 @@ export const enUS: Messages = {
           },
           {
             id: "2.3",
-            text: "Config sync: installed apps and preferences may sync across devices through the browser’s built-in sync. KnowIt does not operate a separate cloud account system.",
+            text: "Config sync: installed tools and preferences may sync across devices through the browser’s built-in sync. KnowIt does not operate a separate cloud account system.",
           },
           {
             id: "2.4",
@@ -640,7 +640,7 @@ export const enUS: Messages = {
         items: [
           {
             id: "1.1",
-            text: "KnowIt provides browser-extension reading productivity tools. You can install marketplace modules as needed for in-page find, summarization, translation, export, and more. Web search on the new tab page is handled by your browser’s default search provider; KnowIt does not provide or replace a default search service.",
+            text: "KnowIt provides browser-extension reading productivity tools. You can install tools as needed for in-page find, summarization, translation, export, and more. Web search on the new tab page is handled by your browser’s default search provider; KnowIt does not provide or replace a default search service.",
           },
           {
             id: "1.2",
@@ -741,9 +741,9 @@ export const enUS: Messages = {
         "Redesigned the new tab page",
         "New tab search now uses your browser’s default search engine via the Chrome Search API instead of a built-in engine picker",
         "Selection translation now supports a larger, zoomed-in view",
-        "Added the free Element Inspector app for inspecting page elements and picking colors",
-        "Added the free Ad Cleaner app to hide ads and promotional overlays, with undo support",
-        "Fixed unused apps leaking styles onto the original page, and Media Downloader failing to open",
+        "Added the free Element Inspector tool for inspecting page elements and picking colors",
+        "Added the free Ad Cleaner tool to hide ads and promotional overlays, with undo support",
+        "Fixed unused tools leaking styles onto the original page, and Media Downloader failing to open",
       ],
     },
     {

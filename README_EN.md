@@ -51,13 +51,13 @@ Browsing, reading papers, studying, or creating content often comes with familia
 
 The current release is **3.0.0** (2026-09-01). Compared with 2.x:
 
-* **Workbench redesign** — the extension home is now a two-pane workbench for installing apps, configuring models, toolbar, blacklist, sync, activation, and usage stats
+* **Workbench redesign** — the extension home is now a two-pane workbench for installing tools, configuring models, toolbar, blacklist, sync, activation, and usage stats
 * **New tab redesign** — every new tab can search with your browser’s default search engine, jump into common AI chats, and show daily headlines; the search box uses the Chrome Search API instead of a built-in engine picker
 * **History redesign** — summaries, translations, word lookups, writing, and exports now live in the workbench
-* **New free app: Ad Cleaner** — after permission is granted, ads and promo overlays hide automatically; right-click to clean / restore, with undo
-* **New free app: Element Inspector** — inspect page element properties and pick any on-screen pixel color
+* **New free tool: Ad Cleaner** — after permission is granted, ads and promo overlays hide automatically; right-click to clean / restore, with undo
+* **New free tool: Element Inspector** — inspect page element properties and pick any on-screen pixel color
 * **Selection translation zoom** — open a larger side-panel view of the translation
-* **Stability** — unused apps no longer leak styles onto the host page, and Media Downloader opens reliably again. If you are still on 2.3.0, please update
+* **Stability** — unused tools no longer leak styles onto the host page, and Media Downloader opens reliably again. If you are still on 2.3.0, please update
 
 ---
 
@@ -80,13 +80,13 @@ After payment, open the workbench → **Pricing / Activate**, then enter your **
 
 ## Workbench & New Tab
 
-After installing the extension, click the KnowIt icon to open the **Workbench**. Install the apps you need, then follow the steps below.
+After installing the extension, click the KnowIt icon to open the **Workbench**. Install the tools you need, then follow the steps below.
 
 ### Workbench
 
 The workbench is KnowIt’s control center:
 
-* Browse, install, and uninstall apps, and open each app’s settings
+* Browse, install, and uninstall tools, and open each tool’s settings
 * Configure AI models, the selection toolbar, the plugin blacklist, and cross-device sync
 * Activate the Lifetime plan
 * Review usage stats and full history
@@ -107,9 +107,9 @@ Content Summary, Selection Translate, Word Inspector, Smart Writing, and Page Ex
 
 ---
 
-## Apps & How to Use
+## Tools & How to Use
 
-### Free apps
+### Free tools
 
 #### 1. Text Search (installed by default)
 
@@ -117,7 +117,7 @@ Content Summary, Selection Translate, Word Inspector, Smart Writing, and Page Ex
 * **How to use**:
   1. Press `Ctrl + F` (Mac: `⌘ + F`) on any page to open the search box
   2. Enter keywords to jump and highlight matches
-  3. Customize the shortcut and highlight style in app settings
+  3. Customize the shortcut and highlight style in tool settings
 
 #### 2. Media Downloader (installed by default)
 
@@ -133,7 +133,7 @@ Content Summary, Selection Translate, Word Inspector, Smart Writing, and Page Ex
   1. Grant permission on first use (the onboarding flow can enable it in one click); it will not auto-clean until authorized
   2. After that, newly opened pages hide ads automatically; refresh an already-open tab to apply
   3. You can also right-click a blank area and choose **Hide ads on this page** or **Restore ads on this page**
-  4. In app settings, turn off “Auto-clean when a page loads” or “Keep hiding ads that appear later”
+  4. In tool settings, turn off “Auto-clean when a page loads” or “Keep hiding ads that appear later”
 
 #### 4. Element Inspector
 
@@ -146,13 +146,13 @@ Content Summary, Selection Translate, Word Inspector, Smart Writing, and Page Ex
 
 ---
 
-### Premium apps (Lifetime activation required)
+### Premium tools (Lifetime activation required)
 
 #### 5. Page Export
 
 * **What it does**: Clean up page body content and export an editable Markdown copy.
 * **How to use**:
-  1. Install the app and ensure activation is complete
+  1. Install the tool and ensure activation is complete
   2. Right-click on the page and choose **Generate Markdown**
   3. Review, edit, and export in the side panel; adjust options in settings
 
@@ -160,7 +160,7 @@ Content Summary, Selection Translate, Word Inspector, Smart Writing, and Page Ex
 
 * **What it does**: Summarize a full page or selection with AI and extract key points quickly.
 * **How to use**:
-  1. Configure an API key under **AI Model Settings** in the workbench, then pick a model in this app’s settings
+  1. Configure an API key under **AI Model Settings** in the workbench, then pick a model in this tool’s settings
   2. **Full-page summary**: right-click → **AI Summary**
   3. **Selection summary**: select text → click **Summary** on the floating toolbar (enable under workbench **Toolbar Display**)
   4. Results appear in the side panel; generation can be paused and history is kept locally
@@ -169,17 +169,17 @@ Content Summary, Selection Translate, Word Inspector, Smart Writing, and Page Ex
 
 * **What it does**: Translate selected text instantly, or run AI full-page translation under the originals. Translations can be opened in a larger side-panel view.
 * **How to use**:
-  1. Configure a model, then install the app
+  1. Configure a model, then install the tool
   2. **Selection translate**: select text → click **Translate** on the floating toolbar; use **Zoom** when you need a larger view
   3. **Full-page translate**: right-click → **AI Page Translation**
   4. You can also translate the clipboard with a shortcut, or paste into the translation side panel and press `⌘/Ctrl + Enter`
-  5. Adjust target language and model in app settings
+  5. Adjust target language and model in tool settings
 
 #### 8. Selection Word Inspector
 
 * **What it does**: Show Pinyin and detailed definitions for selected text to aid reading and learning.
 * **How to use**:
-  1. Configure a model, then install the app
+  1. Configure a model, then install the tool
   2. Select text → click **Inspector** on the floating toolbar
   3. View pronunciation and definitions in the panel; manage model and history in settings
 
@@ -187,7 +187,7 @@ Content Summary, Selection Translate, Word Inspector, Smart Writing, and Page Ex
 
 * **What it does**: AI assistant for webpage inputs—polish, grammar fix, continue, expand, shorten, or custom prompts.
 * **How to use**:
-  1. Configure a model, install the app, and enable the input-field assistant in settings
+  1. Configure a model, install the tool, and enable the input-field assistant in settings
   2. Focus any input / textarea; a floating button appears at the bottom-right
   3. Choose a preset (Polish, Grammar, Continue, Expand, Shorten, etc.) or enter a custom instruction
   4. Replace the original, insert, or copy the result
@@ -202,17 +202,17 @@ Content Summary, Selection Translate, Word Inspector, Smart Writing, and Page Ex
 2. **Open the workbench**  
    Click the extension icon to open the KnowIt workbench and finish onboarding. Enabling free Ad Cleaner is recommended.
 
-3. **Install apps**  
+3. **Install tools**  
    Install the tools you need from the workbench; premium tools require activation first.
 
 4. **(Optional) Configure AI**  
-   Open **AI Model Settings** in the workbench, add provider, model name, API URL, and API key, then set a default model. Each AI app can still pick its own model.
+   Open **AI Model Settings** in the workbench, add provider, model name, API URL, and API key, then set a default model. Each AI tool can still pick its own model.
 
 5. **(Optional) Purchase & activate**  
    Pay via [Afdian checkout](https://ifdian.net/order/create?product_type=1&plan_id=bb5efc0a8f0c11f181ee52540025c377&sku=%5B%7B%22sku_id%22%3A%22bb66d6fa8f0c11f1bada52540025c377%22,%22count%22%3A1%7D%5D&viokrz_ex=0), then enter email + order number under Pricing / Activate.
 
 6. **Start using**  
-   Trigger installed apps via shortcut, context menu, selection toolbar, or the new tab page.
+   Trigger installed tools via shortcut, context menu, selection toolbar, or the new tab page.
 
 ---
 
