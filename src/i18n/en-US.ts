@@ -737,7 +737,7 @@ export const enUS: Messages = {
       items: [
         "Translate directly from page input fields",
         "Translation now picks the target language from the source text",
-        "Translate, word lookup, and summary now show clear feedback for empty content, overly long text, or failed requests",
+        "Translate, word lookup, and summary now flag content that clearly can’t be processed, with better handling and a matching message",
         "Only one tool overlay is shown at a time, so panels no longer stack",
         "Aligned the AI writing popup with other tools",
         "Unified small icons across the app",

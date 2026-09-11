@@ -53,7 +53,7 @@ The current release is **3.1.0** (2026-09-11):
 
 * **Translate in input fields** — translate text directly from page input boxes
 * **Auto target language** — translation picks the target language from the source text
-* **Clearer AI failures** — translate, word lookup, and summary now give clear feedback for empty content, overly long text, or failed requests
+* **Unsuitable content warnings** — translate, word lookup, and summary now flag content that clearly can’t be processed, with better handling and a matching message
 * **One overlay at a time** — tool panels no longer stack on top of each other
 * **Writing popup aligned** — the smart writing overlay matches other tools
 * **Unified icons** — small icons across the app now use one set
