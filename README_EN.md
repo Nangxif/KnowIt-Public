@@ -13,7 +13,7 @@
   <a href="https://github.com/Nangxif/KnowIt-Public/issues">
     <img src="https://img.shields.io/github/issues/Nangxif/KnowIt-Public.svg?style=flat-square&color=red" alt="GitHub issues" />
   </a>
-  <img src="https://img.shields.io/badge/version-3.0.0-3b82f6?style=flat-square" alt="KnowIt 3.0.0" />
+  <img src="https://img.shields.io/badge/version-3.1.0-3b82f6?style=flat-square" alt="KnowIt 3.1.0" />
 </p>
 
 <p align="center">
@@ -47,17 +47,17 @@ Browsing, reading papers, studying, or creating content often comes with familia
 
 ---
 
-## What's new in 3.0.0
+## What's new in 3.1.0
 
-The current release is **3.0.0** (2026-09-01). Compared with 2.x:
+The current release is **3.1.0** (2026-09-11):
 
-* **Workbench redesign** — the extension home is now a two-pane workbench for installing tools, configuring models, toolbar, blacklist, sync, activation, and usage stats
-* **New tab redesign** — every new tab can search with your browser’s default search engine, jump into common AI chats, and show daily headlines; the search box uses the Chrome Search API instead of a built-in engine picker
-* **History redesign** — summaries, translations, word lookups, writing, and exports now live in the workbench
-* **New free tool: Ad Cleaner** — after permission is granted, ads and promo overlays hide automatically; right-click to clean / restore, with undo
-* **New free tool: Element Inspector** — inspect page element properties and pick any on-screen pixel color
-* **Selection translation zoom** — open a larger side-panel view of the translation
-* **Stability** — unused tools no longer leak styles onto the host page, and Media Downloader opens reliably again. If you are still on 2.3.0, please update
+* **Translate in input fields** — translate text directly from page input boxes
+* **Auto target language** — translation picks the target language from the source text
+* **Clearer AI failures** — translate, word lookup, and summary now give clear feedback for empty content, overly long text, or failed requests
+* **One overlay at a time** — tool panels no longer stack on top of each other
+* **Writing popup aligned** — the smart writing overlay matches other tools
+* **Unified icons** — small icons across the app now use one set
+* **Official site on new tab** — the new tab page links to the KnowIt website
 
 ---
 

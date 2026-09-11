@@ -732,6 +732,19 @@ export const enUS: Messages = {
   },
   changelogEntries: [
     {
+      version: "3.1.0",
+      date: "2026-09-11",
+      items: [
+        "Translate directly from page input fields",
+        "Translation now picks the target language from the source text",
+        "Translate, word lookup, and summary now show clear feedback for empty content, overly long text, or failed requests",
+        "Only one tool overlay is shown at a time, so panels no longer stack",
+        "Aligned the AI writing popup with other tools",
+        "Unified small icons across the app",
+        "Added an official website entry on the new tab page",
+      ],
+    },
+    {
       version: "3.0.0",
       date: "2026-09-01",
       items: [
