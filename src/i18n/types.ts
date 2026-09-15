@@ -149,6 +149,59 @@ export type PhilosophyDoc = {
   not?: readonly string[];
 };
 
+export type PromoSlideCopy = {
+  lead: string;
+  rest: string;
+  subtitle: string;
+};
+
+export type PromoStatsMetricCopy = {
+  label: string;
+  value: string;
+  unit: string;
+  caption: string;
+};
+
+export type PromoStatsMessages = {
+  lead: string;
+  rest: string;
+  subtitle: string;
+  panelTitle: string;
+  panelHint: string;
+  days: PromoStatsMetricCopy;
+  uses: PromoStatsMetricCopy;
+  tokens: PromoStatsMetricCopy;
+  success: PromoStatsMetricCopy;
+  latency: PromoStatsMetricCopy;
+};
+
+export type PromoMessages = {
+  brandKicker: string;
+  brand: PromoSlideCopy;
+  popup: PromoSlideCopy;
+  privacy: PromoSlideCopy;
+  privacyLocal: string;
+  privacySync: string;
+  setup: PromoSlideCopy;
+  workbenchTitle: string;
+  localTitle: string;
+  localPageContent: string;
+  localFindHistory: string;
+  localGenerations: string;
+  storeName: string;
+  addToChrome: string;
+  storeRating: string;
+  storeShare: string;
+  storeType: string;
+  storeCategory: string;
+  stats: PromoStatsMessages;
+  tileTagline: string;
+  previewPrev: string;
+  previewNext: string;
+  previewCapture: string;
+  previewHint: string;
+};
+
 export type Messages = {
   documentTitle: string;
   localeLabel: string;
@@ -179,6 +232,7 @@ export type Messages = {
   highlightByokBody: string;
   highlightUxTitle: string;
   highlightUxBody: string;
+  promo: PromoMessages;
   appsTitle: string;
   appsSubtitle: string;
   paidTag: string;

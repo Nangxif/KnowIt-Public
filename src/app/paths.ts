@@ -14,6 +14,16 @@ export const LEGAL_PATHS = {
 export const DOCS_INDEX_PATH = "/docs";
 export const CREATOR_NOTE_DOC_ID = "creator-note";
 
+export const PROMO_INDEX_PATH = "/promo";
+export const PROMO_TILE_PATH = "/promo/tile";
+export const PROMO_SLIDE_PATHS = {
+  brand: "/promo/brand",
+  popup: "/promo/popup",
+  privacy: "/promo/privacy",
+  stats: "/promo/stats",
+  setup: "/promo/setup",
+} as const;
+
 export type LegalTab = keyof typeof LEGAL_PATHS;
 
 export function withBasename(path: string) {

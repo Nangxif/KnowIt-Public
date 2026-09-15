@@ -11,18 +11,26 @@ export default function SiteLayout({
   children,
   showNav = true,
   showFooter = true,
+  fullBleed = false,
+  showWave = true,
+  wavePaused = false,
 }: {
   children: ReactNode;
   showNav?: boolean;
   showFooter?: boolean;
+  fullBleed?: boolean;
+  showWave?: boolean;
+  wavePaused?: boolean;
 }) {
   const { themeName } = useTheme();
 
   return (
-    <div className={styles.page}>
-      <PixelWaveBackground themeName={themeName} />
+    <div className={`${styles.page} ${fullBleed ? styles.fullBleed : ""}`}>
+      {showWave ? (
+        <PixelWaveBackground themeName={themeName} paused={wavePaused} />
+      ) : null}
       {showNav ? <SiteNav /> : null}
-      <main className={styles.main}>{children}</main>
+      <main className={fullBleed ? styles.fullBleedMain : styles.main}>{children}</main>
       {showFooter ? <SiteFooter /> : null}
     </div>
   );

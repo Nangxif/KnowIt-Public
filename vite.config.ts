@@ -5,7 +5,18 @@ import { defineConfig, type Plugin } from "vite";
 import react from "@vitejs/plugin-react";
 
 /** SPA routes that must return HTTP 200 on GitHub Pages (not just 404.html). */
-const STATIC_SPA_ROUTES = ["privacy", "terms", "changelog"] as const;
+const STATIC_SPA_ROUTES = [
+  "privacy",
+  "terms",
+  "changelog",
+  "promo",
+  "promo/brand",
+  "promo/popup",
+  "promo/privacy",
+  "promo/stats",
+  "promo/setup",
+  "promo/tile",
+] as const;
 
 function spaFallback(): Plugin {
   return {

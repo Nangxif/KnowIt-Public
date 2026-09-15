@@ -15,6 +15,7 @@ const CORE_FILL = 0.58;
 
 type PixelWaveBackgroundProps = {
   themeName: KnowItThemeName;
+  paused?: boolean;
 };
 
 function fract(value: number) {
@@ -59,6 +60,7 @@ function themeColors(themeName: KnowItThemeName) {
 
 export default function PixelWaveBackground({
   themeName,
+  paused = false,
 }: PixelWaveBackgroundProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -128,7 +130,7 @@ export default function PixelWaveBackground({
     };
 
     const tick = (now: number) => {
-      if (!running || document.hidden || motionQuery.matches) {
+      if (!running || document.hidden || paused || motionQuery.matches) {
         return;
       }
 
@@ -147,7 +149,7 @@ export default function PixelWaveBackground({
       stopLoop();
       syncBackingStore();
 
-      if (motionQuery.matches) {
+      if (paused || motionQuery.matches) {
         draw(STATIC_TIME);
         return;
       }
@@ -181,7 +183,7 @@ export default function PixelWaveBackground({
       document.removeEventListener("visibilitychange", onVisibility);
       motionQuery.removeEventListener("change", startLoop);
     };
-  }, [themeName]);
+  }, [themeName, paused]);
 
   return (
     <canvas
