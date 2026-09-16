@@ -105,7 +105,7 @@ export const zhTW: Messages = {
         caption: "",
       },
     },
-    tileTagline: "頁內搜尋、劃詞翻譯、AI 總結",
+    tileHeadline: "專注幫你，讀懂網頁",
     previewPrev: "上一張",
     previewNext: "下一張",
     previewCapture: "打開截圖頁",

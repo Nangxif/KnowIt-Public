@@ -27,7 +27,7 @@
   min-width: 0;
   min-height: 0;
   overflow: hidden;
-  background: #3b82f6;
+  background: #252526;
 }
 
 :global(html[data-knowit-capture="1"] *) {
@@ -38,7 +38,7 @@
   width: 440px;
   height: 280px;
   min-height: 280px;
-  background: #3b82f6;
+  background: #252526;
 }
 
 .slide {
@@ -400,175 +400,55 @@
 }
 
 .tileSlide {
+  position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 0;
-  overflow: hidden;
-  padding: 28px 32px;
-  grid-template-columns: none;
-}
-
-.tileSlide .blobA,
-.tileSlide .blobB {
-  display: block;
-}
-
-.tileSlide .blobA {
-  width: 72%;
-  aspect-ratio: 1;
-  height: auto;
-  top: -46%;
-  right: -18%;
-  background: color-mix(in srgb, #fff 48%, var(--promo-accent));
-  opacity: 0.42;
-}
-
-.tileSlide .blobB {
-  width: 58%;
-  aspect-ratio: 1;
-  height: auto;
-  bottom: -48%;
-  left: -28%;
-  background: color-mix(in srgb, #1e3a8a 62%, var(--promo-accent));
-  opacity: 0.5;
-}
-
-.tileSlide .kicker {
-  margin-bottom: 14px;
-  gap: 10px;
-}
-
-.tileSlide .logo {
-  width: 40px;
-  height: 40px;
-}
-
-.tileSlide .kickerName {
-  font-size: 20px;
-}
-
-.tileSlide .headline {
-  font-size: 34px;
-  gap: 8px;
-}
-
-.tileSlide .lead {
-  padding: 0;
-  color: #fff;
-  background: none;
-}
-
-.tileSlide .rest {
-  padding: 0.08em 0.22em;
-  color: #1c2430;
-  background: #fff;
-}
-
-.tileTagline {
-  max-width: 22em;
-  margin: 14px 0 0;
-  color: rgba(255, 255, 255, 0.88);
-  font-size: 14px;
-  line-height: 1.45;
-}
-
-.marqueeSlide {
-  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
-  gap: 40px;
-  overflow: hidden;
-  padding: 36px 0 36px 56px;
-  align-items: stretch;
-}
-
-.marqueeSlide .blobA,
-.marqueeSlide .blobB {
-  display: block;
-}
-
-.marqueeSlide .blobA {
-  width: 58%;
-  aspect-ratio: 1;
-  height: auto;
-  top: -42%;
-  right: 18%;
-  background: color-mix(in srgb, #fff 48%, var(--promo-accent));
-  opacity: 0.4;
-}
-
-.marqueeSlide .blobB {
-  width: 48%;
-  aspect-ratio: 1;
-  height: auto;
-  bottom: -52%;
-  left: -18%;
-  background: color-mix(in srgb, #1e3a8a 62%, var(--promo-accent));
-  opacity: 0.48;
-}
-
-.marqueeSlide .copy {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  height: 100%;
-}
-
-.marqueeSlide .kicker {
-  margin-bottom: 18px;
-  gap: 12px;
-}
-
-.marqueeSlide .logo {
-  width: 56px;
-  height: 56px;
-}
-
-.marqueeSlide .kickerName {
-  font-size: 28px;
-}
-
-.marqueeSlide .headline {
-  font-size: 52px;
-  gap: 10px;
-}
-
-.marqueeSlide .lead {
-  padding: 0;
-  color: #fff;
-  background: none;
-}
-
-.marqueeSlide .rest {
-  padding: 0.08em 0.22em;
-  color: #1c2430;
-  background: #fff;
-}
-
-.marqueeTagline {
-  max-width: 22em;
-  margin: 18px 0 0;
-  color: rgba(255, 255, 255, 0.88);
-  font-size: 18px;
-  line-height: 1.5;
-}
-
-.marqueeSlide .artField {
-  align-self: stretch;
-  align-items: stretch;
-  justify-content: stretch;
-}
-
-.marqueeSlide .brandPanel {
-  height: 100%;
-}
-
-.marqueeSlide .brandPanel img {
+  align-items: center;
+  gap: 16px;
+  box-sizing: border-box;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: top left;
+  overflow: hidden;
+  padding: 24px 28px 24px 16px;
+  color: #cccccc;
+  background:
+    radial-gradient(80% 100% at 8% 50%, rgba(0, 120, 212, 0.18), transparent 55%),
+    linear-gradient(145deg, #2a2d2e 0%, #252526 46%, #1e1e1e 100%);
+}
+
+.tileLogo {
+  display: block;
+  flex: none;
+  width: 210px;
+  height: auto;
+  object-fit: contain;
+}
+
+.tileCopy {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-width: 0;
+  gap: 14px;
+}
+
+.tileName {
+  color: #fff;
+  font-size: 56px;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 0.92;
+}
+
+.tileHeadline {
+  margin: 0;
+  color: #cccccc;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  white-space: nowrap;
 }
 
 .brandSlide .artField {
@@ -1061,11 +941,6 @@
 
   .tileSlide {
     overflow: hidden;
-  }
-
-  .marqueeSlide {
-    overflow: hidden;
-    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
   }
 
   .brandSlide {

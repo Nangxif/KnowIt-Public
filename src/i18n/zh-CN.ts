@@ -105,7 +105,7 @@ export const zhCN: Messages = {
         caption: "",
       },
     },
-    tileTagline: "页内搜索、划词翻译、AI 总结",
+    tileHeadline: "专注帮你，读懂网页",
     previewPrev: "上一张",
     previewNext: "下一张",
     previewCapture: "打开截图页",

@@ -195,7 +195,7 @@ export type PromoMessages = {
   storeType: string;
   storeCategory: string;
   stats: PromoStatsMessages;
-  tileTagline: string;
+  tileHeadline: string;
   previewPrev: string;
   previewNext: string;
   previewCapture: string;

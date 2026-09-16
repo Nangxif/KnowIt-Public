@@ -46,12 +46,3 @@
   min-height: 0;
   overflow: hidden;
 }
-
-:global(html[data-knowit-marquee="1"]) .fullBleed,
-:global(html[data-knowit-marquee="1"]) .fullBleedMain {
-  width: 1400px;
-  height: 560px;
-  min-width: 0;
-  min-height: 0;
-  overflow: hidden;
-}

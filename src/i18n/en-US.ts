@@ -108,7 +108,7 @@ export const enUS: Messages = {
         caption: "",
       },
     },
-    tileTagline: "Find, translate, and summarize in the page",
+    tileHeadline: "Read any page better",
     previewPrev: "Previous",
     previewNext: "Next",
     previewCapture: "Open capture page",

@@ -5,32 +5,19 @@ import { useTranslation } from "@/i18n/context";
 import SiteLayout from "@/shell/SiteLayout";
 
 import PromoCanvas from "./PromoCanvas";
-import { Headline, Poster } from "./Poster";
 import styles from "./promo.module.css";
 
 function TileView() {
   const { text } = useTranslation();
 
   return (
-    <Poster tone="field" accent="#3b82f6" className={styles.tileSlide}>
-      <div className={styles.kicker}>
-        <img src={assetUrl("brand/logo-dark.png")} alt="" className={styles.logo} />
-        <img
-          src={assetUrl("brand/logo-light.png")}
-          alt=""
-          className={`${styles.logo} ${styles.logoLight}`}
-        />
-        <span className={styles.kickerName}>{text.promo.brandKicker}</span>
+    <div className={styles.tileSlide}>
+      <img src={assetUrl("promo/tile-icon.png")} alt="" className={styles.tileLogo} />
+      <div className={styles.tileCopy}>
+        <div className={styles.tileName}>{text.promo.brandKicker}</div>
+        <p className={styles.tileHeadline}>{text.promo.tileHeadline}</p>
       </div>
-      <Headline
-        copy={{
-          lead: text.promo.brand.lead,
-          rest: text.promo.brand.rest,
-          subtitle: "",
-        }}
-      />
-      <p className={styles.tileTagline}>{text.promo.tileTagline}</p>
-    </Poster>
+    </div>
   );
 }
 
