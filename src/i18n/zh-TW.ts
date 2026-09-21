@@ -798,6 +798,16 @@ export const zhTW: Messages = {
   },
   changelogEntries: [
     {
+      version: "3.2.0",
+      date: "2026-09-21",
+      items: [
+        "文字搜索新增快捷側邊欄，查找更順手",
+        "元素檢查器支持提取頁面風格",
+        "資源下載器支持右鍵描述圖片",
+        "優化新標籤頁的新聞展示",
+      ],
+    },
+    {
       version: "3.1.0",
       date: "2026-09-11",
       items: [

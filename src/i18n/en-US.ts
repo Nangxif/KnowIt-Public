@@ -812,6 +812,16 @@ export const enUS: Messages = {
   },
   changelogEntries: [
     {
+      version: "3.2.0",
+      date: "2026-09-21",
+      items: [
+        "Text Search now has a quick side panel for faster lookups",
+        "Element Inspector can extract a page’s visual style",
+        "Media Downloader can describe images from the right-click menu",
+        "Improved news display on the new tab page",
+      ],
+    },
+    {
       version: "3.1.0",
       date: "2026-09-11",
       items: [

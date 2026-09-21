@@ -798,6 +798,16 @@ export const zhCN: Messages = {
   },
   changelogEntries: [
     {
+      version: "3.2.0",
+      date: "2026-09-21",
+      items: [
+        "文字搜索新增快捷侧边栏，查找更顺手",
+        "元素检查器支持提取页面风格",
+        "资源下载器支持右键描述图片",
+        "优化新标签页的新闻展示",
+      ],
+    },
+    {
       version: "3.1.0",
       date: "2026-09-11",
       items: [

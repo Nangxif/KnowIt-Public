@@ -13,7 +13,6 @@
   <a href="https://github.com/Nangxif/KnowIt-Public/issues">
     <img src="https://img.shields.io/github/issues/Nangxif/KnowIt-Public.svg?style=flat-square&color=red" alt="GitHub issues" />
   </a>
-  <img src="https://img.shields.io/badge/version-3.1.0-3b82f6?style=flat-square" alt="KnowIt 3.1.0" />
 </p>
 
 <p align="center">
@@ -23,7 +22,7 @@
   &nbsp;·&nbsp;
   <a href="https://microsoftedge.microsoft.com/addons/detail/knowit/enhdaccokoiadmddhlehmpkmeeaanlll">Edge Add-ons</a>
   &nbsp;·&nbsp;
-  English | <a href="./README.md">简体中文</a> | <a href="./README_ZH_TW.md">繁體中文</a>
+  <a href="./README.md">简体中文</a> | <a href="./README_ZH_TW.md">繁體中文</a> | English
 </p>
 
 ---
@@ -44,20 +43,6 @@ Browsing, reading papers, studying, or creating content often comes with familia
 * **Privacy-first** — page content, selections, in-page find history, and generation results stay local by default; nothing is uploaded to KnowIt servers
 * **Bring your own API key** — unified model settings for DeepSeek, OpenAI, Gemini, Moonshot (Kimi), Alibaba DashScope, SiliconFlow, and more
 * **Polished UX** — shortcuts, context menus, selection toolbar, side panel, workbench, new tab page, and light/dark themes
-
----
-
-## What's new in 3.1.0
-
-The current release is **3.1.0** (2026-09-11):
-
-* **Translate in input fields** — translate text directly from page input boxes
-* **Auto target language** — translation picks the target language from the source text
-* **Unsuitable content warnings** — translate, word lookup, and summary now flag content that clearly can’t be processed, with better handling and a matching message
-* **One overlay at a time** — tool panels no longer stack on top of each other
-* **Writing popup aligned** — the smart writing overlay matches other tools
-* **Unified icons** — small icons across the app now use one set
-* **Official site on new tab** — the new tab page links to the KnowIt website
 
 ---
 
@@ -99,7 +84,7 @@ Every new tab lets you:
 
 * Search with your browser’s default search engine (via the Chrome Search API, respecting your browser search settings)
 * Jump into DeepSeek, Kimi, Qwen, Doubao, ChatGPT, Claude, Gemini, Yuanbao, and other AI chats
-* Check daily headlines
+* Browse clearer daily headlines
 
 ### History
 
@@ -113,18 +98,19 @@ Content Summary, Selection Translate, Word Inspector, Smart Writing, and Page Ex
 
 #### 1. Text Search (installed by default)
 
-* **What it does**: Search webpage text like a code editor, with case matching, result navigation, and custom highlights.
+* **What it does**: Search webpage text like a code editor, with case matching, result navigation, and custom highlights; also available from a quick side panel.
 * **How to use**:
-  1. Press `Ctrl + F` (Mac: `⌘ + F`) on any page to open the search box
+  1. Press `Ctrl + F` (Mac: `⌘ + F`) on any page to open the search box, or open it from the quick side panel
   2. Enter keywords to jump and highlight matches
   3. Customize the shortcut and highlight style in tool settings
 
 #### 2. Media Downloader (installed by default)
 
-* **What it does**: Scan and extract images and videos from the current page, with preview and batch download.
+* **What it does**: Scan and extract images and videos from the current page, with preview and batch download; you can also describe an image from the right-click menu.
 * **How to use**:
   1. Right-click on the page and choose **Media Downloader**
   2. Filter, preview, and batch-download in the side panel
+  3. Right-click an image to describe it
 
 #### 3. Ad Cleaner (installed by default)
 
@@ -137,11 +123,11 @@ Content Summary, Selection Translate, Word Inspector, Smart Writing, and Page Ex
 
 #### 4. Element Inspector
 
-* **What it does**: Click a page element to view a Figma-like properties panel, and pick any on-screen pixel with the eyedropper.
+* **What it does**: Click a page element to view a Figma-like properties panel, pick any on-screen pixel with the eyedropper, and extract the page’s visual style.
 * **How to use**:
   1. Install **Element Inspector** from the workbench
   2. Right-click a blank area and choose **Inspect page elements**, or press `Alt+Shift+C`
-  3. Hover to inspect properties, click to pin; use the bottom toolbar to switch Inspect / Eyedropper
+  3. Hover to inspect properties, click to pin; use the bottom toolbar to switch Inspect / Eyedropper, and extract page style
   4. Press `Esc` to exit
 
 ---
