@@ -38,7 +38,7 @@ function spaFallback(): Plugin {
 }
 
 export default defineConfig({
-  base: "/KnowIt-Public/",
+  base: "/",
   plugins: [react(), spaFallback()],
   resolve: {
     alias: {

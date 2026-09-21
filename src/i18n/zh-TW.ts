@@ -48,10 +48,11 @@ export const zhTW: Messages = {
     privacy: {
       lead: "記錄僅存",
       rest: "本機",
-      subtitle: "",
+      subtitle: "網頁內容與使用痕跡留在你的瀏覽器裡，KnowIt 不上傳、不代存。",
     },
     privacyLocal: "使用記錄僅存本機",
     privacySync: "設定與訂閱可以跟隨Chrome同步",
+    privacyKey: "模型 Key 自備自管",
     setup: {
       lead: "一鍵安裝",
       rest: "馬上使用",

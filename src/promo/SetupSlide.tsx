@@ -11,8 +11,8 @@ function StoreCursor() {
     <svg className={styles.storeCursor} viewBox="0 0 24 28" aria-hidden>
       <path
         d="M3 2.2 20.6 16.4l-7.4.6 4.2 8.8-3.3 1.6-4.2-8.7L3 22.4Z"
-        fill="#fff"
-        stroke="#1c2430"
+        fill="var(--vscode-button-foreground)"
+        stroke="var(--vscode-editor-background)"
         strokeWidth="1.6"
         strokeLinejoin="round"
       />
@@ -25,7 +25,7 @@ export default function SetupSlide() {
   const siteHost = new URL(siteConfig.officialSiteUrl).hostname;
 
   return (
-    <Poster tone="field" accent="#f07a82" className={styles.setupSlide}>
+    <Poster tone="field" className={styles.setupSlide}>
       <div className={styles.setupCopy}>
         <Headline copy={text.promo.setup} variant="inline" />
       </div>
@@ -33,6 +33,11 @@ export default function SetupSlide() {
         <div className={styles.storeTop}>
           <div className={styles.storeBrand}>
             <img src={assetUrl("brand/logo-dark.png")} alt="" className={styles.storeLogo} />
+            <img
+              src={assetUrl("brand/logo-light.png")}
+              alt=""
+              className={`${styles.storeLogo} ${styles.storeLogoLight}`}
+            />
             <div className={styles.storeName}>{text.promo.storeName}</div>
           </div>
           <div className={styles.storeCta}>

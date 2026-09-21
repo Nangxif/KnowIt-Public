@@ -1,5 +1,3 @@
-import { CheckCircleFilled } from "@ant-design/icons";
-
 import { assetUrl } from "@/config/site";
 import { useTranslation } from "@/i18n/context";
 import type { Locale } from "@/i18n/types";
@@ -44,7 +42,7 @@ function BrandSlide() {
   const { locale, text } = useTranslation();
 
   return (
-    <Poster tone="field" accent="#3b82f6" className={styles.brandSlide}>
+    <Poster tone="field" className={styles.brandSlide}>
       <div className={styles.copy}>
         <BrandMark name={text.promo.brandKicker} />
         <div className={styles.brandHeadline}>
@@ -69,7 +67,7 @@ function PopupSlide() {
   const { locale, text } = useTranslation();
 
   return (
-    <Poster tone="air" accent="#3b82f6" className={styles.popupSlide}>
+    <Poster tone="air" className={styles.popupSlide}>
       <div className={styles.copy}>
         <Headline copy={text.promo.popup} variant="inline" />
       </div>
@@ -91,26 +89,25 @@ function PopupSlide() {
   );
 }
 
+function PrivacyPoint({ title }: { title: string }) {
+  return (
+    <li className={styles.privacyCard}>
+      <div className={styles.privacyCardTitle}>{title}</div>
+    </li>
+  );
+}
+
 function PrivacySlide() {
   const { text } = useTranslation();
 
   return (
-    <Poster tone="field" accent="#2ec99d" className={styles.privacySlide}>
+    <Poster tone="field" className={styles.privacySlide}>
       <div className={styles.copy}>
         <Headline copy={text.promo.privacy} variant="inline" />
-        <ul className={styles.privacyList}>
-          <li>
-            <span className={styles.privacyListRow}>
-              {text.promo.privacyLocal}
-              <CheckCircleFilled className={styles.privacyCheck} />
-            </span>
-          </li>
-          <li>
-            <span className={styles.privacyListRow}>
-              {text.promo.privacySync}
-              <CheckCircleFilled className={styles.privacyCheck} />
-            </span>
-          </li>
+        <ul className={styles.privacyCards}>
+          <PrivacyPoint title={text.promo.privacyLocal} />
+          <PrivacyPoint title={text.promo.privacySync} />
+          <PrivacyPoint title={text.promo.privacyKey} />
         </ul>
       </div>
       <ShieldMark />

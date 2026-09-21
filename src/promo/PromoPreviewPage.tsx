@@ -3,7 +3,7 @@ import { Button } from "antd";
 import { useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 
-import { useTranslation } from "@/i18n/context";
+import { DEFAULT_LOCALE, useTranslation } from "@/i18n/context";
 import { langParamValue } from "@/i18n/params";
 import SiteLayout from "@/shell/SiteLayout";
 import { useTheme } from "@/theme/theme";
@@ -23,7 +23,7 @@ import {
 export default function PromoPreviewPage() {
   const { text, locale } = useTranslation();
   const { themeName } = useTheme();
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
   const [slideId, setSlideId] = useState<PromoSlideId>(PROMO_SLIDE_IDS[0]);
 
@@ -33,6 +33,13 @@ export default function PromoPreviewPage() {
       delete document.documentElement.dataset.knowitPromo;
     };
   }, []);
+
+  useEffect(() => {
+    if (searchParams.get("lang")) return;
+    const next = new URLSearchParams(searchParams);
+    next.set("lang", langParamValue(DEFAULT_LOCALE));
+    setSearchParams(next, { replace: true });
+  }, [searchParams, setSearchParams]);
 
   const params = new URLSearchParams(searchParams);
   if (!params.get("lang")) params.set("lang", langParamValue(locale));

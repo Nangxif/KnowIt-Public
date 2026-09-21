@@ -51,10 +51,11 @@ export const enUS: Messages = {
     privacy: {
       lead: "History",
       rest: "on-device",
-      subtitle: "",
+      subtitle: "Page content and usage stay in your browser—KnowIt does not upload or host them.",
     },
     privacyLocal: "Usage history stays on this device",
     privacySync: "Settings and subscription can follow Chrome Sync",
+    privacyKey: "Your model keys, your control",
     setup: {
       lead: "One-click install",
       rest: "start using it",

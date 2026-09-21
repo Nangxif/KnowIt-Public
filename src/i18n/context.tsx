@@ -6,7 +6,7 @@ import {
   useState,
   type PropsWithChildren,
 } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useLocation, useSearchParams } from "react-router-dom";
 
 import { enUS } from "./en-US";
 import { parseLangParam, langParamValue } from "./params";
@@ -51,6 +51,10 @@ function readUrlLocale(): Locale | null {
   }
 }
 
+function isPromoPath(pathname: string) {
+  return pathname === "/promo" || pathname.startsWith("/promo/");
+}
+
 function applyLocale(locale: Locale) {
   document.documentElement.lang = LOCALE_HTML_LANG[locale];
   document.title = dictionaries[locale].documentTitle;
@@ -65,17 +69,20 @@ type LocaleContextValue = {
 const LocaleContext = createContext<LocaleContextValue | null>(null);
 
 export function LocaleProvider({ children }: PropsWithChildren) {
+  const location = useLocation();
   const [searchParams, setSearchParams] = useSearchParams();
   const urlLocale = parseLangParam(searchParams.get("lang"));
+  const promoRoute = isPromoPath(location.pathname);
   const [locale, setLocale] = useState<Locale>(
     () => readUrlLocale() ?? DEFAULT_LOCALE,
   );
 
   useEffect(() => {
-    const next = urlLocale ?? readStoredLocale();
+    // Promo capture/preview defaults to Simplified Chinese unless ?lang= is set.
+    const next = urlLocale ?? (promoRoute ? DEFAULT_LOCALE : readStoredLocale());
     setLocale(next);
     applyLocale(next);
-  }, [urlLocale]);
+  }, [urlLocale, promoRoute]);
 
   useEffect(() => {
     applyLocale(locale);
@@ -92,14 +99,14 @@ export function LocaleProvider({ children }: PropsWithChildren) {
         } catch {
           // Ignore blocked storage.
         }
-        if (urlLocale) {
+        if (urlLocale || promoRoute) {
           const nextParams = new URLSearchParams(searchParams);
           nextParams.set("lang", langParamValue(next));
           setSearchParams(nextParams, { replace: true });
         }
       },
     }),
-    [locale, urlLocale, searchParams, setSearchParams],
+    [locale, urlLocale, promoRoute, searchParams, setSearchParams],
   );
 
   return (

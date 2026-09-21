@@ -182,6 +182,7 @@ export type PromoMessages = {
   privacy: PromoSlideCopy;
   privacyLocal: string;
   privacySync: string;
+  privacyKey: string;
   setup: PromoSlideCopy;
   workbenchTitle: string;
   localTitle: string;

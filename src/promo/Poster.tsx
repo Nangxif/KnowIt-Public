@@ -11,18 +11,22 @@ export function Poster({
   children,
 }: {
   tone: "field" | "air";
-  accent: string;
+  /** Optional override; defaults to KnowIt `--vscode-button-background` via CSS. */
+  accent?: string;
   className?: string;
   children: ReactNode;
 }) {
   return (
     <div
       className={`${styles.slide} ${tone === "field" ? styles.field : styles.air}${className ? ` ${className}` : ""}`}
-      style={{ "--promo-accent": accent } as CSSProperties}
+      style={accent ? ({ "--promo-accent": accent } as CSSProperties) : undefined}
     >
       <div className={styles.wash} aria-hidden />
-      <div className={styles.blobA} aria-hidden />
-      <div className={styles.blobB} aria-hidden />
+      <div className={styles.glowA} aria-hidden />
+      <div className={styles.glowB} aria-hidden />
+      <div className={styles.glowC} aria-hidden />
+      <div className={styles.frost} aria-hidden />
+      <div className={styles.grid} aria-hidden />
       {children}
     </div>
   );
