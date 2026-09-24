@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN" data-knowit-theme="vscode-dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/brand/icon-128.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="KnowIt — 专注帮你读懂网页：页内文字查找、AI 总结、划词翻译与查词、正文导出，一站式提升网页阅读效率。"
+    />
+    <title>KnowIt</title>
+    <script>
+      try {
+        var params = new URLSearchParams(location.search);
+        var themeParam = params.get("theme");
+        var theme = localStorage.getItem("knowItTheme");
+        if (themeParam === "light" || themeParam === "vscode-light") {
+          theme = "vscode-light";
+        } else if (themeParam === "dark" || themeParam === "vscode-dark") {
+          theme = "vscode-dark";
+        }
+        if (theme === "vscode-dark" || theme === "vscode-light") {
+          document.documentElement.dataset.knowitTheme = theme;
+          document.documentElement.style.colorScheme =
+            theme === "vscode-dark" ? "dark" : "light";
+        }
+        var localeParam = params.get("lang");
+        var locale = localStorage.getItem("knowItLocale");
+        if (
+          localeParam === "zh-CN" ||
+          localeParam === "zh" ||
+          localeParam === "zh-cn" ||
+          localeParam === "cn"
+        ) {
+          locale = "zh-CN";
+        } else if (
+          localeParam === "zh-TW" ||
+          localeParam === "zh-tw" ||
+          localeParam === "tw"
+        ) {
+          locale = "zh-TW";
+        } else if (
+          localeParam === "en-US" ||
+          localeParam === "en" ||
+          localeParam === "en-us"
+        ) {
+          locale = "en-US";
+        }
+        if (locale === "zh-CN" || locale === "zh-TW" || locale === "en-US") {
+          document.documentElement.lang =
+            locale === "en-US" ? "en" : locale;
+        }
+      } catch (e) {}
+    </script>
+    <script type="module" crossorigin src="/assets/index-U1Uxsruu.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-COwjtTUu.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
