@@ -813,6 +813,18 @@ export const enUS: Messages = {
   },
   changelogEntries: [
     {
+      version: "3.2.1",
+      date: "2026-09-30",
+      items: [
+        "Added a history shortcut in the top-right corner of the new tab page",
+        "History now keeps the selected item after a refresh",
+        "Fixed the image recognition popup appearing in the wrong place",
+        "Fixed image recognition allowing models that don't support images",
+        "Updated the model list",
+        "Added suggestions for choosing a model",
+      ],
+    },
+    {
       version: "3.2.0",
       date: "2026-09-21",
       items: [
