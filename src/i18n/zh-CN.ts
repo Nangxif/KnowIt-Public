@@ -799,6 +799,13 @@ export const zhCN: Messages = {
   },
   changelogEntries: [
     {
+      version: "3.2.2",
+      date: "2026-10-09",
+      items: [
+        "修复广告清除识别错误",
+      ],
+    },
+    {
       version: "3.2.1",
       date: "2026-09-30",
       items: [

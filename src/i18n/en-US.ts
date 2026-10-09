@@ -813,6 +813,13 @@ export const enUS: Messages = {
   },
   changelogEntries: [
     {
+      version: "3.2.2",
+      date: "2026-10-09",
+      items: [
+        "Fixed incorrect ad detection in Ad Cleaner",
+      ],
+    },
+    {
       version: "3.2.1",
       date: "2026-09-30",
       items: [

@@ -799,6 +799,13 @@ export const zhTW: Messages = {
   },
   changelogEntries: [
     {
+      version: "3.2.2",
+      date: "2026-10-09",
+      items: [
+        "修復廣告清除識別錯誤",
+      ],
+    },
+    {
       version: "3.2.1",
       date: "2026-09-30",
       items: [
