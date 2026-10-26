@@ -14,5 +14,6 @@ export function isDocsDocId(value: string): value is DocsDocId {
 }
 
 export function docsPath(docId: DocsDocId = CREATOR_NOTE_DOC_ID) {
+  if (docId === CREATOR_NOTE_DOC_ID) return "/docs";
   return `/docs/${docId}`;
 }

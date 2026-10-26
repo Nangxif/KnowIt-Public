@@ -173,6 +173,16 @@
   font-weight: 700;
 }
 
+.moreLink {
+  color: var(--vscode-textLink-foreground, #3794ff);
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.moreLink:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 820px) {
   .page {
     grid-template-columns: 1fr;

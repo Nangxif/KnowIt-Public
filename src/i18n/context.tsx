@@ -3,21 +3,17 @@ import {
   useContext,
   useEffect,
   useMemo,
-  useState,
   type PropsWithChildren,
 } from "react";
-import { useLocation, useSearchParams } from "react-router-dom";
+import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 
 import { enUS } from "./en-US";
 import { parseLangParam, langParamValue } from "./params";
+import { isPromoPath, localizePath } from "./routing";
+import { knownBarePath, knownHash, themeSearch } from "./safePath";
 import { zhCN } from "./zh-CN";
 import { zhTW } from "./zh-TW";
-import {
-  LOCALES,
-  LOCALE_HTML_LANG,
-  type Locale,
-  type Messages,
-} from "./types";
+import { LOCALE_HTML_LANG, type Locale, type Messages } from "./types";
 
 export const LOCALE_STORAGE_KEY = "knowItLocale";
 export const DEFAULT_LOCALE: Locale = "zh-CN";
@@ -28,38 +24,6 @@ const dictionaries: Record<Locale, Messages> = {
   "en-US": enUS,
 };
 
-const isLocale = (value: unknown): value is Locale =>
-  typeof value === "string" && (LOCALES as readonly string[]).includes(value);
-
-function readStoredLocale(): Locale {
-  try {
-    const stored = window.localStorage.getItem(LOCALE_STORAGE_KEY);
-    if (isLocale(stored)) return stored;
-  } catch {
-    // Ignore blocked storage.
-  }
-  return DEFAULT_LOCALE;
-}
-
-function readUrlLocale(): Locale | null {
-  try {
-    return parseLangParam(
-      new URLSearchParams(window.location.search).get("lang"),
-    );
-  } catch {
-    return null;
-  }
-}
-
-function isPromoPath(pathname: string) {
-  return pathname === "/promo" || pathname.startsWith("/promo/");
-}
-
-function applyLocale(locale: Locale) {
-  document.documentElement.lang = LOCALE_HTML_LANG[locale];
-  document.title = dictionaries[locale].documentTitle;
-}
-
 type LocaleContextValue = {
   locale: Locale;
   text: Messages;
@@ -68,45 +32,65 @@ type LocaleContextValue = {
 
 const LocaleContext = createContext<LocaleContextValue | null>(null);
 
-export function LocaleProvider({ children }: PropsWithChildren) {
+export function LocaleProvider({
+  locale,
+  children,
+}: PropsWithChildren<{ locale: Locale }>) {
   const location = useLocation();
+  const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
-  const urlLocale = parseLangParam(searchParams.get("lang"));
   const promoRoute = isPromoPath(location.pathname);
-  const [locale, setLocale] = useState<Locale>(
-    () => readUrlLocale() ?? DEFAULT_LOCALE,
-  );
+  const queryLocale = parseLangParam(searchParams.get("lang"));
+  const activeLocale = promoRoute && queryLocale ? queryLocale : locale;
 
   useEffect(() => {
-    // Promo capture/preview defaults to Simplified Chinese unless ?lang= is set.
-    const next = urlLocale ?? (promoRoute ? DEFAULT_LOCALE : readStoredLocale());
-    setLocale(next);
-    applyLocale(next);
-  }, [urlLocale, promoRoute]);
+    document.documentElement.lang = LOCALE_HTML_LANG[activeLocale];
+  }, [activeLocale]);
 
   useEffect(() => {
-    applyLocale(locale);
-  }, [locale]);
+    if (promoRoute || !queryLocale) return;
+    navigate(
+      {
+        pathname: localizePath(knownBarePath(location.pathname), queryLocale),
+        search: themeSearch(searchParams),
+        hash: knownHash(location.hash),
+      },
+      { replace: true },
+    );
+  }, [promoRoute, queryLocale, location.pathname, location.hash, navigate, searchParams]);
 
   const value = useMemo<LocaleContextValue>(
     () => ({
-      locale,
-      text: dictionaries[locale],
+      locale: activeLocale,
+      text: dictionaries[activeLocale],
       changeLanguage: (next) => {
-        setLocale(next);
         try {
           window.localStorage.setItem(LOCALE_STORAGE_KEY, next);
         } catch {
           // Ignore blocked storage.
         }
-        if (urlLocale || promoRoute) {
+        if (promoRoute) {
           const nextParams = new URLSearchParams(searchParams);
           nextParams.set("lang", langParamValue(next));
           setSearchParams(nextParams, { replace: true });
+          return;
         }
+        navigate({
+          pathname: localizePath(knownBarePath(location.pathname), next),
+          search: themeSearch(searchParams),
+          hash: knownHash(location.hash),
+        });
       },
     }),
-    [locale, urlLocale, promoRoute, searchParams, setSearchParams],
+    [
+      activeLocale,
+      promoRoute,
+      searchParams,
+      setSearchParams,
+      navigate,
+      location.pathname,
+      location.hash,
+    ],
   );
 
   return (
@@ -120,6 +104,11 @@ export function useTranslation() {
     throw new Error("useTranslation must be used within LocaleProvider");
   }
   return context;
+}
+
+export function useLocalizedPath() {
+  const { locale } = useTranslation();
+  return (path: string) => localizePath(path, locale);
 }
 
 export { LOCALES } from "./types";

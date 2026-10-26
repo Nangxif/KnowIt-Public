@@ -1,4 +1,4 @@
-import { langParamValue } from "@/i18n/params";
+import { localizePath } from "@/i18n/routing";
 import type { Locale } from "@/i18n/types";
 import { themeParamValue, type KnowItThemeName } from "@/theme/params";
 
@@ -39,7 +39,6 @@ export function legalPageSrc(
 ) {
   const params = new URLSearchParams({
     theme: themeParamValue(themeName),
-    lang: langParamValue(locale),
   });
-  return withBasename(`${LEGAL_PATHS[tab]}?${params.toString()}`);
+  return `${localizePath(LEGAL_PATHS[tab], locale)}?${params.toString()}`;
 }

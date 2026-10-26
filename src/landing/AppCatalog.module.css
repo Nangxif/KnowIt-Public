@@ -109,6 +109,15 @@
   font-weight: 780;
 }
 
+.cardTitleLink {
+  color: inherit;
+  text-decoration: none;
+}
+
+.cardTitleLink:hover {
+  text-decoration: underline;
+}
+
 .category {
   margin-top: 6px;
   color: var(--vscode-descriptionForeground);

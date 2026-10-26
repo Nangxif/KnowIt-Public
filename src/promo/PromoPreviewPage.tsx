@@ -3,8 +3,9 @@ import { Button } from "antd";
 import { useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 
-import { DEFAULT_LOCALE, useTranslation } from "@/i18n/context";
+import { useLocalizedPath, useTranslation } from "@/i18n/context";
 import { langParamValue } from "@/i18n/params";
+import { PageMeta } from "@/seo/head";
 import SiteLayout from "@/shell/SiteLayout";
 import { useTheme } from "@/theme/theme";
 import { themeParamValue } from "@/theme/params";
@@ -22,6 +23,7 @@ import {
 
 export default function PromoPreviewPage() {
   const { text, locale } = useTranslation();
+  const to = useLocalizedPath();
   const { themeName } = useTheme();
   const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
@@ -37,17 +39,23 @@ export default function PromoPreviewPage() {
   useEffect(() => {
     if (searchParams.get("lang")) return;
     const next = new URLSearchParams(searchParams);
-    next.set("lang", langParamValue(DEFAULT_LOCALE));
+    next.set("lang", langParamValue(locale));
     setSearchParams(next, { replace: true });
-  }, [searchParams, setSearchParams]);
+  }, [locale, searchParams, setSearchParams]);
 
   const params = new URLSearchParams(searchParams);
   if (!params.get("lang")) params.set("lang", langParamValue(locale));
   if (!params.get("theme")) params.set("theme", themeParamValue(themeName));
-  const captureTo = `${promoSlidePath(slideId)}?${params.toString()}`;
+  const captureTo = `${to(promoSlidePath(slideId))}?${params.toString()}`;
 
   return (
     <SiteLayout showNav={false} showFooter={false} fullBleed showWave={false}>
+      <PageMeta
+        title={text.documentTitle}
+        description={text.entityDefinition}
+        pathname="/promo"
+        robots="noindex, nofollow"
+      />
       <div className={styles.previewPage}>
         <div className={styles.previewBar}>
           <p className={styles.previewMeta}>{text.promo.previewHint}</p>

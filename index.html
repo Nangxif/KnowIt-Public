@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="KnowIt — 专注帮你读懂网页：页内文字查找、AI 总结、划词翻译与查词、正文导出，一站式提升网页阅读效率。"
+      content="KnowIt 是开源、模块化、隐私优先的网页阅读扩展。支持页内文字查找、划词翻译、AI 总结和正文导出。页面内容默认只在本地处理。"
     />
-    <title>KnowIt</title>
+    <title>KnowIt — 页内查找、划词翻译与 AI 总结的浏览器扩展</title>
     <script>
       try {
         var params = new URLSearchParams(location.search);
@@ -24,9 +24,14 @@
           document.documentElement.style.colorScheme =
             theme === "vscode-dark" ? "dark" : "light";
         }
+        var path = location.pathname;
         var localeParam = params.get("lang");
-        var locale = localStorage.getItem("knowItLocale");
-        if (
+        var locale = null;
+        if (path === "/en" || path.indexOf("/en/") === 0) {
+          locale = "en-US";
+        } else if (path === "/zh-TW" || path.indexOf("/zh-TW/") === 0) {
+          locale = "zh-TW";
+        } else if (
           localeParam === "zh-CN" ||
           localeParam === "zh" ||
           localeParam === "zh-cn" ||
@@ -45,10 +50,11 @@
           localeParam === "en-us"
         ) {
           locale = "en-US";
+        } else {
+          locale = "zh-CN";
         }
         if (locale === "zh-CN" || locale === "zh-TW" || locale === "en-US") {
-          document.documentElement.lang =
-            locale === "en-US" ? "en" : locale;
+          document.documentElement.lang = locale === "en-US" ? "en" : locale;
         }
       } catch (e) {}
     </script>

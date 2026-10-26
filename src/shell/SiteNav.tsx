@@ -5,7 +5,8 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import { DOCS_INDEX_PATH } from "@/app/paths";
 import { assetUrl, siteConfig } from "@/config/site";
-import { useTranslation } from "@/i18n/context";
+import { useLocalizedPath, useTranslation } from "@/i18n/context";
+import { stripLocalePrefix } from "@/i18n/routing";
 import { useTheme } from "@/theme/theme";
 
 import InstallMenu from "./InstallMenu";
@@ -21,10 +22,13 @@ const SECTION_LINKS = [
 
 export default function SiteNav() {
   const { text } = useTranslation();
+  const to = useLocalizedPath();
   const { themeName, toggleTheme } = useTheme();
   const location = useLocation();
   const navigate = useNavigate();
   const [isNavFloating, setIsNavFloating] = useState(false);
+  const barePath = stripLocalePrefix(location.pathname);
+  const homePath = to("/");
 
   useEffect(() => {
     const syncNavFloating = () => {
@@ -48,28 +52,28 @@ export default function SiteNav() {
   }, [location.pathname]);
 
   const goHome = (event: MouseEvent<HTMLAnchorElement>) => {
-    if (location.pathname !== "/") return;
+    if (barePath !== "/") return;
     event.preventDefault();
     if (location.hash) {
-      navigate("/", { replace: true });
+      navigate(homePath, { replace: true });
     }
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   };
 
-  const isDocsPage = location.pathname.startsWith("/docs");
+  const isDocsPage = barePath === "/docs" || barePath.startsWith("/docs/");
 
   return (
     <div className={styles.navShell} data-site-nav="">
       <div className={`${styles.nav} ${isNavFloating ? styles.navScrolled : ""}`}>
         <Link
-          to="/"
+          to={homePath}
           className={styles.brand}
           onClick={goHome}
           aria-label={text.brandHomeLabel}
         >
           <img
             src={assetUrl("brand/logo-dark.png")}
-            alt=""
+            alt="KnowIt"
             className={styles.logo}
           />
           <img
@@ -84,14 +88,14 @@ export default function SiteNav() {
           {SECTION_LINKS.map((link) => (
             <Link
               key={link.hash}
-              to={{ pathname: "/", hash: `#${link.hash}` }}
+              to={{ pathname: homePath, hash: `#${link.hash}` }}
               className={styles.sectionLink}
             >
               {text[link.labelKey]}
             </Link>
           ))}
           <Link
-            to={DOCS_INDEX_PATH}
+            to={to(DOCS_INDEX_PATH)}
             className={`${styles.sectionLink} ${
               isDocsPage ? styles.sectionLinkActive : ""
             }`}

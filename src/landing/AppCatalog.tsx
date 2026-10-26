@@ -3,7 +3,7 @@ import { useState, type CSSProperties } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 import { docsPath } from "@/docs/docIds";
-import { useTranslation } from "@/i18n/context";
+import { useLocalizedPath, useTranslation } from "@/i18n/context";
 import type { AppCategory, Messages } from "@/i18n/types";
 
 import { catalogApps, type AppBadge, type CatalogApp } from "./apps";
@@ -26,8 +26,13 @@ function Badge({ badge, text }: { badge: AppBadge; text: Messages }) {
 
 export default function AppCatalog() {
   const { text } = useTranslation();
+  const to = useLocalizedPath();
   const location = useLocation();
   const [selected, setSelected] = useState<CatalogApp | null>(null);
+  const searchParams = new URLSearchParams(location.search);
+  searchParams.delete("lang");
+  const search = searchParams.toString();
+  const href = (path: string) => (search ? `${to(path)}?${search}` : to(path));
 
   return (
     <section className={styles.section} id="apps" aria-label={text.appsTitle}>
@@ -51,7 +56,15 @@ export default function AppCatalog() {
               </div>
               <Badge badge={app.badge} text={text} />
             </div>
-            <h3>{text.appNames[app.id]}</h3>
+            <h3>
+              <Link
+                to={href(docsPath(app.id))}
+                className={styles.cardTitleLink}
+                onClick={(event) => event.stopPropagation()}
+              >
+                {text.appNames[app.id]}
+              </Link>
+            </h3>
             <div className={styles.category}>
               {categoryLabel(app.category, text)}
             </div>
@@ -93,7 +106,7 @@ export default function AppCatalog() {
             </div>
             <p>{text.appDescriptions[selected.id]}</p>
             <Link
-              to={{ pathname: docsPath(selected.id), search: location.search }}
+              to={href(docsPath(selected.id))}
               className={styles.philosophyLink}
               onClick={() => setSelected(null)}
             >

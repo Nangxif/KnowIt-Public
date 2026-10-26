@@ -203,8 +203,38 @@ export type PromoMessages = {
   previewHint: string;
 };
 
+export type FaqItem = {
+  question: string;
+  answer: string;
+};
+
 export type Messages = {
   documentTitle: string;
+  seoHomeDescription: string;
+  entityDefinition: string;
+  navFaq: string;
+  faqTitle: string;
+  faqSubtitle: string;
+  faqItems: readonly FaqItem[];
+  seoFaqTitle: string;
+  seoFaqDescription: string;
+  seoPrivacyTitle: string;
+  seoPrivacyDescription: string;
+  seoTermsTitle: string;
+  seoTermsDescription: string;
+  seoChangelogTitle: string;
+  seoChangelogDescription: string;
+  seoCreatorTitle: string;
+  seoCreatorDescription: string;
+  toolSeoTitles: Record<AppId, string>;
+  toolFactsTitle: string;
+  toolFactDoesLabel: string;
+  toolFactPrivacy: string;
+  toolFactByok: string;
+  toolFactPriceFree: string;
+  toolFactPricePremium: string;
+  toolFactFaqLink: string;
+  footerResourcesTitle: string;
   localeLabel: string;
   languageMenuTitle: string;
   switchToLight: string;

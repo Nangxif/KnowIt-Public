@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /promo
+Disallow: /en/promo
+Disallow: /zh-TW/promo
+
+Sitemap: https://knowit.nangxif.com/sitemap.xml

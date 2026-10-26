@@ -93,8 +93,9 @@
 .linkColumns {
   display: flex;
   flex: 1;
+  flex-wrap: wrap;
   justify-content: flex-end;
-  gap: 56px;
+  gap: 32px 56px;
   min-width: 0;
 }
 

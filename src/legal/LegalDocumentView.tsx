@@ -10,7 +10,7 @@ function PolicyArticle({ doc }: { doc: LegalDocument }) {
   return (
     <article className={styles.docArticle}>
       <header className={styles.docHeader}>
-        <h2 className={styles.docTitle}>{doc.title}</h2>
+        <h1 className={styles.docTitle}>{doc.title}</h1>
         <div className={styles.docMeta}>
           <span>
             {text.legalUpdatedAtLabel}：{doc.updatedAt}
@@ -52,7 +52,7 @@ export default function LegalDocumentView({ kind }: { kind: LegalTab }) {
     return (
       <article className={styles.docArticle}>
         <header className={styles.docHeader}>
-          <h2 className={styles.docTitle}>{text.changelogTitle}</h2>
+          <h1 className={styles.docTitle}>{text.changelogTitle}</h1>
         </header>
         {text.changelogEntries.map((entry) => (
           <section key={entry.version} className={styles.changelogEntry}>

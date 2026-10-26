@@ -2,8 +2,9 @@ import { useEffect } from "react";
 import { Navigate, useParams, useSearchParams } from "react-router-dom";
 
 import { PROMO_SLIDE_PATHS } from "@/app/paths";
-import { DEFAULT_LOCALE } from "@/i18n/context";
+import { useLocalizedPath, useTranslation } from "@/i18n/context";
 import { langParamValue } from "@/i18n/params";
+import { PageMeta } from "@/seo/head";
 import SiteLayout from "@/shell/SiteLayout";
 
 import PromoCanvas from "./PromoCanvas";
@@ -12,6 +13,8 @@ import { isPromoSlideId } from "./slides";
 
 export default function PromoCapturePage() {
   const { slideId } = useParams();
+  const { locale, text } = useTranslation();
+  const to = useLocalizedPath();
   const [searchParams, setSearchParams] = useSearchParams();
   const search = searchParams.toString();
   const suffix = search ? `?${search}` : "";
@@ -29,16 +32,22 @@ export default function PromoCapturePage() {
   useEffect(() => {
     if (searchParams.get("lang")) return;
     const next = new URLSearchParams(searchParams);
-    next.set("lang", langParamValue(DEFAULT_LOCALE));
+    next.set("lang", langParamValue(locale));
     setSearchParams(next, { replace: true });
-  }, [searchParams, setSearchParams]);
+  }, [locale, searchParams, setSearchParams]);
 
   if (!isPromoSlideId(slideId)) {
-    return <Navigate to={`${PROMO_SLIDE_PATHS.brand}${suffix}`} replace />;
+    return <Navigate to={`${to(PROMO_SLIDE_PATHS.brand)}${suffix}`} replace />;
   }
 
   return (
     <SiteLayout showNav={false} showFooter={false} fullBleed showWave={false}>
+      <PageMeta
+        title={text.documentTitle}
+        description={text.entityDefinition}
+        pathname={`/promo/${slideId}`}
+        robots="noindex, nofollow"
+      />
       <PromoCanvas>
         <PromoSlideView id={slideId} />
       </PromoCanvas>

@@ -1,10 +1,11 @@
 import { GithubOutlined } from "@ant-design/icons";
 import { Modal } from "antd";
-import { useState, type CSSProperties } from "react";
+import { useState, type CSSProperties, type MouseEvent } from "react";
+import { Link } from "react-router-dom";
 
-import { legalPageSrc, type LegalTab } from "@/app/paths";
+import { DOCS_INDEX_PATH, LEGAL_PATHS, legalPageSrc, type LegalTab } from "@/app/paths";
 import { assetUrl, siteConfig } from "@/config/site";
-import { useTranslation } from "@/i18n/context";
+import { useLocalizedPath, useTranslation } from "@/i18n/context";
 import { useTheme } from "@/theme/theme";
 
 import styles from "./SiteFooter.module.css";
@@ -16,6 +17,7 @@ type SiteFooterStyle = CSSProperties & {
 export default function SiteFooter() {
   const currentYear = new Date().getFullYear();
   const { locale, text } = useTranslation();
+  const to = useLocalizedPath();
   const { themeName } = useTheme();
   const [activeTab, setActiveTab] = useState<LegalTab | null>(null);
 
@@ -39,7 +41,7 @@ export default function SiteFooter() {
             <div className={styles.brandRow}>
               <img
                 src={assetUrl("brand/logo-dark.png")}
-                alt=""
+                alt="KnowIt"
                 className={styles.logo}
               />
               <img
@@ -73,13 +75,25 @@ export default function SiteFooter() {
               <ul className={styles.columnLinks}>
                 {navItems.map((item) => (
                   <li key={item.key}>
-                    <button
-                      type="button"
+                    <a
+                      href={to(LEGAL_PATHS[item.key])}
                       className={styles.footerLink}
-                      onClick={() => setActiveTab(item.key)}
+                      onClick={(event: MouseEvent<HTMLAnchorElement>) => {
+                        if (
+                          event.metaKey ||
+                          event.ctrlKey ||
+                          event.shiftKey ||
+                          event.altKey ||
+                          event.button !== 0
+                        ) {
+                          return;
+                        }
+                        event.preventDefault();
+                        setActiveTab(item.key);
+                      }}
                     >
                       {item.label}
-                    </button>
+                    </a>
                   </li>
                 ))}
               </ul>
@@ -102,6 +116,41 @@ export default function SiteFooter() {
                     className={styles.footerLink}
                   >
                     {text.contactFeedbackShort}
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <section className={styles.linkColumn}>
+              <h3 className={styles.columnTitle}>{text.footerResourcesTitle}</h3>
+              <ul className={styles.columnLinks}>
+                <li>
+                  <Link to={to("/faq")} className={styles.footerLink}>
+                    {text.faqTitle}
+                  </Link>
+                </li>
+                <li>
+                  <Link to={to(DOCS_INDEX_PATH)} className={styles.footerLink}>
+                    {text.navDocs}
+                  </Link>
+                </li>
+                <li>
+                  <a
+                    href={siteConfig.chromeWebStoreUrl}
+                    className={styles.footerLink}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    {text.installChrome}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href={siteConfig.edgeAddonsUrl}
+                    className={styles.footerLink}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    {text.installEdge}
                   </a>
                 </li>
               </ul>

@@ -1,7 +1,75 @@
 import type { Messages } from "./types";
 
 export const enUS: Messages = {
-  documentTitle: "KnowIt — Read any web page better",
+  documentTitle: "KnowIt — In-page find, selection translation, and AI summaries",
+  seoHomeDescription:
+    "KnowIt is an open-source, modular, privacy-first browser extension for reading the web. In-page find, selection translation, AI summaries, and article export. Page content stays on your device by default.",
+  entityDefinition:
+    "KnowIt is an open-source, modular, privacy-first browser extension for reading the web. Page content stays on your device by default and is not uploaded to KnowIt; model calls use your own API key. It installs on Chrome and Edge.",
+  navFaq: "FAQ",
+  faqTitle: "Frequently asked questions",
+  faqSubtitle: "Answers for KnowIt {version}.",
+  faqItems: [
+    {
+      question: "Does KnowIt upload page content?",
+      answer:
+        "No. Page content, selections, in-page find history, and generation results stay in your browser by default. KnowIt does not run a server that receives them.",
+    },
+    {
+      question: "How do the AI tools work?",
+      answer:
+        "Content summary, selection translation, word lookup, and smart writing use your own API key. DeepSeek, OpenAI, Gemini, Moonshot (Kimi), Alibaba DashScope, and SiliconFlow are supported.",
+    },
+    {
+      question: "What is free, and what is paid?",
+      answer:
+        "Text search, the media downloader, ad cleaner, and element inspector are free. Page export, content summary, selection translation, word lookup, and smart writing are part of the lifetime license at ¥6.66.",
+    },
+    {
+      question: "Which browsers can I install it on?",
+      answer: "Chrome and Microsoft Edge. The source is public on GitHub.",
+    },
+    {
+      question: "How is KnowIt different from full-page translators or assistant extensions?",
+      answer:
+        "KnowIt is split into tools you install only if you use them. Page content stays on your device by default, and model calls use your API key rather than a KnowIt account.",
+    },
+  ],
+  seoFaqTitle: "KnowIt FAQ",
+  seoFaqDescription:
+    "Whether KnowIt uploads page content, how AI tools use your own API key, which tools are free, and how to install on Chrome and Edge.",
+  seoPrivacyTitle: "KnowIt privacy policy",
+  seoPrivacyDescription:
+    "KnowIt does not upload page content by default. The privacy policy explains local data, browser sync, and model services you configure yourself.",
+  seoTermsTitle: "KnowIt terms of use",
+  seoTermsDescription:
+    "Terms for the KnowIt browser extension, including local processing, your own API key, and the lifetime license.",
+  seoChangelogTitle: "KnowIt changelog",
+  seoChangelogDescription: "Version history for the KnowIt browser extension.",
+  seoCreatorTitle: "A note from the KnowIt creator",
+  seoCreatorDescription:
+    "The KnowIt creator on the 3.0 layout fix, and why later work stays on the tools that already exist.",
+  toolSeoTitles: {
+    "text-search": "In-page text find for the browser",
+    "media-downloader": "Save images and videos from a page",
+    "ad-cleaner": "Hide ads on the page you are reading",
+    "element-inspector": "Inspect page elements and pick colors",
+    "page-export": "Export a web page to Markdown",
+    "content-summary": "AI summary for web pages",
+    "selection-translate": "Selection translation browser extension",
+    "word-inspector": "Pinyin and word lookup on a page",
+    "smart-writer": "AI rewrite inside page text fields",
+  },
+  toolFactsTitle: "Facts worth checking first",
+  toolFactDoesLabel: "What it does: ",
+  toolFactPrivacy:
+    "Page content, selections, and generation results stay on this device by default and are not uploaded to KnowIt.",
+  toolFactByok:
+    "This tool calls a model with your own API key. KnowIt does not provide a model account.",
+  toolFactPriceFree: "Free once the extension is installed.",
+  toolFactPricePremium: "Lifetime license, ¥6.66.",
+  toolFactFaqLink: "Read the full FAQ",
+  footerResourcesTitle: "Resources",
   localeLabel: "EN",
   languageMenuTitle: "Choose language",
   switchToLight: "Switch to light mode",

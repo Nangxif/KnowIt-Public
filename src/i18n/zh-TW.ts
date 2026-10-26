@@ -1,7 +1,74 @@
 import type { Messages } from "./types";
 
 export const zhTW: Messages = {
-  documentTitle: "KnowIt — 專注幫你讀懂網頁",
+  documentTitle: "KnowIt — 頁內搜尋、劃詞翻譯與 AI 總結的瀏覽器擴充功能",
+  seoHomeDescription:
+    "KnowIt 是開源、模組化、隱私優先的網頁閱讀擴充功能。支援頁內文字搜尋、劃詞翻譯、AI 總結和正文匯出。頁面內容預設只在本地處理。",
+  entityDefinition:
+    "KnowIt 是一款開源、模組化、隱私優先的網頁閱讀瀏覽器擴充功能。頁面內容預設只在本地處理，不會上傳到 KnowIt 的伺服器；呼叫模型時使用你自己的 API Key。可以安裝到 Chrome 和 Edge。",
+  navFaq: "問答",
+  faqTitle: "常見問題",
+  faqSubtitle: "以下回答對應 KnowIt {version}。",
+  faqItems: [
+    {
+      question: "KnowIt 會上傳網頁內容嗎？",
+      answer:
+        "不會。頁面內容、選取的文字、頁內搜尋記錄和生成結果預設只保存在你的瀏覽器本地。KnowIt 沒有接收這些內容的伺服器。",
+    },
+    {
+      question: "AI 功能要怎麼用？",
+      answer:
+        "內容總結、劃詞翻譯、劃詞識字和智慧寫作需要你自己的 API Key。支援 DeepSeek、OpenAI、Gemini、Moonshot（Kimi）、阿里雲百煉和 SiliconFlow 等。",
+    },
+    {
+      question: "哪些功能免費，哪些要付費？",
+      answer:
+        "文字搜尋、資源下載器、廣告清除和元素檢查器免費。頁面匯出、內容總結、劃詞翻譯、劃詞識字和智慧寫作屬於終身版，價格為 ¥6.66。",
+    },
+    {
+      question: "可以裝在哪些瀏覽器上？",
+      answer: "可以安裝到 Chrome 和 Microsoft Edge。原始碼在 GitHub 公開。",
+    },
+    {
+      question: "KnowIt 和整頁翻譯類、助手類擴充功能有什麼不同？",
+      answer:
+        "KnowIt 按工具拆開，用哪個裝哪個。頁面內容預設不上傳，模型呼叫走你自己的 API Key，而不是 KnowIt 的帳號。",
+    },
+  ],
+  seoFaqTitle: "KnowIt 常見問題",
+  seoFaqDescription:
+    "KnowIt 是否上傳網頁內容、AI 功能如何使用自己的 API Key、哪些工具免費，以及 Chrome 與 Edge 的安裝方式。",
+  seoPrivacyTitle: "KnowIt 隱私協議",
+  seoPrivacyDescription:
+    "KnowIt 預設不上傳網頁內容。隱私協議說明本地資料、瀏覽器同步，以及你自行設定的模型服務之間的邊界。",
+  seoTermsTitle: "KnowIt 使用者協議",
+  seoTermsDescription:
+    "使用 KnowIt 瀏覽器擴充功能的條款，包括本地處理、自備 API Key 和終身版授權。",
+  seoChangelogTitle: "KnowIt 更新日誌",
+  seoChangelogDescription: "KnowIt 瀏覽器擴充功能的版本記錄。",
+  seoCreatorTitle: "KnowIt 創作者的話",
+  seoCreatorDescription:
+    "KnowIt 作者關於 3.0 排版問題修復，以及後續把精力放在現有工具上的說明。",
+  toolSeoTitles: {
+    "text-search": "頁內文字搜尋瀏覽器擴充功能",
+    "media-downloader": "網頁圖片與影片下載擴充功能",
+    "ad-cleaner": "網頁去廣告擴充功能",
+    "element-inspector": "網頁元素檢查與取色擴充功能",
+    "page-export": "網頁正文匯出 Markdown",
+    "content-summary": "網頁 AI 總結擴充功能",
+    "selection-translate": "劃詞翻譯瀏覽器擴充功能",
+    "word-inspector": "劃詞查詞與注音擴充功能",
+    "smart-writer": "網頁輸入框 AI 潤色擴充功能",
+  },
+  toolFactsTitle: "使用前可以確認的事實",
+  toolFactDoesLabel: "做什麼：",
+  toolFactPrivacy:
+    "頁面內容、選取的文字和生成結果預設只留在本機，不上傳到 KnowIt 伺服器。",
+  toolFactByok: "這個工具會呼叫模型，使用你自己的 API Key。KnowIt 不提供模型帳號。",
+  toolFactPriceFree: "免費，安裝擴充功能後即可使用。",
+  toolFactPricePremium: "終身版功能，價格 ¥6.66。",
+  toolFactFaqLink: "查看全部常見問題",
+  footerResourcesTitle: "資源",
   localeLabel: "繁體",
   languageMenuTitle: "選擇語言",
   switchToLight: "切換成淺色模式",

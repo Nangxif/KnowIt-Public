@@ -39,16 +39,6 @@ function readStoredTheme(): KnowItThemeName {
   return DEFAULT_THEME;
 }
 
-function readUrlTheme(): KnowItThemeName | null {
-  try {
-    return parseThemeParam(
-      new URLSearchParams(window.location.search).get("theme"),
-    );
-  } catch {
-    return null;
-  }
-}
-
 type ThemeContextValue = {
   themeName: KnowItThemeName;
   setThemeName: (themeName: KnowItThemeName) => void;
@@ -60,9 +50,11 @@ const ThemeContext = createContext<ThemeContextValue | null>(null);
 export function ThemeProvider({ children }: PropsWithChildren) {
   const [searchParams, setSearchParams] = useSearchParams();
   const urlTheme = parseThemeParam(searchParams.get("theme"));
-  const [themeName, setThemeNameState] = useState<KnowItThemeName>(
-    () => readUrlTheme() ?? DEFAULT_THEME,
-  );
+  const [themeName, setThemeNameState] = useState<KnowItThemeName>(() => {
+    if (urlTheme) return urlTheme;
+    if (typeof window === "undefined") return DEFAULT_THEME;
+    return readStoredTheme();
+  });
 
   useEffect(() => {
     const next = urlTheme ?? readStoredTheme();

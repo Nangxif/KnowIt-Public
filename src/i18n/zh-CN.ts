@@ -1,7 +1,74 @@
 import type { Messages } from "./types";
 
 export const zhCN: Messages = {
-  documentTitle: "KnowIt — 专注帮你读懂网页",
+  documentTitle: "KnowIt — 页内查找、划词翻译与 AI 总结的浏览器扩展",
+  seoHomeDescription:
+    "KnowIt 是开源、模块化、隐私优先的网页阅读扩展。支持页内文字查找、划词翻译、AI 总结和正文导出。页面内容默认只在本地处理。",
+  entityDefinition:
+    "KnowIt 是一款开源、模块化、隐私优先的网页阅读浏览器扩展。页面内容默认只在本地处理，不会上传到 KnowIt 的服务器；调用模型时使用你自己的 API Key。可以安装到 Chrome 和 Edge。",
+  navFaq: "问答",
+  faqTitle: "常见问题",
+  faqSubtitle: "以下回答对应 KnowIt {version}。",
+  faqItems: [
+    {
+      question: "KnowIt 会上传网页内容吗？",
+      answer:
+        "不会。页面内容、选中文字、页内查找记录和生成结果默认只保存在你的浏览器本地。KnowIt 没有接收这些内容的服务器。",
+    },
+    {
+      question: "AI 功能要怎么用？",
+      answer:
+        "内容总结、划词翻译、划词识字和智能写作需要你自己的 API Key。支持 DeepSeek、OpenAI、Gemini、Moonshot（Kimi）、阿里云百炼和 SiliconFlow 等。",
+    },
+    {
+      question: "哪些功能免费，哪些要付费？",
+      answer:
+        "文字搜索、资源下载器、广告清除和元素检查器免费。页面导出、内容总结、划词翻译、划词识字和智能写作属于终身版，价格为 ¥6.66。",
+    },
+    {
+      question: "可以装在哪些浏览器上？",
+      answer: "可以安装到 Chrome 和 Microsoft Edge。源码在 GitHub 公开。",
+    },
+    {
+      question: "KnowIt 和整页翻译类、助手类扩展有什么不同？",
+      answer:
+        "KnowIt 按工具拆开，用哪个装哪个。页面内容默认不上传，模型调用走你自己的 API Key，而不是 KnowIt 的账号。",
+    },
+  ],
+  seoFaqTitle: "KnowIt 常见问题",
+  seoFaqDescription:
+    "KnowIt 是否上传网页内容、AI 功能如何使用自己的 API Key、哪些工具免费，以及 Chrome 与 Edge 的安装方式。",
+  seoPrivacyTitle: "KnowIt 隐私协议",
+  seoPrivacyDescription:
+    "KnowIt 默认不上传网页内容。隐私协议说明本地数据、浏览器同步，以及你自行配置的模型服务之间的边界。",
+  seoTermsTitle: "KnowIt 用户协议",
+  seoTermsDescription:
+    "使用 KnowIt 浏览器扩展的条款，包括本地处理、自备 API Key 和终身版授权。",
+  seoChangelogTitle: "KnowIt 更新日志",
+  seoChangelogDescription: "KnowIt 浏览器扩展的版本记录。",
+  seoCreatorTitle: "KnowIt 创作者的话",
+  seoCreatorDescription:
+    "KnowIt 作者关于 3.0 排版问题修复，以及后续把精力放在现有工具上的说明。",
+  toolSeoTitles: {
+    "text-search": "页内文字查找浏览器扩展",
+    "media-downloader": "网页图片与视频下载扩展",
+    "ad-cleaner": "网页去广告扩展",
+    "element-inspector": "网页元素检查与取色扩展",
+    "page-export": "网页正文导出 Markdown",
+    "content-summary": "网页 AI 总结扩展",
+    "selection-translate": "划词翻译浏览器扩展",
+    "word-inspector": "划词查词与拼音扩展",
+    "smart-writer": "网页输入框 AI 润色扩展",
+  },
+  toolFactsTitle: "使用前可以确认的事实",
+  toolFactDoesLabel: "做什么：",
+  toolFactPrivacy:
+    "页面内容、选中文字和生成结果默认只留在本机，不上传到 KnowIt 服务器。",
+  toolFactByok: "这个工具会调用模型，使用你自己的 API Key。KnowIt 不提供模型账号。",
+  toolFactPriceFree: "免费，安装扩展后即可使用。",
+  toolFactPricePremium: "终身版功能，价格 ¥6.66。",
+  toolFactFaqLink: "查看全部常见问题",
+  footerResourcesTitle: "资源",
   localeLabel: "简体",
   languageMenuTitle: "选择语言",
   switchToLight: "切换成浅色模式",
