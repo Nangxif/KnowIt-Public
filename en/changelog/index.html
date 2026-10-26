@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" data-knowit-theme="vscode-dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/brand/icon-128.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Version history for the KnowIt browser extension." />
+    <title>KnowIt changelog</title>
+    <script>
+      try {
+        var params = new URLSearchParams(location.search);
+        var themeParam = params.get("theme");
+        var theme = localStorage.getItem("knowItTheme");
+        if (themeParam === "light" || themeParam === "vscode-light") {
+          theme = "vscode-light";
+        } else if (themeParam === "dark" || themeParam === "vscode-dark") {
+          theme = "vscode-dark";
+        }
+        if (theme === "vscode-dark" || theme === "vscode-light") {
+          document.documentElement.dataset.knowitTheme = theme;
+          document.documentElement.style.colorScheme =
+            theme === "vscode-dark" ? "dark" : "light";
+        }
+        var path = location.pathname;
+        var localeParam = params.get("lang");
+        var locale = null;
+        if (path === "/en" || path.indexOf("/en/") === 0) {
+          locale = "en-US";
+        } else if (path === "/zh-TW" || path.indexOf("/zh-TW/") === 0) {
+          locale = "zh-TW";
+        } else if (
+          localeParam === "zh-CN" ||
+          localeParam === "zh" ||
+          localeParam === "zh-cn" ||
+          localeParam === "cn"
+        ) {
+          locale = "zh-CN";
+        } else if (
+          localeParam === "zh-TW" ||
+          localeParam === "zh-tw" ||
+          localeParam === "tw"
+        ) {
+          locale = "zh-TW";
+        } else if (
+          localeParam === "en-US" ||
+          localeParam === "en" ||
+          localeParam === "en-us"
+        ) {
+          locale = "en-US";
+        } else {
+          locale = "zh-CN";
+        }
+        if (locale === "zh-CN" || locale === "zh-TW" || locale === "en-US") {
+          document.documentElement.lang = locale === "en-US" ? "en" : locale;
+        }
+      } catch (e) {}
+    </script>
+    <script type="module" crossorigin src="/assets/index-DmmzJZqD.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-D3boXJsl.css">
+  <link rel="canonical" href="https://knowit.nangxif.com/en/changelog" />
+<link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/changelog" />
+<link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/changelog" />
+<link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/changelog" />
+<link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/changelog" />
+<meta name="robots" content="index, follow" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="KnowIt" />
+<meta property="og:title" content="KnowIt changelog" />
+<meta property="og:description" content="Version history for the KnowIt browser extension." />
+<meta property="og:url" content="https://knowit.nangxif.com/en/changelog" />
+<meta property="og:image" content="https://knowit.nangxif.com/brand/icon-128.png" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="zh_CN" />
+<meta property="og:locale:alternate" content="zh_TW" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="KnowIt changelog" />
+<meta name="twitter:description" content="Version history for the KnowIt browser extension." />
+<meta name="twitter:image" content="https://knowit.nangxif.com/brand/icon-128.png" />
+  </head>
+  <body>
+    <div id="root"><div class="_page_1hb8g_1 "><canvas class="_canvas_re3y6_1" data-pixel-wave="" aria-hidden="true"></canvas><main class="_main_1hb8g_20"><div class="_standalone_5xizp_115"><div class="_panel_5xizp_119"><article class="_docArticle_5xizp_1"><header class="_docHeader_5xizp_6"><h1 class="_docTitle_5xizp_11">Changelog</h1></header><section class="_changelogEntry_5xizp_72"><div class="_changelogHeader_5xizp_78"><h3>v<!-- -->3.2.2</h3><time dateTime="2026-10-09">2026-10-09</time></div><ul class="_changelogList_5xizp_99"><li>Fixed incorrect ad detection in Ad Cleaner</li></ul></section><section class="_changelogEntry_5xizp_72"><div class="_changelogHeader_5xizp_78"><h3>v<!-- -->3.2.1</h3><time dateTime="2026-09-30">2026-09-30</time></div><ul class="_changelogList_5xizp_99"><li>Added a history shortcut in the top-right corner of the new tab page</li><li>History now keeps the selected item after a refresh</li><li>Fixed the image recognition popup appearing in the wrong place</li><li>Fixed image recognition allowing models that don&#x27;t support images</li><li>Updated the model list</li><li>Added suggestions for choosing a model</li></ul></section><section class="_changelogEntry_5xizp_72"><div class="_changelogHeader_5xizp_78"><h3>v<!-- -->3.2.0</h3><time dateTime="2026-09-21">2026-09-21</time></div><ul class="_changelogList_5xizp_99"><li>Text Search now has a quick side panel for faster lookups</li><li>Element Inspector can extract a page’s visual style</li><li>Media Downloader can describe images from the right-click menu</li><li>Improved news display on the new tab page</li></ul></section><section class="_changelogEntry_5xizp_72"><div class="_changelogHeader_5xizp_78"><h3>v<!-- -->3.1.0</h3><time dateTime="2026-09-11">2026-09-11</time></div><ul class="_changelogList_5xizp_99"><li>Translate directly from page input fields</li><li>Translation now picks the target language from the source text</li><li>Translate, word lookup, and summary now flag content that clearly can’t be processed, with better handling and a matching message</li><li>Only one tool overlay is shown at a time, so panels no longer stack</li><li>Aligned the AI writing popup with other tools</li><li>Unified small icons across the app</li><li>Added an official website entry on the new tab page</li></ul></section><section class="_changelogEntry_5xizp_72"><div class="_changelogHeader_5xizp_78"><h3>v<!-- -->3.0.0</h3><time dateTime="2026-09-01">2026-09-01</time></div><ul class="_changelogList_5xizp_99"><li>Redesigned the workbench</li><li>Moved usage stats onto the workbench and redesigned them</li><li>Redesigned the history page</li><li>Redesigned the new tab page</li><li>New tab search now uses your browser’s default search engine via the Chrome Search API instead of a built-in engine picker</li><li>Selection translation now supports a larger, zoomed-in view</li><li>Added the free Element Inspector tool for inspecting page elements and picking colors</li><li>Added the free Ad Cleaner tool to hide ads and promotional overlays, with undo support</li><li>Fixed unused tools leaking styles onto the original page, and Media Downloader failing to open</li></ul></section><section class="_changelogEntry_5xizp_72"><div class="_changelogHeader_5xizp_78"><h3>v<!-- -->2.3.0</h3><time dateTime="2026-08-25">2026-08-25</time></div><ul class="_changelogList_5xizp_99"><li>Added user onboarding</li><li>Redesigned the landing page</li><li>Updated the new tab page style</li></ul></section><section class="_changelogEntry_5xizp_72"><div class="_changelogHeader_5xizp_78"><h3>v<!-- -->2.2.0</h3><time dateTime="2026-08-20">2026-08-20</time></div><ul class="_changelogList_5xizp_99"><li>Refactored multi-device sync for activation status and settings on the same account</li><li>Cached translation results locally (up to 50 entries) to reduce repeat translations</li><li>Full-page translation now supports regeneration</li><li>Added Traditional Chinese as a UI language</li><li>AI translation now supports paste-to-translate</li><li>Improved the footer with privacy policy, user agreement, and related entries</li><li>Fixed history list snapshots not displaying and popup style issues in English mode</li></ul></section><section class="_changelogEntry_5xizp_72"><div class="_changelogHeader_5xizp_78"><h3>v<!-- -->2.1.0</h3><time dateTime="2026-08-04">2026-08-04</time></div><ul class="_changelogList_5xizp_99"><li>Integrated Afdian payment, with order-number activation for premium features</li><li>Full-page summary now supports pause, and fixed occasional content parsing failures</li><li>Proofread and refined product copy</li><li>Redesigned the footer with legal docs, changelog, and contact links</li></ul></section></article></div></div></main></div></div>
+  </body>
+</html>

@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://knowit.nangxif.com/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/" />
+  </url>
+  <url>
+    <loc>https://knowit.nangxif.com/zh-TW</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/" />
+  </url>
+  <url>
+    <loc>https://knowit.nangxif.com/en</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/" />
+  </url>
+  <url>
+    <loc>https://knowit.nangxif.com/faq</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/faq" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/faq" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/faq" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/faq" />
+  </url>
+  <url>
+    <loc>https://knowit.nangxif.com/zh-TW/faq</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/faq" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/faq" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/faq" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/faq" />
+  </url>
+  <url>
+    <loc>https://knowit.nangxif.com/en/faq</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/faq" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/faq" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/faq" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/faq" />
+  </url>
+  <url>
+    <loc>https://knowit.nangxif.com/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/privacy" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/privacy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/privacy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/privacy" />
+  </url>
+  <url>
+    <loc>https://knowit.nangxif.com/zh-TW/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/privacy" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/privacy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/privacy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/privacy" />
+  </url>
+  <url>
+    <loc>https://knowit.nangxif.com/en/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/privacy" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/privacy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/privacy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/privacy" />
+  </url>
+  <url>
+    <loc>https://knowit.nangxif.com/terms</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/terms" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/terms" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/terms" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/terms" />
+  </url>
+  <url>
+    <loc>https://knowit.nangxif.com/zh-TW/terms</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/terms" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/terms" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/terms" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/terms" />
+  </url>
+  <url>
+    <loc>https://knowit.nangxif.com/en/terms</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/terms" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/terms" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/terms" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/terms" />
+  </url>
+  <url>
+    <loc>https://knowit.nangxif.com/changelog</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/changelog" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/changelog" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/changelog" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/changelog" />
+  </url>
+  <url>
+    <loc>https://knowit.nangxif.com/zh-TW/changelog</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/changelog" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/changelog" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/changelog" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/changelog" />
+  </url>
+  <url>
+    <loc>https://knowit.nangxif.com/en/changelog</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/changelog" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/changelog" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/changelog" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/changelog" />
+  </url>
+  <url>
+    <loc>https://knowit.nangxif.com/docs</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/docs" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/docs" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/docs" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/docs" />
+  </url>
+  <url>
+    <loc>https://knowit.nangxif.com/zh-TW/docs</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/docs" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/docs" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/docs" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/docs" />
+  </url>
+  <url>
+    <loc>https://knowit.nangxif.com/en/docs</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/docs" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/docs" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/docs" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/docs" />
+  </url>
+  <url>
+    <loc>https://knowit.nangxif.com/docs/text-search</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/docs/text-search" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/docs/text-search" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/docs/text-search" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/docs/text-search" />
+  </url>
+  <url>
+    <loc>https://knowit.nangxif.com/zh-TW/docs/text-search</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/docs/text-search" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/docs/text-search" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/docs/text-search" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/docs/text-search" />
+  </url>
+  <url>
+    <loc>https://knowit.nangxif.com/en/docs/text-search</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/docs/text-search" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/docs/text-search" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/docs/text-search" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/docs/text-search" />
+  </url>
+  <url>
+    <loc>https://knowit.nangxif.com/docs/media-downloader</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/docs/media-downloader" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/docs/media-downloader" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/docs/media-downloader" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/docs/media-downloader" />
+  </url>
+  <url>
+    <loc>https://knowit.nangxif.com/zh-TW/docs/media-downloader</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/docs/media-downloader" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/docs/media-downloader" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/docs/media-downloader" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/docs/media-downloader" />
+  </url>
+  <url>
+    <loc>https://knowit.nangxif.com/en/docs/media-downloader</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/docs/media-downloader" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/docs/media-downloader" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/docs/media-downloader" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/docs/media-downloader" />
+  </url>
+  <url>
+    <loc>https://knowit.nangxif.com/docs/ad-cleaner</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/docs/ad-cleaner" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/docs/ad-cleaner" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/docs/ad-cleaner" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/docs/ad-cleaner" />
+  </url>
+  <url>
+    <loc>https://knowit.nangxif.com/zh-TW/docs/ad-cleaner</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/docs/ad-cleaner" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/docs/ad-cleaner" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/docs/ad-cleaner" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/docs/ad-cleaner" />
+  </url>
+  <url>
+    <loc>https://knowit.nangxif.com/en/docs/ad-cleaner</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/docs/ad-cleaner" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/docs/ad-cleaner" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/docs/ad-cleaner" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/docs/ad-cleaner" />
+  </url>
+  <url>
+    <loc>https://knowit.nangxif.com/docs/element-inspector</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/docs/element-inspector" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/docs/element-inspector" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/docs/element-inspector" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/docs/element-inspector" />
+  </url>
+  <url>
+    <loc>https://knowit.nangxif.com/zh-TW/docs/element-inspector</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/docs/element-inspector" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/docs/element-inspector" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/docs/element-inspector" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/docs/element-inspector" />
+  </url>
+  <url>
+    <loc>https://knowit.nangxif.com/en/docs/element-inspector</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/docs/element-inspector" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/docs/element-inspector" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/docs/element-inspector" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/docs/element-inspector" />
+  </url>
+  <url>
+    <loc>https://knowit.nangxif.com/docs/page-export</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/docs/page-export" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/docs/page-export" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/docs/page-export" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/docs/page-export" />
+  </url>
+  <url>
+    <loc>https://knowit.nangxif.com/zh-TW/docs/page-export</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/docs/page-export" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/docs/page-export" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/docs/page-export" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/docs/page-export" />
+  </url>
+  <url>
+    <loc>https://knowit.nangxif.com/en/docs/page-export</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/docs/page-export" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/docs/page-export" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/docs/page-export" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/docs/page-export" />
+  </url>
+  <url>
+    <loc>https://knowit.nangxif.com/docs/content-summary</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/docs/content-summary" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/docs/content-summary" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/docs/content-summary" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/docs/content-summary" />
+  </url>
+  <url>
+    <loc>https://knowit.nangxif.com/zh-TW/docs/content-summary</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/docs/content-summary" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/docs/content-summary" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/docs/content-summary" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/docs/content-summary" />
+  </url>
+  <url>
+    <loc>https://knowit.nangxif.com/en/docs/content-summary</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/docs/content-summary" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/docs/content-summary" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/docs/content-summary" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/docs/content-summary" />
+  </url>
+  <url>
+    <loc>https://knowit.nangxif.com/docs/selection-translate</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/docs/selection-translate" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/docs/selection-translate" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/docs/selection-translate" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/docs/selection-translate" />
+  </url>
+  <url>
+    <loc>https://knowit.nangxif.com/zh-TW/docs/selection-translate</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/docs/selection-translate" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/docs/selection-translate" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/docs/selection-translate" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/docs/selection-translate" />
+  </url>
+  <url>
+    <loc>https://knowit.nangxif.com/en/docs/selection-translate</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/docs/selection-translate" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/docs/selection-translate" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/docs/selection-translate" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/docs/selection-translate" />
+  </url>
+  <url>
+    <loc>https://knowit.nangxif.com/docs/word-inspector</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/docs/word-inspector" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/docs/word-inspector" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/docs/word-inspector" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/docs/word-inspector" />
+  </url>
+  <url>
+    <loc>https://knowit.nangxif.com/zh-TW/docs/word-inspector</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/docs/word-inspector" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/docs/word-inspector" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/docs/word-inspector" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/docs/word-inspector" />
+  </url>
+  <url>
+    <loc>https://knowit.nangxif.com/en/docs/word-inspector</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/docs/word-inspector" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/docs/word-inspector" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/docs/word-inspector" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/docs/word-inspector" />
+  </url>
+  <url>
+    <loc>https://knowit.nangxif.com/docs/smart-writer</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/docs/smart-writer" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/docs/smart-writer" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/docs/smart-writer" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/docs/smart-writer" />
+  </url>
+  <url>
+    <loc>https://knowit.nangxif.com/zh-TW/docs/smart-writer</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/docs/smart-writer" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/docs/smart-writer" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/docs/smart-writer" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/docs/smart-writer" />
+  </url>
+  <url>
+    <loc>https://knowit.nangxif.com/en/docs/smart-writer</loc>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/docs/smart-writer" />
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/docs/smart-writer" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/docs/smart-writer" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/docs/smart-writer" />
+  </url>
+</urlset>

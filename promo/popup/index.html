@@ -4,11 +4,8 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/brand/icon-128.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="KnowIt — 专注帮你读懂网页：页内文字查找、AI 总结、划词翻译与查词、正文导出，一站式提升网页阅读效率。"
-    />
-    <title>KnowIt</title>
+    <meta name="description" content="KnowIt 是一款开源、模块化、隐私优先的网页阅读浏览器扩展。页面内容默认只在本地处理，不会上传到 KnowIt 的服务器；调用模型时使用你自己的 API Key。可以安装到 Chrome 和 Edge。" />
+    <title>KnowIt — 页内查找、划词翻译与 AI 总结的浏览器扩展</title>
     <script>
       try {
         var params = new URLSearchParams(location.search);
@@ -24,9 +21,14 @@
           document.documentElement.style.colorScheme =
             theme === "vscode-dark" ? "dark" : "light";
         }
+        var path = location.pathname;
         var localeParam = params.get("lang");
-        var locale = localStorage.getItem("knowItLocale");
-        if (
+        var locale = null;
+        if (path === "/en" || path.indexOf("/en/") === 0) {
+          locale = "en-US";
+        } else if (path === "/zh-TW" || path.indexOf("/zh-TW/") === 0) {
+          locale = "zh-TW";
+        } else if (
           localeParam === "zh-CN" ||
           localeParam === "zh" ||
           localeParam === "zh-cn" ||
@@ -45,17 +47,37 @@
           localeParam === "en-us"
         ) {
           locale = "en-US";
+        } else {
+          locale = "zh-CN";
         }
         if (locale === "zh-CN" || locale === "zh-TW" || locale === "en-US") {
-          document.documentElement.lang =
-            locale === "en-US" ? "en" : locale;
+          document.documentElement.lang = locale === "en-US" ? "en" : locale;
         }
       } catch (e) {}
     </script>
-    <script type="module" crossorigin src="/assets/index-Dp2qd1r_.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-COwjtTUu.css">
+    <script type="module" crossorigin src="/assets/index-DmmzJZqD.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-D3boXJsl.css">
+  <link rel="canonical" href="https://knowit.nangxif.com/promo/popup" />
+<link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/promo/popup" />
+<link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/promo/popup" />
+<link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/promo/popup" />
+<link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/promo/popup" />
+<meta name="robots" content="noindex, nofollow" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="KnowIt" />
+<meta property="og:title" content="KnowIt — 页内查找、划词翻译与 AI 总结的浏览器扩展" />
+<meta property="og:description" content="KnowIt 是一款开源、模块化、隐私优先的网页阅读浏览器扩展。页面内容默认只在本地处理，不会上传到 KnowIt 的服务器；调用模型时使用你自己的 API Key。可以安装到 Chrome 和 Edge。" />
+<meta property="og:url" content="https://knowit.nangxif.com/promo/popup" />
+<meta property="og:image" content="https://knowit.nangxif.com/brand/icon-128.png" />
+<meta property="og:locale" content="zh_CN" />
+<meta property="og:locale:alternate" content="zh_TW" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="KnowIt — 页内查找、划词翻译与 AI 总结的浏览器扩展" />
+<meta name="twitter:description" content="KnowIt 是一款开源、模块化、隐私优先的网页阅读浏览器扩展。页面内容默认只在本地处理，不会上传到 KnowIt 的服务器；调用模型时使用你自己的 API Key。可以安装到 Chrome 和 Edge。" />
+<meta name="twitter:image" content="https://knowit.nangxif.com/brand/icon-128.png" />
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"><div class="_page_1hb8g_1 _fullBleed_1hb8g_26"><main class="_fullBleedMain_1hb8g_33"><div class="_canvas_1w568_1" data-promo-canvas=""><div class="_slide_1w568_44 _air_1w568_106"><div class="_wash_1w568_61" aria-hidden="true"></div><div class="_glowA_1w568_62" aria-hidden="true"></div><div class="_glowB_1w568_63" aria-hidden="true"></div><div class="_glowC_1w568_64" aria-hidden="true"></div><div class="_frost_1w568_65" aria-hidden="true"></div><div class="_grid_1w568_66" aria-hidden="true"></div><div class="_copy_1w568_274"><h1 class="_headlineInline_1w568_311"><span class="_lead_1w568_333">读懂网页</span><span class="_rest_1w568_334">也更好用</span></h1><p class="_subtitle_1w568_367">集成文字搜索、内容总结、划词翻译等实用工具，按需安装，打造你的网页工作台。</p></div><div class="_popupArt_1w568_535"><div class="_popupStack_1w568_546"><img src="/promo/popup-dark.png" alt="" class="_popupShot_1w568_551 _popupShotBack_1w568_559"/><img src="/promo/popup-light.png" alt="" class="_popupShot_1w568_551 _popupShotFront_1w568_567"/></div></div></div></div></main></div></div>
   </body>
 </html>

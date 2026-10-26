@@ -4,11 +4,8 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/brand/icon-128.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="KnowIt — 专注帮你读懂网页：页内文字查找、AI 总结、划词翻译与查词、正文导出，一站式提升网页阅读效率。"
-    />
-    <title>KnowIt</title>
+    <meta name="description" content="KnowIt 是一款开源、模块化、隐私优先的网页阅读浏览器扩展。页面内容默认只在本地处理，不会上传到 KnowIt 的服务器；调用模型时使用你自己的 API Key。可以安装到 Chrome 和 Edge。" />
+    <title>KnowIt — 页内查找、划词翻译与 AI 总结的浏览器扩展</title>
     <script>
       try {
         var params = new URLSearchParams(location.search);
@@ -24,9 +21,14 @@
           document.documentElement.style.colorScheme =
             theme === "vscode-dark" ? "dark" : "light";
         }
+        var path = location.pathname;
         var localeParam = params.get("lang");
-        var locale = localStorage.getItem("knowItLocale");
-        if (
+        var locale = null;
+        if (path === "/en" || path.indexOf("/en/") === 0) {
+          locale = "en-US";
+        } else if (path === "/zh-TW" || path.indexOf("/zh-TW/") === 0) {
+          locale = "zh-TW";
+        } else if (
           localeParam === "zh-CN" ||
           localeParam === "zh" ||
           localeParam === "zh-cn" ||
@@ -45,17 +47,38 @@
           localeParam === "en-us"
         ) {
           locale = "en-US";
+        } else {
+          locale = "zh-CN";
         }
         if (locale === "zh-CN" || locale === "zh-TW" || locale === "en-US") {
-          document.documentElement.lang =
-            locale === "en-US" ? "en" : locale;
+          document.documentElement.lang = locale === "en-US" ? "en" : locale;
         }
       } catch (e) {}
     </script>
-    <script type="module" crossorigin src="/assets/index-Dp2qd1r_.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-COwjtTUu.css">
+    <script type="module" crossorigin src="/assets/index-DmmzJZqD.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-D3boXJsl.css">
+  <link rel="canonical" href="https://knowit.nangxif.com/promo" />
+<link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/promo" />
+<link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/promo" />
+<link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/promo" />
+<link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/promo" />
+<meta name="robots" content="noindex, nofollow" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="KnowIt" />
+<meta property="og:title" content="KnowIt — 页内查找、划词翻译与 AI 总结的浏览器扩展" />
+<meta property="og:description" content="KnowIt 是一款开源、模块化、隐私优先的网页阅读浏览器扩展。页面内容默认只在本地处理，不会上传到 KnowIt 的服务器；调用模型时使用你自己的 API Key。可以安装到 Chrome 和 Edge。" />
+<meta property="og:url" content="https://knowit.nangxif.com/promo" />
+<meta property="og:image" content="https://knowit.nangxif.com/brand/icon-128.png" />
+<meta property="og:locale" content="zh_CN" />
+<meta property="og:locale:alternate" content="zh_TW" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="KnowIt — 页内查找、划词翻译与 AI 总结的浏览器扩展" />
+<meta name="twitter:description" content="KnowIt 是一款开源、模块化、隐私优先的网页阅读浏览器扩展。页面内容默认只在本地处理，不会上传到 KnowIt 的服务器；调用模型时使用你自己的 API Key。可以安装到 Chrome 和 Edge。" />
+<meta name="twitter:image" content="https://knowit.nangxif.com/brand/icon-128.png" />
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"><div class="_page_1hb8g_1 _fullBleed_1hb8g_26"><main class="_fullBleedMain_1hb8g_33"><div class="_previewPage_1w568_573"><div class="_previewBar_1w568_583"><p class="_previewMeta_1w568_592">页面随窗口适配，建议在 1280×800 下截图。可用 ?lang=zh-CN&amp;theme=dark 锁定语言和主题。</p><button type="button" class="ant-btn css-1pxxg1r ant-btn-primary ant-btn-color-primary ant-btn-variant-solid"><span>打开截图页</span></button></div><div class="_previewStage_1w568_598"><button type="button" class="_navButton_1w568_622" aria-label="上一张"><span role="img" aria-label="left" class="anticon anticon-left"><svg viewBox="64 64 896 896" focusable="false" data-icon="left" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M724 218.3V141c0-6.7-7.7-10.4-12.9-6.3L260.3 486.8a31.86 31.86 0 000 50.3l450.8 352.1c5.3 4.1 12.9.4 12.9-6.3v-77.3c0-4.9-2.3-9.6-6.1-12.6l-360-281 360-281.1c3.8-3 6.1-7.7 6.1-12.6z"></path></svg></span></button><div class="_stageFrame_1w568_607"><div class="_canvas_1w568_1" data-promo-canvas=""><div class="_slide_1w568_44 _field_1w568_105 _brandSlide_1w568_387"><div class="_wash_1w568_61" aria-hidden="true"></div><div class="_glowA_1w568_62" aria-hidden="true"></div><div class="_glowB_1w568_63" aria-hidden="true"></div><div class="_glowC_1w568_64" aria-hidden="true"></div><div class="_frost_1w568_65" aria-hidden="true"></div><div class="_grid_1w568_66" aria-hidden="true"></div><div class="_copy_1w568_274"><div class="_kicker_1w568_278"><img src="/brand/logo-dark.png" alt="" class="_logo_1w568_285"/><img src="/brand/logo-light.png" alt="" class="_logo_1w568_285 _logoLight_1w568_291"/><span class="_kickerName_1w568_303">KnowIt</span></div><div class="_brandHeadline_1w568_408"><h1 class="_headline_1w568_310"><span class="_lead_1w568_333">专注帮你</span><span class="_rest_1w568_334">读懂网页</span></h1><p class="_subtitle_1w568_367">页内搜索、划词翻译、AI 总结，用哪个装哪个。
+网页内容只在你电脑上处理，不会上传。</p></div></div><div class="_artField_1w568_376"><div class="_brandPanel_1w568_428"><img src="/promo/brand-tools.png" alt=""/></div></div></div></div></div><button type="button" class="_navButton_1w568_622" aria-label="下一张"><span role="img" aria-label="right" class="anticon anticon-right"><svg viewBox="64 64 896 896" focusable="false" data-icon="right" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M765.7 486.8L314.9 134.7A7.97 7.97 0 00302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 000-50.4z"></path></svg></span></button></div></div></main></div></div>
   </body>
 </html>

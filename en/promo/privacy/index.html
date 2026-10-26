@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" data-knowit-theme="vscode-dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/brand/icon-128.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="KnowIt is an open-source, modular, privacy-first browser extension for reading the web. Page content stays on your device by default and is not uploaded to KnowIt; model calls use your own API key. It installs on Chrome and Edge." />
+    <title>KnowIt — In-page find, selection translation, and AI summaries</title>
+    <script>
+      try {
+        var params = new URLSearchParams(location.search);
+        var themeParam = params.get("theme");
+        var theme = localStorage.getItem("knowItTheme");
+        if (themeParam === "light" || themeParam === "vscode-light") {
+          theme = "vscode-light";
+        } else if (themeParam === "dark" || themeParam === "vscode-dark") {
+          theme = "vscode-dark";
+        }
+        if (theme === "vscode-dark" || theme === "vscode-light") {
+          document.documentElement.dataset.knowitTheme = theme;
+          document.documentElement.style.colorScheme =
+            theme === "vscode-dark" ? "dark" : "light";
+        }
+        var path = location.pathname;
+        var localeParam = params.get("lang");
+        var locale = null;
+        if (path === "/en" || path.indexOf("/en/") === 0) {
+          locale = "en-US";
+        } else if (path === "/zh-TW" || path.indexOf("/zh-TW/") === 0) {
+          locale = "zh-TW";
+        } else if (
+          localeParam === "zh-CN" ||
+          localeParam === "zh" ||
+          localeParam === "zh-cn" ||
+          localeParam === "cn"
+        ) {
+          locale = "zh-CN";
+        } else if (
+          localeParam === "zh-TW" ||
+          localeParam === "zh-tw" ||
+          localeParam === "tw"
+        ) {
+          locale = "zh-TW";
+        } else if (
+          localeParam === "en-US" ||
+          localeParam === "en" ||
+          localeParam === "en-us"
+        ) {
+          locale = "en-US";
+        } else {
+          locale = "zh-CN";
+        }
+        if (locale === "zh-CN" || locale === "zh-TW" || locale === "en-US") {
+          document.documentElement.lang = locale === "en-US" ? "en" : locale;
+        }
+      } catch (e) {}
+    </script>
+    <script type="module" crossorigin src="/assets/index-DmmzJZqD.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-D3boXJsl.css">
+  <link rel="canonical" href="https://knowit.nangxif.com/en/promo/privacy" />
+<link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/promo/privacy" />
+<link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/promo/privacy" />
+<link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/promo/privacy" />
+<link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/promo/privacy" />
+<meta name="robots" content="noindex, nofollow" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="KnowIt" />
+<meta property="og:title" content="KnowIt — In-page find, selection translation, and AI summaries" />
+<meta property="og:description" content="KnowIt is an open-source, modular, privacy-first browser extension for reading the web. Page content stays on your device by default and is not uploaded to KnowIt; model calls use your own API key. It installs on Chrome and Edge." />
+<meta property="og:url" content="https://knowit.nangxif.com/en/promo/privacy" />
+<meta property="og:image" content="https://knowit.nangxif.com/brand/icon-128.png" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="zh_CN" />
+<meta property="og:locale:alternate" content="zh_TW" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="KnowIt — In-page find, selection translation, and AI summaries" />
+<meta name="twitter:description" content="KnowIt is an open-source, modular, privacy-first browser extension for reading the web. Page content stays on your device by default and is not uploaded to KnowIt; model calls use your own API key. It installs on Chrome and Edge." />
+<meta name="twitter:image" content="https://knowit.nangxif.com/brand/icon-128.png" />
+  </head>
+  <body>
+    <div id="root"><div class="_page_1hb8g_1 _fullBleed_1hb8g_26"><main class="_fullBleedMain_1hb8g_33"><div class="_canvas_1w568_1" data-promo-canvas=""><div class="_slide_1w568_44 _field_1w568_105 _privacySlide_1w568_642"><div class="_wash_1w568_61" aria-hidden="true"></div><div class="_glowA_1w568_62" aria-hidden="true"></div><div class="_glowB_1w568_63" aria-hidden="true"></div><div class="_glowC_1w568_64" aria-hidden="true"></div><div class="_frost_1w568_65" aria-hidden="true"></div><div class="_grid_1w568_66" aria-hidden="true"></div><div class="_copy_1w568_274"><h1 class="_headlineInline_1w568_311"><span class="_lead_1w568_333">History</span><span class="_rest_1w568_334">on-device</span></h1><p class="_subtitle_1w568_367">Page content and usage stay in your browser—KnowIt does not upload or host them.</p><ul class="_privacyCards_1w568_670"><li class="_privacyCard_1w568_670"><div class="_privacyCardTitle_1w568_690">Usage history stays on this device</div></li><li class="_privacyCard_1w568_670"><div class="_privacyCardTitle_1w568_690">Settings and subscription can follow Chrome Sync</div></li><li class="_privacyCard_1w568_670"><div class="_privacyCardTitle_1w568_690">Your model keys, your control</div></li></ul></div><svg class="_privacyMark_1w568_697" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 1 20.217 2.826A1 1 0 0 1 21 3.802v9.987a6 6 0 0 1-2.672 4.992L12 23l-6.328-4.219A6 6 0 0 1 3 13.789V3.802a1 1 0 0 1 .783-.976ZM12 3.049 5 4.604v9.185a4 4 0 0 0 1.781 3.328L12 20.597l5.219-3.48A4 4 0 0 0 19 13.79V4.604ZM12 7a2 2 0 0 1 1.001 3.732L13 15h-2v-4.268A2 2 0 0 1 12 7Z"></path></svg></div></div></main></div></div>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" data-knowit-theme="vscode-dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/brand/icon-128.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Terms for the KnowIt browser extension, including local processing, your own API key, and the lifetime license." />
+    <title>KnowIt terms of use</title>
+    <script>
+      try {
+        var params = new URLSearchParams(location.search);
+        var themeParam = params.get("theme");
+        var theme = localStorage.getItem("knowItTheme");
+        if (themeParam === "light" || themeParam === "vscode-light") {
+          theme = "vscode-light";
+        } else if (themeParam === "dark" || themeParam === "vscode-dark") {
+          theme = "vscode-dark";
+        }
+        if (theme === "vscode-dark" || theme === "vscode-light") {
+          document.documentElement.dataset.knowitTheme = theme;
+          document.documentElement.style.colorScheme =
+            theme === "vscode-dark" ? "dark" : "light";
+        }
+        var path = location.pathname;
+        var localeParam = params.get("lang");
+        var locale = null;
+        if (path === "/en" || path.indexOf("/en/") === 0) {
+          locale = "en-US";
+        } else if (path === "/zh-TW" || path.indexOf("/zh-TW/") === 0) {
+          locale = "zh-TW";
+        } else if (
+          localeParam === "zh-CN" ||
+          localeParam === "zh" ||
+          localeParam === "zh-cn" ||
+          localeParam === "cn"
+        ) {
+          locale = "zh-CN";
+        } else if (
+          localeParam === "zh-TW" ||
+          localeParam === "zh-tw" ||
+          localeParam === "tw"
+        ) {
+          locale = "zh-TW";
+        } else if (
+          localeParam === "en-US" ||
+          localeParam === "en" ||
+          localeParam === "en-us"
+        ) {
+          locale = "en-US";
+        } else {
+          locale = "zh-CN";
+        }
+        if (locale === "zh-CN" || locale === "zh-TW" || locale === "en-US") {
+          document.documentElement.lang = locale === "en-US" ? "en" : locale;
+        }
+      } catch (e) {}
+    </script>
+    <script type="module" crossorigin src="/assets/index-DmmzJZqD.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-D3boXJsl.css">
+  <link rel="canonical" href="https://knowit.nangxif.com/en/terms" />
+<link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/terms" />
+<link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/terms" />
+<link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/terms" />
+<link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/terms" />
+<meta name="robots" content="index, follow" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="KnowIt" />
+<meta property="og:title" content="KnowIt terms of use" />
+<meta property="og:description" content="Terms for the KnowIt browser extension, including local processing, your own API key, and the lifetime license." />
+<meta property="og:url" content="https://knowit.nangxif.com/en/terms" />
+<meta property="og:image" content="https://knowit.nangxif.com/brand/icon-128.png" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="zh_CN" />
+<meta property="og:locale:alternate" content="zh_TW" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="KnowIt terms of use" />
+<meta name="twitter:description" content="Terms for the KnowIt browser extension, including local processing, your own API key, and the lifetime license." />
+<meta name="twitter:image" content="https://knowit.nangxif.com/brand/icon-128.png" />
+  </head>
+  <body>
+    <div id="root"><div class="_page_1hb8g_1 "><canvas class="_canvas_re3y6_1" data-pixel-wave="" aria-hidden="true"></canvas><main class="_main_1hb8g_20"><div class="_standalone_5xizp_115"><div class="_panel_5xizp_119"><article class="_docArticle_5xizp_1"><header class="_docHeader_5xizp_6"><h1 class="_docTitle_5xizp_11">User Agreement</h1><div class="_docMeta_5xizp_19"><span>Updated<!-- -->：<!-- -->September 6, 2026</span><span>Effective<!-- -->：<!-- -->September 6, 2026</span></div></header><p class="_docIntro_5xizp_28">This User Agreement is a legal agreement between you and KnowIt regarding your use of this extension and its tools. By using KnowIt, you confirm that you have read, understood, and agreed to this Agreement. If you do not agree, please stop using the product.</p><section class="_docSection_5xizp_36"><h3 class="_docSectionTitle_5xizp_40">1. Service description</h3><ol class="_docItemList_5xizp_47"><li><span class="_docItemId_5xizp_67">1.1</span><span>KnowIt provides browser-extension reading productivity tools. You can install tools as needed for in-page find, summarization, translation, export, and more. Web search on the new tab page is handled by your browser’s default search provider; KnowIt does not provide or replace a default search service.</span></li><li><span class="_docItemId_5xizp_67">1.2</span><span>KnowIt runs local-first. Except for third-party services you actively use, core processing happens in your local environment by default.</span></li><li><span class="_docItemId_5xizp_67">1.3</span><span>Some advanced tools require purchase and activation. Basic features remain available without activation.</span></li></ol></section><section class="_docSection_5xizp_36"><h3 class="_docSectionTitle_5xizp_40">2. Acceptable use</h3><ol class="_docItemList_5xizp_47"><li><span class="_docItemId_5xizp_67">2.1</span><span>You must use KnowIt lawfully and must not use it to infringe others’ rights, violate applicable laws, or disrupt network order.</span></li><li><span class="_docItemId_5xizp_67">2.2</span><span>You must have the necessary rights or authorization for content you process through KnowIt.</span></li><li><span class="_docItemId_5xizp_67">2.3</span><span>You are responsible for safeguarding local settings, API keys, activation order numbers, and bound emails.</span></li></ol></section><section class="_docSection_5xizp_36"><h3 class="_docSectionTitle_5xizp_40">3. Activation and paid features</h3><ol class="_docItemList_5xizp_47"><li><span class="_docItemId_5xizp_67">3.1</span><span>Some premium features require purchase through channels such as Afdian, followed by activation with an order number.</span></li><li><span class="_docItemId_5xizp_67">3.2</span><span>Each Afdian order number and bound email can be activated at most twice. Switching order numbers may uninstall related premium tools.</span></li><li><span class="_docItemId_5xizp_67">3.3</span><span>Payment, refunds, and invoices are governed by the relevant third-party platform. KnowIt only unlocks features after validation succeeds.</span></li></ol></section><section class="_docSection_5xizp_36"><h3 class="_docSectionTitle_5xizp_40">4. Third-party services</h3><ol class="_docItemList_5xizp_47"><li><span class="_docItemId_5xizp_67">4.1</span><span>When AI features are enabled, requests are sent to the model provider you configure.</span></li><li><span class="_docItemId_5xizp_67">4.2</span><span>KnowIt does not warrant the stability, accuracy, continuity, or compliance of third-party services.</span></li></ol></section><section class="_docSection_5xizp_36"><h3 class="_docSectionTitle_5xizp_40">5. Disclaimer and limitation of liability</h3><ol class="_docItemList_5xizp_47"><li><span class="_docItemId_5xizp_67">5.1</span><span>KnowIt is provided “as is.” Browser environments, page structures, network conditions, and third-party services may cause delays, failures, or incomplete results.</span></li><li><span class="_docItemId_5xizp_67">5.2</span><span>Judgments and decisions you make based on summaries, translations, or generated content are your own responsibility.</span></li><li><span class="_docItemId_5xizp_67">5.3</span><span>To the maximum extent permitted by law, KnowIt’s author/maintainer is not liable for indirect, incidental, or consequential damages arising from use of or inability to use the product.</span></li></ol></section><section class="_docSection_5xizp_36"><h3 class="_docSectionTitle_5xizp_40">6. Changes to this Agreement</h3><p class="_docParagraph_5xizp_29">I may revise this Agreement from time to time. Revisions will be shown in the product. Continued use constitutes acceptance of the revised Agreement.</p></section><section class="_docSection_5xizp_36"><h3 class="_docSectionTitle_5xizp_40">7. Contact</h3><p class="_docParagraph_5xizp_29">For questions about this Agreement or the product, contact me through the email addresses or GitHub Issues listed in the footer.</p></section></article></div></div></main></div></div>
+  </body>
+</html>

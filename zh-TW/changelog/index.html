@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-TW" data-knowit-theme="vscode-dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/brand/icon-128.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="KnowIt 瀏覽器擴充功能的版本記錄。" />
+    <title>KnowIt 更新日誌</title>
+    <script>
+      try {
+        var params = new URLSearchParams(location.search);
+        var themeParam = params.get("theme");
+        var theme = localStorage.getItem("knowItTheme");
+        if (themeParam === "light" || themeParam === "vscode-light") {
+          theme = "vscode-light";
+        } else if (themeParam === "dark" || themeParam === "vscode-dark") {
+          theme = "vscode-dark";
+        }
+        if (theme === "vscode-dark" || theme === "vscode-light") {
+          document.documentElement.dataset.knowitTheme = theme;
+          document.documentElement.style.colorScheme =
+            theme === "vscode-dark" ? "dark" : "light";
+        }
+        var path = location.pathname;
+        var localeParam = params.get("lang");
+        var locale = null;
+        if (path === "/en" || path.indexOf("/en/") === 0) {
+          locale = "en-US";
+        } else if (path === "/zh-TW" || path.indexOf("/zh-TW/") === 0) {
+          locale = "zh-TW";
+        } else if (
+          localeParam === "zh-CN" ||
+          localeParam === "zh" ||
+          localeParam === "zh-cn" ||
+          localeParam === "cn"
+        ) {
+          locale = "zh-CN";
+        } else if (
+          localeParam === "zh-TW" ||
+          localeParam === "zh-tw" ||
+          localeParam === "tw"
+        ) {
+          locale = "zh-TW";
+        } else if (
+          localeParam === "en-US" ||
+          localeParam === "en" ||
+          localeParam === "en-us"
+        ) {
+          locale = "en-US";
+        } else {
+          locale = "zh-CN";
+        }
+        if (locale === "zh-CN" || locale === "zh-TW" || locale === "en-US") {
+          document.documentElement.lang = locale === "en-US" ? "en" : locale;
+        }
+      } catch (e) {}
+    </script>
+    <script type="module" crossorigin src="/assets/index-DmmzJZqD.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-D3boXJsl.css">
+  <link rel="canonical" href="https://knowit.nangxif.com/zh-TW/changelog" />
+<link rel="alternate" hreflang="zh-CN" href="https://knowit.nangxif.com/changelog" />
+<link rel="alternate" hreflang="zh-TW" href="https://knowit.nangxif.com/zh-TW/changelog" />
+<link rel="alternate" hreflang="en" href="https://knowit.nangxif.com/en/changelog" />
+<link rel="alternate" hreflang="x-default" href="https://knowit.nangxif.com/changelog" />
+<meta name="robots" content="index, follow" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="KnowIt" />
+<meta property="og:title" content="KnowIt 更新日誌" />
+<meta property="og:description" content="KnowIt 瀏覽器擴充功能的版本記錄。" />
+<meta property="og:url" content="https://knowit.nangxif.com/zh-TW/changelog" />
+<meta property="og:image" content="https://knowit.nangxif.com/brand/icon-128.png" />
+<meta property="og:locale" content="zh_TW" />
+<meta property="og:locale:alternate" content="zh_CN" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="KnowIt 更新日誌" />
+<meta name="twitter:description" content="KnowIt 瀏覽器擴充功能的版本記錄。" />
+<meta name="twitter:image" content="https://knowit.nangxif.com/brand/icon-128.png" />
+  </head>
+  <body>
+    <div id="root"><div class="_page_1hb8g_1 "><canvas class="_canvas_re3y6_1" data-pixel-wave="" aria-hidden="true"></canvas><main class="_main_1hb8g_20"><div class="_standalone_5xizp_115"><div class="_panel_5xizp_119"><article class="_docArticle_5xizp_1"><header class="_docHeader_5xizp_6"><h1 class="_docTitle_5xizp_11">更新日誌</h1></header><section class="_changelogEntry_5xizp_72"><div class="_changelogHeader_5xizp_78"><h3>v<!-- -->3.2.2</h3><time dateTime="2026-10-09">2026-10-09</time></div><ul class="_changelogList_5xizp_99"><li>修復廣告清除識別錯誤</li></ul></section><section class="_changelogEntry_5xizp_72"><div class="_changelogHeader_5xizp_78"><h3>v<!-- -->3.2.1</h3><time dateTime="2026-09-30">2026-09-30</time></div><ul class="_changelogList_5xizp_99"><li>新標籤頁右上角新增歷史記錄入口</li><li>刷新歷史記錄頁後，會記住上次選中的條目</li><li>修復圖片識別懸浮窗位置錯亂</li><li>修復圖片識別可以選到不支持識圖的模型</li><li>更新模型列表</li><li>新增模型選擇建議</li></ul></section><section class="_changelogEntry_5xizp_72"><div class="_changelogHeader_5xizp_78"><h3>v<!-- -->3.2.0</h3><time dateTime="2026-09-21">2026-09-21</time></div><ul class="_changelogList_5xizp_99"><li>文字搜索新增快捷側邊欄，查找更順手</li><li>元素檢查器支持提取頁面風格</li><li>資源下載器支持右鍵描述圖片</li><li>優化新標籤頁的新聞展示</li></ul></section><section class="_changelogEntry_5xizp_72"><div class="_changelogHeader_5xizp_78"><h3>v<!-- -->3.1.0</h3><time dateTime="2026-09-11">2026-09-11</time></div><ul class="_changelogList_5xizp_99"><li>網頁輸入框裡也能直接翻譯</li><li>翻譯會按原文自動判斷要譯成哪種語言</li><li>翻譯、劃詞識字、總結遇到明顯不能處理的內容時，會給出相應提示，並優化了這類內容的處理方式</li><li>同一時間只保留一個工具懸浮層，面板不會疊在一起</li><li>AI 寫作懸浮窗和其他工具對齊了樣式</li><li>全局小圖標換成同一套</li><li>新標籤頁加了官網入口</li></ul></section><section class="_changelogEntry_5xizp_72"><div class="_changelogHeader_5xizp_78"><h3>v<!-- -->3.0.0</h3><time dateTime="2026-09-01">2026-09-01</time></div><ul class="_changelogList_5xizp_99"><li>重新設計工作台頁面</li><li>數據統計挪到工作台頁面並重新設計</li><li>重新設計歷史記錄頁面</li><li>重新設計新 tab 頁</li><li>新標籤頁搜索改用瀏覽器默認搜索引擎（Chrome Search API），不再內置搜索引擎切換</li><li>劃詞翻譯支持放大查看</li><li>新增免費工具「元素檢查器」：檢查頁面元素並吸取顏色</li><li>新增免費工具「廣告清除」：自動隱藏網頁廣告與推廣浮層，支持撤銷</li><li>修復未啟用工具時樣式仍影響原網頁、資源下載器無法打開的問題</li></ul></section><section class="_changelogEntry_5xizp_72"><div class="_changelogHeader_5xizp_78"><h3>v<!-- -->2.3.0</h3><time dateTime="2026-08-25">2026-08-25</time></div><ul class="_changelogList_5xizp_99"><li>新增用戶引導</li><li>重新調整落地頁</li><li>新 tab 頁風格調整</li></ul></section><section class="_changelogEntry_5xizp_72"><div class="_changelogHeader_5xizp_78"><h3>v<!-- -->2.2.0</h3><time dateTime="2026-08-20">2026-08-20</time></div><ul class="_changelogList_5xizp_99"><li>重新整理激活狀態與配置的同賬號多地登錄同步邏輯</li><li>翻譯結果支持本地緩存（上限 50 條），減少重複翻譯</li><li>全文翻譯支持重新生成</li><li>新增繁體中文界面語言支持</li><li>AI翻譯支持粘貼翻譯</li><li>優化底部欄，補充隱私協議、用戶協議等說明入口</li><li>修復歷史列表快照無法展示、英文模式下 popup 樣式異常等問題</li></ul></section><section class="_changelogEntry_5xizp_72"><div class="_changelogHeader_5xizp_78"><h3>v<!-- -->2.1.0</h3><time dateTime="2026-08-04">2026-08-04</time></div><ul class="_changelogList_5xizp_99"><li>接入愛發電支付，支持購買後填寫訂單號激活高級功能</li><li>全文總結支持暫停，並修復偶現內容解析失敗的問題</li><li>校對並優化產品相關文案內容</li><li>整改底部欄，補充協議說明、更新日誌與聯繫方式入口</li></ul></section></article></div></div></main></div></div>
+  </body>
+</html>
