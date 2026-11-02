@@ -154,8 +154,7 @@
   transition: color 150ms ease, background 150ms ease;
 }
 
-.sectionLink:hover,
-.sectionLinkActive {
+.sectionLink:hover {
   color: var(--vscode-editor-foreground);
   background: color-mix(in srgb, #ffffff 10%, transparent);
 }

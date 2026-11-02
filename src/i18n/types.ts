@@ -212,9 +212,7 @@ export type Messages = {
   documentTitle: string;
   seoHomeDescription: string;
   entityDefinition: string;
-  navFaq: string;
   faqTitle: string;
-  faqSubtitle: string;
   faqItems: readonly FaqItem[];
   seoFaqTitle: string;
   seoFaqDescription: string;
@@ -305,6 +303,7 @@ export type Messages = {
   philosophyLink: string;
   appPhilosophy: Record<AppId, PhilosophyDoc>;
   footerAboutTitle: string;
+  footerHelpTitle: string;
   footerContactTitle: string;
   footerGithubLabel: string;
   contactFeedbackShort: string;

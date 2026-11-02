@@ -1,16 +1,14 @@
 import { DownloadOutlined, ExportOutlined } from "@ant-design/icons";
 import { Button } from "antd";
-import { Link } from "react-router-dom";
 
 import { assetUrl, siteConfig } from "@/config/site";
-import { useLocalizedPath, useTranslation } from "@/i18n/context";
+import { useTranslation } from "@/i18n/context";
 import InstallMenu from "@/shell/InstallMenu";
 
 import styles from "./Hero.module.css";
 
 export default function Hero() {
   const { text } = useTranslation();
-  const to = useLocalizedPath();
 
   return (
     <section className={styles.hero} id="top" aria-label={text.heroTitle}>
@@ -26,10 +24,6 @@ export default function Hero() {
       />
       <h1>{text.heroTitle}</h1>
       <p className={styles.subtitle}>{text.heroSubtitle}</p>
-      <p className={styles.definition}>
-        {text.entityDefinition}{" "}
-        <Link to={to("/faq")}>{text.faqTitle}</Link>
-      </p>
       <div className={styles.actions}>
         <InstallMenu
           label={text.heroInstall}
@@ -48,17 +42,6 @@ export default function Hero() {
           {text.heroPurchase}
         </Button>
       </div>
-      <p className={styles.installLinks}>
-        <a href={siteConfig.chromeWebStoreUrl} target="_blank" rel="noreferrer noopener">
-          {text.installChrome}
-        </a>
-        <a href={siteConfig.edgeAddonsUrl} target="_blank" rel="noreferrer noopener">
-          {text.installEdge}
-        </a>
-        <a href={siteConfig.githubUrl} target="_blank" rel="noreferrer noopener">
-          {text.installGithub}
-        </a>
-      </p>
     </section>
   );
 }

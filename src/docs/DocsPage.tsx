@@ -165,9 +165,6 @@ export default function DocsPage() {
             >
               {text.creatorNoteTitle}
             </Link>
-            <Link to={to("/faq")} className={styles.navItem}>
-              {text.faqTitle}
-            </Link>
             <p className={styles.groupLabel}>{text.docsGroupApps}</p>
             {APP_DOC_IDS.map((appId) => (
               <Link

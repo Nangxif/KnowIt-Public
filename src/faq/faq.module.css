@@ -4,34 +4,55 @@
   padding: 56px 0 24px;
 }
 
-.header h1 {
-  margin: 0;
-  font-size: 36px;
-  font-weight: 780;
-  line-height: 1.2;
+.header {
+  margin-bottom: 28px;
 }
 
-.header p {
-  margin: 14px 0 0;
-  color: var(--vscode-descriptionForeground);
-  font-size: 15px;
-  line-height: 1.75;
+.header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 780;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .item {
-  margin-top: 28px;
+  display: grid;
+  grid-template-columns: 2ch minmax(0, 1fr);
+  column-gap: 12px;
+  align-items: baseline;
+  padding: 22px 24px;
+  background: var(--vscode-sideBar-background);
+  border: 1px solid var(--vscode-widget-border);
+  border-radius: var(--knowit-radius-lg);
+}
+
+.index {
+  color: var(--vscode-textLink-foreground, #4daafc);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+  font-variant-numeric: tabular-nums;
 }
 
 .item h2 {
-  margin: 0 0 8px;
-  font-size: 18px;
+  margin: 0;
+  font-size: 16px;
   font-weight: 730;
   line-height: 1.4;
 }
 
 .item p {
-  margin: 0;
+  grid-column: 2;
+  margin: 8px 0 0;
   color: var(--vscode-descriptionForeground);
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.75;
+  text-wrap: pretty;
 }

@@ -3,12 +3,10 @@ import type { Messages } from "./types";
 export const zhTW: Messages = {
   documentTitle: "KnowIt — 頁內搜尋、劃詞翻譯與 AI 總結的瀏覽器擴充功能",
   seoHomeDescription:
-    "KnowIt 是開源、模組化、隱私優先的網頁閱讀擴充功能。支援頁內文字搜尋、劃詞翻譯、AI 總結和正文匯出。頁面內容預設只在本地處理。",
+    "KnowIt 是模組化、隱私優先的網頁閱讀擴充功能。支援頁內文字搜尋、劃詞翻譯、AI 總結和正文匯出。頁面內容預設只在本地處理。",
   entityDefinition:
-    "KnowIt 是一款開源、模組化、隱私優先的網頁閱讀瀏覽器擴充功能。頁面內容預設只在本地處理，不會上傳到 KnowIt 的伺服器；呼叫模型時使用你自己的 API Key。可以安裝到 Chrome 和 Edge。",
-  navFaq: "問答",
+    "KnowIt 是一款模組化、隱私優先的網頁閱讀瀏覽器擴充功能。頁面內容預設只在本地處理，不會上傳到 KnowIt 的伺服器；呼叫模型時使用你自己的 API Key。可以安裝到 Chrome 和 Edge。",
   faqTitle: "常見問題",
-  faqSubtitle: "以下回答對應 KnowIt {version}。",
   faqItems: [
     {
       question: "KnowIt 會上傳網頁內容嗎？",
@@ -27,7 +25,7 @@ export const zhTW: Messages = {
     },
     {
       question: "可以裝在哪些瀏覽器上？",
-      answer: "可以安裝到 Chrome 和 Microsoft Edge。原始碼在 GitHub 公開。",
+      answer: "可以安裝到 Chrome 和 Microsoft Edge。",
     },
     {
       question: "KnowIt 和整頁翻譯類、助手類擴充功能有什麼不同？",
@@ -660,6 +658,7 @@ export const zhTW: Messages = {
     },
   },
   footerAboutTitle: "關於",
+  footerHelpTitle: "幫助",
   footerContactTitle: "聯繫我",
   footerGithubLabel: "GitHub 倉庫",
   contactFeedbackShort: "問題反饋",

@@ -1,4 +1,3 @@
-import { siteConfig } from "@/config/site";
 import { useTranslation } from "@/i18n/context";
 import { PageMeta } from "@/seo/head";
 import { faqJsonLd } from "@/seo/structuredData";
@@ -8,7 +7,6 @@ import styles from "./faq.module.css";
 
 export default function FaqPage() {
   const { text } = useTranslation();
-  const subtitle = text.faqSubtitle.replace("{version}", siteConfig.version);
 
   return (
     <SiteLayout>
@@ -21,15 +19,18 @@ export default function FaqPage() {
       <article className={styles.article}>
         <header className={styles.header}>
           <h1>{text.faqTitle}</h1>
-          <p>{subtitle}</p>
-          <p>{text.entityDefinition}</p>
         </header>
-        {text.faqItems.map((item) => (
-          <section key={item.question} className={styles.item}>
-            <h2>{item.question}</h2>
-            <p>{item.answer}</p>
-          </section>
-        ))}
+        <div className={styles.list}>
+          {text.faqItems.map((item, index) => (
+            <section key={item.question} className={styles.item}>
+              <span className={styles.index} aria-hidden="true">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <h2>{item.question}</h2>
+              <p>{item.answer}</p>
+            </section>
+          ))}
+        </div>
       </article>
     </SiteLayout>
   );

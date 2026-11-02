@@ -41,37 +41,6 @@
   line-height: 1.7;
 }
 
-.definition {
-  max-width: 720px;
-  margin: 14px 0 0;
-  color: var(--vscode-descriptionForeground);
-  font-size: 14px;
-  line-height: 1.7;
-}
-
-.definition a {
-  color: var(--vscode-textLink-foreground, #3794ff);
-  font-weight: 650;
-}
-
-.installLinks {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px 16px;
-  margin: 16px 0 0;
-  font-size: 13px;
-}
-
-.installLinks a {
-  color: var(--vscode-textLink-foreground, #3794ff);
-  text-decoration: none;
-}
-
-.installLinks a:hover {
-  text-decoration: underline;
-}
-
 .actions {
   display: flex;
   flex-wrap: wrap;

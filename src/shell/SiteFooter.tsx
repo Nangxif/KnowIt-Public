@@ -121,7 +121,7 @@ export default function SiteFooter() {
               </ul>
             </section>
             <section className={styles.linkColumn}>
-              <h3 className={styles.columnTitle}>{text.footerResourcesTitle}</h3>
+              <h3 className={styles.columnTitle}>{text.footerHelpTitle}</h3>
               <ul className={styles.columnLinks}>
                 <li>
                   <Link to={to("/faq")} className={styles.footerLink}>
@@ -133,6 +133,11 @@ export default function SiteFooter() {
                     {text.navDocs}
                   </Link>
                 </li>
+              </ul>
+            </section>
+            <section className={styles.linkColumn}>
+              <h3 className={styles.columnTitle}>{text.footerResourcesTitle}</h3>
+              <ul className={styles.columnLinks}>
                 <li>
                   <a
                     href={siteConfig.chromeWebStoreUrl}

@@ -3,12 +3,10 @@ import type { Messages } from "./types";
 export const enUS: Messages = {
   documentTitle: "KnowIt — In-page find, selection translation, and AI summaries",
   seoHomeDescription:
-    "KnowIt is an open-source, modular, privacy-first browser extension for reading the web. In-page find, selection translation, AI summaries, and article export. Page content stays on your device by default.",
+    "KnowIt is a modular, privacy-first browser extension for reading the web. In-page find, selection translation, AI summaries, and article export. Page content stays on your device by default.",
   entityDefinition:
-    "KnowIt is an open-source, modular, privacy-first browser extension for reading the web. Page content stays on your device by default and is not uploaded to KnowIt; model calls use your own API key. It installs on Chrome and Edge.",
-  navFaq: "FAQ",
+    "KnowIt is a modular, privacy-first browser extension for reading the web. Page content stays on your device by default and is not uploaded to KnowIt; model calls use your own API key. It installs on Chrome and Edge.",
   faqTitle: "Frequently asked questions",
-  faqSubtitle: "Answers for KnowIt {version}.",
   faqItems: [
     {
       question: "Does KnowIt upload page content?",
@@ -27,7 +25,7 @@ export const enUS: Messages = {
     },
     {
       question: "Which browsers can I install it on?",
-      answer: "Chrome and Microsoft Edge. The source is public on GitHub.",
+      answer: "Chrome and Microsoft Edge.",
     },
     {
       question: "How is KnowIt different from full-page translators or assistant extensions?",
@@ -675,6 +673,7 @@ export const enUS: Messages = {
     },
   },
   footerAboutTitle: "About",
+  footerHelpTitle: "Help",
   footerContactTitle: "Contact",
   footerGithubLabel: "GitHub repository",
   contactFeedbackShort: "GitHub Issues",

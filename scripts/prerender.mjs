@@ -137,9 +137,9 @@ const sections = ["zh-CN", "zh-TW", "en-US"].map((locale) => {
 
 const llms = `# KnowIt
 
-> KnowIt 是一款开源、模块化、隐私优先的网页阅读浏览器扩展。页面内容默认只在本地处理，不会上传到 KnowIt 的服务器；调用模型时使用你自己的 API Key。可以安装到 Chrome 和 Edge。
+> KnowIt 是一款模块化、隐私优先的网页阅读浏览器扩展。页面内容默认只在本地处理，不会上传到 KnowIt 的服务器；调用模型时使用你自己的 API Key。可以安装到 Chrome 和 Edge。
 >
-> KnowIt is an open-source, modular, privacy-first browser extension for reading the web. Page content stays on your device by default and is not uploaded to KnowIt; model calls use your own API key.
+> KnowIt is a modular, privacy-first browser extension for reading the web. Page content stays on your device by default and is not uploaded to KnowIt; model calls use your own API key.
 
 当前版本 / Current version: 3.2.2
 

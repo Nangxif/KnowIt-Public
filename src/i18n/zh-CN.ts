@@ -3,12 +3,10 @@ import type { Messages } from "./types";
 export const zhCN: Messages = {
   documentTitle: "KnowIt — 页内查找、划词翻译与 AI 总结的浏览器扩展",
   seoHomeDescription:
-    "KnowIt 是开源、模块化、隐私优先的网页阅读扩展。支持页内文字查找、划词翻译、AI 总结和正文导出。页面内容默认只在本地处理。",
+    "KnowIt 是模块化、隐私优先的网页阅读扩展。支持页内文字查找、划词翻译、AI 总结和正文导出。页面内容默认只在本地处理。",
   entityDefinition:
-    "KnowIt 是一款开源、模块化、隐私优先的网页阅读浏览器扩展。页面内容默认只在本地处理，不会上传到 KnowIt 的服务器；调用模型时使用你自己的 API Key。可以安装到 Chrome 和 Edge。",
-  navFaq: "问答",
+    "KnowIt 是一款模块化、隐私优先的网页阅读浏览器扩展。页面内容默认只在本地处理，不会上传到 KnowIt 的服务器；调用模型时使用你自己的 API Key。可以安装到 Chrome 和 Edge。",
   faqTitle: "常见问题",
-  faqSubtitle: "以下回答对应 KnowIt {version}。",
   faqItems: [
     {
       question: "KnowIt 会上传网页内容吗？",
@@ -27,7 +25,7 @@ export const zhCN: Messages = {
     },
     {
       question: "可以装在哪些浏览器上？",
-      answer: "可以安装到 Chrome 和 Microsoft Edge。源码在 GitHub 公开。",
+      answer: "可以安装到 Chrome 和 Microsoft Edge。",
     },
     {
       question: "KnowIt 和整页翻译类、助手类扩展有什么不同？",
@@ -660,6 +658,7 @@ export const zhCN: Messages = {
     },
   },
   footerAboutTitle: "关于",
+  footerHelpTitle: "帮助",
   footerContactTitle: "联系我",
   footerGithubLabel: "GitHub 仓库",
   contactFeedbackShort: "问题反馈",
