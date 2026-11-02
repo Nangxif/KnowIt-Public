@@ -1,8 +1,8 @@
 # KnowIt
 
-> KnowIt 是一款开源、模块化、隐私优先的网页阅读浏览器扩展。页面内容默认只在本地处理，不会上传到 KnowIt 的服务器；调用模型时使用你自己的 API Key。可以安装到 Chrome 和 Edge。
+> KnowIt 是一款模块化、隐私优先的网页阅读浏览器扩展。页面内容默认只在本地处理，不会上传到 KnowIt 的服务器；调用模型时使用你自己的 API Key。可以安装到 Chrome 和 Edge。
 >
-> KnowIt is an open-source, modular, privacy-first browser extension for reading the web. Page content stays on your device by default and is not uploaded to KnowIt; model calls use your own API key.
+> KnowIt is a modular, privacy-first browser extension for reading the web. Page content stays on your device by default and is not uploaded to KnowIt; model calls use your own API key.
 
 当前版本 / Current version: 3.2.2
 
@@ -13,7 +13,7 @@
 
 ## 简体中文
 
-- [KnowIt — 页内查找、划词翻译与 AI 总结的浏览器扩展](https://knowit.nangxif.com/): KnowIt 是开源、模块化、隐私优先的网页阅读扩展。支持页内文字查找、划词翻译、AI 总结和正文导出。页面内容默认只在本地处理。
+- [KnowIt — 页内查找、划词翻译与 AI 总结的浏览器扩展](https://knowit.nangxif.com/): KnowIt 是模块化、隐私优先的网页阅读扩展。支持页内文字查找、划词翻译、AI 总结和正文导出。页面内容默认只在本地处理。
 - [KnowIt 常见问题](https://knowit.nangxif.com/faq): KnowIt 是否上传网页内容、AI 功能如何使用自己的 API Key、哪些工具免费，以及 Chrome 与 Edge 的安装方式。
 - [KnowIt 隐私协议](https://knowit.nangxif.com/privacy): KnowIt 默认不上传网页内容。隐私协议说明本地数据、浏览器同步，以及你自行配置的模型服务之间的边界。
 - [KnowIt 用户协议](https://knowit.nangxif.com/terms): 使用 KnowIt 浏览器扩展的条款，包括本地处理、自备 API Key 和终身版授权。
@@ -31,7 +31,7 @@
 
 ## 繁體中文
 
-- [KnowIt — 頁內搜尋、劃詞翻譯與 AI 總結的瀏覽器擴充功能](https://knowit.nangxif.com/zh-TW): KnowIt 是開源、模組化、隱私優先的網頁閱讀擴充功能。支援頁內文字搜尋、劃詞翻譯、AI 總結和正文匯出。頁面內容預設只在本地處理。
+- [KnowIt — 頁內搜尋、劃詞翻譯與 AI 總結的瀏覽器擴充功能](https://knowit.nangxif.com/zh-TW): KnowIt 是模組化、隱私優先的網頁閱讀擴充功能。支援頁內文字搜尋、劃詞翻譯、AI 總結和正文匯出。頁面內容預設只在本地處理。
 - [KnowIt 常見問題](https://knowit.nangxif.com/zh-TW/faq): KnowIt 是否上傳網頁內容、AI 功能如何使用自己的 API Key、哪些工具免費，以及 Chrome 與 Edge 的安裝方式。
 - [KnowIt 隱私協議](https://knowit.nangxif.com/zh-TW/privacy): KnowIt 預設不上傳網頁內容。隱私協議說明本地資料、瀏覽器同步，以及你自行設定的模型服務之間的邊界。
 - [KnowIt 使用者協議](https://knowit.nangxif.com/zh-TW/terms): 使用 KnowIt 瀏覽器擴充功能的條款，包括本地處理、自備 API Key 和終身版授權。
@@ -49,7 +49,7 @@
 
 ## English
 
-- [KnowIt — In-page find, selection translation, and AI summaries](https://knowit.nangxif.com/en): KnowIt is an open-source, modular, privacy-first browser extension for reading the web. In-page find, selection translation, AI summaries, and article export. Page content stays on your device by default.
+- [KnowIt — In-page find, selection translation, and AI summaries](https://knowit.nangxif.com/en): KnowIt is a modular, privacy-first browser extension for reading the web. In-page find, selection translation, AI summaries, and article export. Page content stays on your device by default.
 - [KnowIt FAQ](https://knowit.nangxif.com/en/faq): Whether KnowIt uploads page content, how AI tools use your own API key, which tools are free, and how to install on Chrome and Edge.
 - [KnowIt privacy policy](https://knowit.nangxif.com/en/privacy): KnowIt does not upload page content by default. The privacy policy explains local data, browser sync, and model services you configure yourself.
 - [KnowIt terms of use](https://knowit.nangxif.com/en/terms): Terms for the KnowIt browser extension, including local processing, your own API key, and the lifetime license.
