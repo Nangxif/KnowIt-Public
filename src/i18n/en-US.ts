@@ -1,11 +1,13 @@
 import type { Messages } from "./types";
 
 export const enUS: Messages = {
-  documentTitle: "KnowIt — In-page find, selection translation, and AI summaries",
+  documentTitle: "KnowIt — selection translation and AI summary for Chrome",
   seoHomeDescription:
-    "KnowIt is a modular, privacy-first browser extension for reading the web. In-page find, selection translation, AI summaries, and article export. Page content stays on your device by default.",
+    "Chrome and Edge extension for selection translation, in-page find, and AI page summaries. Export articles to Markdown. Page content stays local; AI uses your API key.",
+  seoKeywords: "selection translation,Chrome extension,AI summary,in-page find,Edge add-on,KnowIt",
+  seoShareImageAlt: "KnowIt browser extension",
   entityDefinition:
-    "KnowIt is a modular, privacy-first browser extension for reading the web. Page content stays on your device by default and is not uploaded to KnowIt; model calls use your own API key. It installs on Chrome and Edge.",
+    "KnowIt is a browser extension for reading the web on Chrome and Edge. It covers selection translation, in-page find, AI summaries, and article export. Page content stays on your device by default and is not uploaded to KnowIt; model calls use your own API key.",
   faqTitle: "Frequently asked questions",
   faqItems: [
     {
@@ -28,35 +30,76 @@ export const enUS: Messages = {
       answer: "Chrome and Microsoft Edge.",
     },
     {
+      question: "How do I install it on Chrome or Edge?",
+      answer:
+        "Use the install menu on this site to open the Chrome Web Store or Edge Add-ons, then add KnowIt. You can also download a release from the GitHub repository.",
+    },
+    {
       question: "How is KnowIt different from full-page translators or assistant extensions?",
       answer:
         "KnowIt is split into tools you install only if you use them. Page content stays on your device by default, and model calls use your API key rather than a KnowIt account.",
     },
   ],
-  seoFaqTitle: "KnowIt FAQ",
+  seoFaqTitle: "KnowIt FAQ — privacy, API keys, and install",
   seoFaqDescription:
-    "Whether KnowIt uploads page content, how AI tools use your own API key, which tools are free, and how to install on Chrome and Edge.",
-  seoPrivacyTitle: "KnowIt privacy policy",
+    "Whether KnowIt uploads pages, how selection translation and AI summaries use your API key, which tools are free, and how to install on Chrome and Edge.",
+  seoFaqKeywords: "KnowIt FAQ,selection translation,API key,Chrome extension install,privacy",
+  seoPrivacyTitle: "KnowIt privacy policy — page content stays local",
   seoPrivacyDescription:
     "KnowIt does not upload page content by default. The privacy policy explains local data, browser sync, and model services you configure yourself.",
-  seoTermsTitle: "KnowIt terms of use",
+  seoPrivacyKeywords: "KnowIt privacy policy,local processing,API key",
+  seoTermsTitle: "KnowIt terms of use — extension and lifetime license",
   seoTermsDescription:
-    "Terms for the KnowIt browser extension, including local processing, your own API key, and the lifetime license.",
-  seoChangelogTitle: "KnowIt changelog",
-  seoChangelogDescription: "Version history for the KnowIt browser extension.",
+    "Terms for the KnowIt Chrome and Edge extension, including local processing, your own API key, and the lifetime license.",
+  seoTermsKeywords: "KnowIt terms,lifetime license,browser extension,API key",
+  seoChangelogTitle: "KnowIt changelog — browser extension releases",
+  seoChangelogDescription: "Version history and feature changes for the KnowIt Chrome and Edge extension.",
+  seoChangelogKeywords: "KnowIt changelog,browser extension,release notes",
   seoCreatorTitle: "A note from the KnowIt creator",
   seoCreatorDescription:
-    "The KnowIt creator on the 3.0 layout fix, and why later work stays on the tools that already exist.",
+    "The KnowIt creator on the 3.0 layout fix, and why later work stays on the browser extension tools that already exist.",
+  seoCreatorKeywords: "KnowIt,creator,browser extension",
   toolSeoTitles: {
-    "text-search": "In-page text find for the browser",
-    "media-downloader": "Save images and videos from a page",
-    "ad-cleaner": "Hide ads on the page you are reading",
-    "element-inspector": "Inspect page elements and pick colors",
-    "page-export": "Export a web page to Markdown",
-    "content-summary": "AI summary for web pages",
-    "selection-translate": "Selection translation browser extension",
-    "word-inspector": "Pinyin and word lookup on a page",
-    "smart-writer": "AI rewrite inside page text fields",
+    "text-search": "In-page find Chrome extension",
+    "media-downloader": "Download page images and videos",
+    "ad-cleaner": "Hide webpage ads Chrome extension",
+    "element-inspector": "Inspect elements and pick colors",
+    "page-export": "Export a webpage to Markdown",
+    "content-summary": "AI webpage summary Chrome extension",
+    "selection-translate": "Selection translation Chrome extension",
+    "word-inspector": "Pinyin and word lookup extension",
+    "smart-writer": "AI rewrite for webpage text fields",
+  },
+  toolSeoDescriptions: {
+    "text-search":
+      "Find text on a page with Ctrl+F in Chrome or Edge, including case match, result jumps, and highlights. KnowIt in-page find is free and stays on your device.",
+    "media-downloader":
+      "Scan the current page for images and videos, preview them, and download in bulk. The KnowIt downloader is free on Chrome and Edge.",
+    "ad-cleaner":
+      "Hide ads and promo overlays on the page you are reading, with auto-clean and undo. KnowIt ad cleaning is free on Chrome and Edge.",
+    "element-inspector":
+      "Inspect an element and pick any color on the page. The KnowIt inspector is free and installs on Chrome and Edge.",
+    "page-export":
+      "Turn the article on a page into editable Markdown. KnowIt page export runs on Chrome and Edge, and the content stays on your device.",
+    "content-summary":
+      "Summarize a full page or a selection with your own API key. KnowIt AI summaries run on Chrome and Edge and are not uploaded to KnowIt.",
+    "selection-translate":
+      "Translate selected text instantly, or compare a full-page translation with the original. KnowIt on Chrome and Edge uses your own API key.",
+    "word-inspector":
+      "Show Pinyin and a definition for a selected word. KnowIt word lookup runs on Chrome and Edge, and results stay on your device.",
+    "smart-writer":
+      "Polish, correct, continue, or shorten text in a webpage field. KnowIt smart writing on Chrome and Edge uses your own API key.",
+  },
+  toolSeoKeywords: {
+    "text-search": "in-page find,Ctrl+F,Chrome extension,find on page",
+    "media-downloader": "download images from page,download videos,Chrome extension",
+    "ad-cleaner": "hide webpage ads,ad blocker extension,Chrome",
+    "element-inspector": "color picker,inspect element,Chrome extension",
+    "page-export": "export webpage to Markdown,article export,Chrome extension",
+    "content-summary": "AI webpage summary,summarize page,Chrome extension",
+    "selection-translate": "selection translation,translate selected text,Chrome extension",
+    "word-inspector": "Pinyin lookup,word definition,Chrome extension",
+    "smart-writer": "AI rewrite,polish text,Chrome extension",
   },
   toolFactsTitle: "Facts worth checking first",
   toolFactDoesLabel: "What it does: ",
@@ -84,7 +127,7 @@ export const enUS: Messages = {
   brandHomeLabel: "Back to top",
   heroTitle: "Read any web page better",
   heroSubtitle:
-    "In-page text find, AI summary, selection translation, word lookup, and clean article export. Install only what you need—privacy-first reading tools for the web.",
+    "In-page find, selection translation, AI summaries, and article export for Chrome and Edge. Install only what you need. Page content stays on your device.",
   heroInstall: "Install the extension",
   heroPurchase: "Buy Lifetime",
   highlightsTitle: "Why KnowIt",
@@ -183,7 +226,7 @@ export const enUS: Messages = {
       "Pages adapt to the window; capture at 1280×800. Use ?lang=en-US&theme=dark to lock language and theme.",
   },
   appsTitle: "Tools",
-  appsSubtitle: "After installing the extension, enable these tools from the workbench.",
+  appsSubtitle: "After installing on Chrome or Edge, enable these tools from the workbench.",
   paidTag: "Paid",
   freeTag: "Free",
   detailsTitle: "Tool details",

@@ -4,11 +4,13 @@ import { useTranslation } from "@/i18n/context";
 import { LOCALE_HTML_LANG, LOCALES, type Locale } from "@/i18n/types";
 
 import type { JsonLd } from "./structuredData";
-import { absoluteUrl, assetAbsolute } from "./urls";
+import { absoluteUrl, assetAbsolute, SHARE_IMAGE } from "./urls";
 
 export type PageHead = {
   title: string;
   description: string;
+  keywords?: string;
+  imageAlt: string;
   pathname: string;
   locale: Locale;
   robots: string;
@@ -45,9 +47,14 @@ const OG_LOCALE: Record<Locale, string> = {
   "en-US": "en_US",
 };
 
+function openGraphType(pathname: string) {
+  if (pathname === "/docs" || pathname.startsWith("/docs/")) return "article";
+  return "website";
+}
+
 export function renderHeadTags(head: PageHead) {
   const canonical = absoluteUrl(head.pathname, head.locale);
-  const image = assetAbsolute("/brand/icon-128.png");
+  const image = assetAbsolute(SHARE_IMAGE.path);
   const alternates = LOCALES.map((locale) => {
     const href = absoluteUrl(head.pathname, locale);
     return `<link rel="alternate" hreflang="${LOCALE_HTML_LANG[locale]}" href="${escapeAttr(href)}" />`;
@@ -67,30 +74,49 @@ export function renderHeadTags(head: PageHead) {
     ? `<script type="application/ld+json">${JSON.stringify(head.jsonLd).replace(/</g, "\\u003c")}</script>`
     : "";
 
+  const keywords = head.keywords
+    ? `<meta name="keywords" content="${escapeAttr(head.keywords)}" />`
+    : "";
+
   return [
     `<link rel="canonical" href="${escapeAttr(canonical)}" />`,
     ...alternates,
     `<meta name="robots" content="${escapeAttr(head.robots)}" />`,
-    `<meta property="og:type" content="website" />`,
+    `<meta name="author" content="KnowIt" />`,
+    `<meta name="applicable-device" content="pc,mobile" />`,
+    keywords,
+    `<meta property="og:type" content="${openGraphType(head.pathname)}" />`,
     `<meta property="og:site_name" content="KnowIt" />`,
     `<meta property="og:title" content="${escapeAttr(head.title)}" />`,
     `<meta property="og:description" content="${escapeAttr(head.description)}" />`,
     `<meta property="og:url" content="${escapeAttr(canonical)}" />`,
     `<meta property="og:image" content="${escapeAttr(image)}" />`,
+    `<meta property="og:image:alt" content="${escapeAttr(head.imageAlt)}" />`,
+    `<meta property="og:image:width" content="${SHARE_IMAGE.width}" />`,
+    `<meta property="og:image:height" content="${SHARE_IMAGE.height}" />`,
     `<meta property="og:locale" content="${OG_LOCALE[head.locale]}" />`,
     ogAlternates,
-    `<meta name="twitter:card" content="summary" />`,
+    `<meta name="twitter:card" content="summary_large_image" />`,
     `<meta name="twitter:title" content="${escapeAttr(head.title)}" />`,
     `<meta name="twitter:description" content="${escapeAttr(head.description)}" />`,
     `<meta name="twitter:image" content="${escapeAttr(image)}" />`,
+    `<meta name="twitter:image:alt" content="${escapeAttr(head.imageAlt)}" />`,
     jsonLd,
   ]
     .filter(Boolean)
     .join("\n");
 }
 
-function upsertMeta(attribute: "name" | "property", key: string, content: string) {
+function upsertMeta(
+  attribute: "name" | "property",
+  key: string,
+  content: string | undefined,
+) {
   const selector = `meta[${attribute}="${key}"]`;
+  if (!content) {
+    document.head.querySelector(selector)?.remove();
+    return;
+  }
   let element = document.head.querySelector(selector);
   if (!element) {
     element = document.createElement("meta");
@@ -101,21 +127,29 @@ function upsertMeta(attribute: "name" | "property", key: string, content: string
 }
 
 function applyClientHead(head: PageHead) {
+  const image = assetAbsolute(SHARE_IMAGE.path);
   document.title = head.title;
   document.documentElement.lang = LOCALE_HTML_LANG[head.locale];
   upsertMeta("name", "description", head.description);
+  upsertMeta("name", "keywords", head.keywords);
   upsertMeta("name", "robots", head.robots);
-  upsertMeta("property", "og:type", "website");
+  upsertMeta("name", "author", "KnowIt");
+  upsertMeta("name", "applicable-device", "pc,mobile");
+  upsertMeta("property", "og:type", openGraphType(head.pathname));
   upsertMeta("property", "og:site_name", "KnowIt");
   upsertMeta("property", "og:title", head.title);
   upsertMeta("property", "og:description", head.description);
   upsertMeta("property", "og:url", absoluteUrl(head.pathname, head.locale));
-  upsertMeta("property", "og:image", assetAbsolute("/brand/icon-128.png"));
+  upsertMeta("property", "og:image", image);
+  upsertMeta("property", "og:image:alt", head.imageAlt);
+  upsertMeta("property", "og:image:width", String(SHARE_IMAGE.width));
+  upsertMeta("property", "og:image:height", String(SHARE_IMAGE.height));
   upsertMeta("property", "og:locale", OG_LOCALE[head.locale]);
-  upsertMeta("name", "twitter:card", "summary");
+  upsertMeta("name", "twitter:card", "summary_large_image");
   upsertMeta("name", "twitter:title", head.title);
   upsertMeta("name", "twitter:description", head.description);
-  upsertMeta("name", "twitter:image", assetAbsolute("/brand/icon-128.png"));
+  upsertMeta("name", "twitter:image", image);
+  upsertMeta("name", "twitter:image:alt", head.imageAlt);
 
   document.head
     .querySelectorAll("[data-knowit-seo], meta[property='og:locale:alternate']")
@@ -169,21 +203,26 @@ function applyClientHead(head: PageHead) {
 export function PageMeta({
   title,
   description,
+  keywords,
   pathname,
   robots = "index, follow",
   jsonLd,
 }: {
   title: string;
   description: string;
+  keywords?: string;
   pathname: string;
   robots?: string;
   jsonLd?: JsonLd;
 }) {
-  const { locale } = useTranslation();
+  const { locale, text } = useTranslation();
   const collector = useContext(HeadContext);
+  const imageAlt = text.seoShareImageAlt;
   const head: PageHead = {
     title,
     description,
+    keywords,
+    imageAlt,
     pathname,
     locale,
     robots,
@@ -195,7 +234,7 @@ export function PageMeta({
 
   useEffect(() => {
     applyClientHead(head);
-  }, [title, description, pathname, locale, robots, jsonLdKey]);
+  }, [title, description, keywords, imageAlt, pathname, locale, robots, jsonLdKey]);
 
   return null;
 }

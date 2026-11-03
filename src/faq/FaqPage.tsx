@@ -6,15 +6,16 @@ import SiteLayout from "@/shell/SiteLayout";
 import styles from "./faq.module.css";
 
 export default function FaqPage() {
-  const { text } = useTranslation();
+  const { locale, text } = useTranslation();
 
   return (
     <SiteLayout>
       <PageMeta
         title={text.seoFaqTitle}
         description={text.seoFaqDescription}
+        keywords={text.seoFaqKeywords}
         pathname="/faq"
-        jsonLd={faqJsonLd(text)}
+        jsonLd={faqJsonLd(text, locale)}
       />
       <article className={styles.article}>
         <header className={styles.header}>

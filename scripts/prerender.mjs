@@ -98,6 +98,18 @@ const hreflang = {
   "en-US": "en",
 };
 
+function sitemapMeta(pathname) {
+  if (pathname === "/") return { priority: "1.0", changefreq: "weekly" };
+  if (pathname === "/faq" || pathname.startsWith("/docs/")) {
+    return { priority: "0.8", changefreq: "monthly" };
+  }
+  if (pathname === "/docs") return { priority: "0.6", changefreq: "monthly" };
+  if (pathname === "/changelog") return { priority: "0.5", changefreq: "weekly" };
+  return { priority: "0.3", changefreq: "yearly" };
+}
+
+const lastmod = new Date().toISOString().slice(0, 10);
+
 const urls = [...byPath.entries()].flatMap(([, pages]) => {
   const alternates = pages
     .map(
@@ -106,13 +118,17 @@ const urls = [...byPath.entries()].flatMap(([, pages]) => {
     )
     .join("\n");
   const fallback = pages.find((page) => page.locale === "zh-CN");
-  return pages.map(
-    (page) => `  <url>
+  return pages.map((page) => {
+    const meta = sitemapMeta(page.pathname);
+    return `  <url>
     <loc>${page.loc}</loc>
+    <lastmod>${lastmod}</lastmod>
+    <changefreq>${meta.changefreq}</changefreq>
+    <priority>${meta.priority}</priority>
 ${alternates}
     <xhtml:link rel="alternate" hreflang="x-default" href="${fallback.loc}" />
-  </url>`,
-  );
+  </url>`;
+  });
 });
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -137,9 +153,9 @@ const sections = ["zh-CN", "zh-TW", "en-US"].map((locale) => {
 
 const llms = `# KnowIt
 
-> KnowIt 是一款模块化、隐私优先的网页阅读浏览器扩展。页面内容默认只在本地处理，不会上传到 KnowIt 的服务器；调用模型时使用你自己的 API Key。可以安装到 Chrome 和 Edge。
+> KnowIt 是面向 Chrome 和 Edge 的网页阅读插件，支持划词翻译、页内查找、AI 网页总结和正文导出。页面内容默认只在本地处理，不会上传到 KnowIt 的服务器；调用模型时使用你自己的 API Key。
 >
-> KnowIt is a modular, privacy-first browser extension for reading the web. Page content stays on your device by default and is not uploaded to KnowIt; model calls use your own API key.
+> KnowIt is a Chrome and Edge extension for reading the web: selection translation, in-page find, AI summaries, and article export. Page content stays on your device by default and is not uploaded to KnowIt; model calls use your own API key.
 
 当前版本 / Current version: 3.2.2
 

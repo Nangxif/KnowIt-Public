@@ -1,11 +1,13 @@
 import type { Messages } from "./types";
 
 export const zhTW: Messages = {
-  documentTitle: "KnowIt — 頁內搜尋、劃詞翻譯與 AI 總結的瀏覽器擴充功能",
+  documentTitle: "KnowIt — Chrome 劃詞翻譯與網頁 AI 總結擴充功能",
   seoHomeDescription:
-    "KnowIt 是模組化、隱私優先的網頁閱讀擴充功能。支援頁內文字搜尋、劃詞翻譯、AI 總結和正文匯出。頁面內容預設只在本地處理。",
+    "Chrome 與 Edge 擴充功能，支援劃詞翻譯、頁內文字搜尋、網頁 AI 總結和正文匯出 Markdown。頁面內容預設只在本地處理，模型使用你自己的 API Key。",
+  seoKeywords: "劃詞翻譯,網頁AI總結,Chrome擴充功能,頁內搜尋,Edge擴充功能,KnowIt",
+  seoShareImageAlt: "KnowIt 瀏覽器擴充功能",
   entityDefinition:
-    "KnowIt 是一款模組化、隱私優先的網頁閱讀瀏覽器擴充功能。頁面內容預設只在本地處理，不會上傳到 KnowIt 的伺服器；呼叫模型時使用你自己的 API Key。可以安裝到 Chrome 和 Edge。",
+    "KnowIt 是面向 Chrome 和 Edge 的網頁閱讀瀏覽器擴充功能。支援劃詞翻譯、頁內搜尋、AI 總結和正文匯出。頁面內容預設只在本地處理，不會上傳到 KnowIt 的伺服器；呼叫模型時使用你自己的 API Key。",
   faqTitle: "常見問題",
   faqItems: [
     {
@@ -28,35 +30,76 @@ export const zhTW: Messages = {
       answer: "可以安裝到 Chrome 和 Microsoft Edge。",
     },
     {
+      question: "怎麼安裝到 Chrome 或 Edge？",
+      answer:
+        "從本站的安裝選單進入 Chrome 應用商店或 Edge 應用商店，加入 KnowIt 即可。也可以從 GitHub 倉庫下載發布包自行安裝。",
+    },
+    {
       question: "KnowIt 和整頁翻譯類、助手類擴充功能有什麼不同？",
       answer:
         "KnowIt 按工具拆開，用哪個裝哪個。頁面內容預設不上傳，模型呼叫走你自己的 API Key，而不是 KnowIt 的帳號。",
     },
   ],
-  seoFaqTitle: "KnowIt 常見問題",
+  seoFaqTitle: "KnowIt 常見問題 — 隱私、API Key 與安裝",
   seoFaqDescription:
-    "KnowIt 是否上傳網頁內容、AI 功能如何使用自己的 API Key、哪些工具免費，以及 Chrome 與 Edge 的安裝方式。",
-  seoPrivacyTitle: "KnowIt 隱私協議",
+    "KnowIt 會不會上傳網頁、劃詞翻譯和 AI 總結如何使用自己的 API Key、哪些工具免費，以及怎麼安裝到 Chrome 和 Edge。",
+  seoFaqKeywords: "KnowIt常見問題,劃詞翻譯,API Key,Chrome擴充功能安裝,隱私",
+  seoPrivacyTitle: "KnowIt 隱私協議 — 網頁內容預設不上傳",
   seoPrivacyDescription:
     "KnowIt 預設不上傳網頁內容。隱私協議說明本地資料、瀏覽器同步，以及你自行設定的模型服務之間的邊界。",
-  seoTermsTitle: "KnowIt 使用者協議",
+  seoPrivacyKeywords: "KnowIt隱私協議,本地處理,不上傳網頁,API Key",
+  seoTermsTitle: "KnowIt 使用者協議 — 瀏覽器擴充功能與終身版",
   seoTermsDescription:
-    "使用 KnowIt 瀏覽器擴充功能的條款，包括本地處理、自備 API Key 和終身版授權。",
-  seoChangelogTitle: "KnowIt 更新日誌",
-  seoChangelogDescription: "KnowIt 瀏覽器擴充功能的版本記錄。",
+    "使用 KnowIt Chrome / Edge 擴充功能的條款，包括本地處理、自備 API Key 和終身版授權。",
+  seoTermsKeywords: "KnowIt使用者協議,終身版,瀏覽器擴充功能,API Key",
+  seoChangelogTitle: "KnowIt 更新日誌 — 瀏覽器擴充功能版本記錄",
+  seoChangelogDescription: "KnowIt Chrome 與 Edge 瀏覽器擴充功能的版本記錄和功能變化。",
+  seoChangelogKeywords: "KnowIt更新日誌,瀏覽器擴充功能,版本記錄",
   seoCreatorTitle: "KnowIt 創作者的話",
   seoCreatorDescription:
-    "KnowIt 作者關於 3.0 排版問題修復，以及後續把精力放在現有工具上的說明。",
+    "KnowIt 作者關於 3.0 排版問題修復，以及後續把精力放在現有瀏覽器擴充功能上的說明。",
+  seoCreatorKeywords: "KnowIt,創作者,瀏覽器擴充功能",
   toolSeoTitles: {
-    "text-search": "頁內文字搜尋瀏覽器擴充功能",
-    "media-downloader": "網頁圖片與影片下載擴充功能",
-    "ad-cleaner": "網頁去廣告擴充功能",
-    "element-inspector": "網頁元素檢查與取色擴充功能",
-    "page-export": "網頁正文匯出 Markdown",
-    "content-summary": "網頁 AI 總結擴充功能",
-    "selection-translate": "劃詞翻譯瀏覽器擴充功能",
-    "word-inspector": "劃詞查詞與注音擴充功能",
-    "smart-writer": "網頁輸入框 AI 潤色擴充功能",
+    "text-search": "網頁頁內搜尋 Chrome 擴充功能",
+    "media-downloader": "網頁圖片與影片下載 Chrome 擴充功能",
+    "ad-cleaner": "網頁去廣告 Chrome 擴充功能",
+    "element-inspector": "網頁取色與元素檢查 Chrome 擴充功能",
+    "page-export": "網頁匯出 Markdown Chrome 擴充功能",
+    "content-summary": "網頁 AI 總結 Chrome 擴充功能",
+    "selection-translate": "劃詞翻譯 Chrome 擴充功能",
+    "word-inspector": "劃詞查詞與注音 Chrome 擴充功能",
+    "smart-writer": "網頁輸入框 AI 潤色 Chrome 擴充功能",
+  },
+  toolSeoDescriptions: {
+    "text-search":
+      "在 Chrome 和 Edge 裡按 Ctrl+F 搜尋網頁文字，支援大小寫、結果跳轉和高亮。KnowIt 頁內搜尋免費，記錄只留在本地。",
+    "media-downloader":
+      "掃描目前網頁中的圖片和影片，預覽後批量下載。KnowIt 資源下載可裝在 Chrome 與 Edge，免費使用。",
+    "ad-cleaner":
+      "隱藏目前網頁的廣告和推廣浮層，支援打開自動清除，也可以復原。KnowIt 去廣告工具免費，適用於 Chrome 與 Edge。",
+    "element-inspector":
+      "查看網頁元素屬性，並用取色器吸取頁面顏色。KnowIt 元素檢查免費，可安裝到 Chrome 與 Edge。",
+    "page-export":
+      "把網頁正文整理成可編輯的 Markdown。KnowIt 頁面匯出面向 Chrome 與 Edge，內容預設只在本地處理。",
+    "content-summary":
+      "用你自己的 API Key 總結整頁或選取的文字。KnowIt 網頁 AI 總結可裝在 Chrome 與 Edge，內容不上傳到 KnowIt。",
+    "selection-translate":
+      "選取文字即時翻譯，也可以做整頁對照翻譯。KnowIt 劃詞翻譯面向 Chrome 與 Edge，模型呼叫使用你自己的 API Key。",
+    "word-inspector":
+      "選取生詞後顯示注音和釋義。KnowIt 劃詞查詞可裝在 Chrome 與 Edge，結果預設只留在本地。",
+    "smart-writer":
+      "在網頁輸入框裡潤色、糾錯、續寫或精簡。KnowIt 智能寫作面向 Chrome 與 Edge，使用你自己的 API Key。",
+  },
+  toolSeoKeywords: {
+    "text-search": "頁內搜尋,Ctrl+F,Chrome擴充功能,網頁搜尋",
+    "media-downloader": "網頁圖片下載,網頁影片下載,Chrome擴充功能",
+    "ad-cleaner": "網頁去廣告,Chrome去廣告擴充功能,廣告清除",
+    "element-inspector": "網頁取色,元素檢查,Chrome擴充功能",
+    "page-export": "網頁匯出Markdown,正文匯出,Chrome擴充功能",
+    "content-summary": "網頁AI總結,AI總結網頁,Chrome擴充功能",
+    "selection-translate": "劃詞翻譯,Chrome劃詞翻譯,瀏覽器翻譯擴充功能",
+    "word-inspector": "劃詞查詞,注音,Chrome擴充功能",
+    "smart-writer": "AI潤色,輸入框潤色,Chrome擴充功能",
   },
   toolFactsTitle: "使用前可以確認的事實",
   toolFactDoesLabel: "做什麼：",
@@ -83,7 +126,7 @@ export const zhTW: Messages = {
   brandHomeLabel: "回到頂部",
   heroTitle: "專注幫你讀懂網頁",
   heroSubtitle:
-    "頁內文字查找、AI 總結、劃詞翻譯與查詞、正文匯出。按需安裝，隱私優先，把瀏覽器變成你的網頁閱讀助手。",
+    "頁內文字搜尋、劃詞翻譯、AI 總結與正文匯出。面向 Chrome 與 Edge，按需安裝，頁面內容預設只在本地處理。",
   heroInstall: "安裝擴展",
   heroPurchase: "購買終身版",
   highlightsTitle: "為什麼選擇 KnowIt",
@@ -178,7 +221,7 @@ export const zhTW: Messages = {
     previewHint: "頁面隨窗口適配，建議在 1280×800 下截圖。可用 ?lang=zh-TW&theme=dark 鎖定語言和主題。",
   },
   appsTitle: "工具清單",
-  appsSubtitle: "安裝擴展後，在工作臺按需啟用這些工具。",
+  appsSubtitle: "安裝到 Chrome 或 Edge 後，在工作臺按需啟用這些工具。",
   paidTag: "付費",
   freeTag: "免費",
   detailsTitle: "工具詳情",

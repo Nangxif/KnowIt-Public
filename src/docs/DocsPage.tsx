@@ -139,7 +139,11 @@ export default function DocsPage() {
   const description =
     docId === CREATOR_NOTE_DOC_ID
       ? text.seoCreatorDescription
-      : `${text.appDescriptions[docId]} ${text.toolFactPrivacy}`;
+      : text.toolSeoDescriptions[docId];
+  const keywords =
+    docId === CREATOR_NOTE_DOC_ID
+      ? text.seoCreatorKeywords
+      : text.toolSeoKeywords[docId];
   const searchParams = new URLSearchParams(location.search);
   searchParams.delete("lang");
   const search = searchParams.toString();
@@ -150,6 +154,7 @@ export default function DocsPage() {
       <PageMeta
         title={title}
         description={description}
+        keywords={keywords}
         pathname={pathname}
         jsonLd={articleJsonLd({ title, description, pathname, locale, text })}
       />

@@ -36,6 +36,7 @@ export default function LandingPage() {
       <PageMeta
         title={text.documentTitle}
         description={text.seoHomeDescription}
+        keywords={text.seoKeywords}
         pathname="/"
         jsonLd={homeJsonLd(text, locale)}
       />

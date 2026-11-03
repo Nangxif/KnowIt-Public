@@ -14,3 +14,9 @@ export function assetAbsolute(path: string) {
   const normalized = path.startsWith("/") ? path : `/${path}`;
   return new URL(normalized, `${siteOrigin()}/`).toString();
 }
+
+export const SHARE_IMAGE = {
+  path: "/promo/tile-icon.png",
+  width: 1024,
+  height: 808,
+} as const;

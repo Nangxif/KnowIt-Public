@@ -3,5 +3,9 @@ Allow: /
 Disallow: /promo
 Disallow: /en/promo
 Disallow: /zh-TW/promo
+Disallow: /*?theme=
+Disallow: /*?lang=
+Disallow: /*&theme=
+Disallow: /*&lang=
 
 Sitemap: https://knowit.nangxif.com/sitemap.xml
