@@ -1,8 +1,8 @@
 # KnowIt
 
-> KnowIt 是一款模块化、隐私优先的网页阅读浏览器扩展。页面内容默认只在本地处理，不会上传到 KnowIt 的服务器；调用模型时使用你自己的 API Key。可以安装到 Chrome 和 Edge。
+> KnowIt 是面向 Chrome 和 Edge 的网页阅读插件，支持划词翻译、页内查找、AI 网页总结和正文导出。页面内容默认只在本地处理，不会上传到 KnowIt 的服务器；调用模型时使用你自己的 API Key。
 >
-> KnowIt is a modular, privacy-first browser extension for reading the web. Page content stays on your device by default and is not uploaded to KnowIt; model calls use your own API key.
+> KnowIt is a Chrome and Edge extension for reading the web: selection translation, in-page find, AI summaries, and article export. Page content stays on your device by default and is not uploaded to KnowIt; model calls use your own API key.
 
 当前版本 / Current version: 3.2.2
 
@@ -13,54 +13,54 @@
 
 ## 简体中文
 
-- [KnowIt — 页内查找、划词翻译与 AI 总结的浏览器扩展](https://knowit.nangxif.com/): KnowIt 是模块化、隐私优先的网页阅读扩展。支持页内文字查找、划词翻译、AI 总结和正文导出。页面内容默认只在本地处理。
-- [KnowIt 常见问题](https://knowit.nangxif.com/faq): KnowIt 是否上传网页内容、AI 功能如何使用自己的 API Key、哪些工具免费，以及 Chrome 与 Edge 的安装方式。
-- [KnowIt 隐私协议](https://knowit.nangxif.com/privacy): KnowIt 默认不上传网页内容。隐私协议说明本地数据、浏览器同步，以及你自行配置的模型服务之间的边界。
-- [KnowIt 用户协议](https://knowit.nangxif.com/terms): 使用 KnowIt 浏览器扩展的条款，包括本地处理、自备 API Key 和终身版授权。
-- [KnowIt 更新日志](https://knowit.nangxif.com/changelog): KnowIt 浏览器扩展的版本记录。
-- [KnowIt 创作者的话](https://knowit.nangxif.com/docs): KnowIt 作者关于 3.0 排版问题修复，以及后续把精力放在现有工具上的说明。
-- [页内文字查找浏览器扩展 — KnowIt](https://knowit.nangxif.com/docs/text-search): 像代码编辑器一样搜索网页文字，支持大小写匹配、结果跳转与自定义高亮。 页面内容、选中文字和生成结果默认只留在本机，不上传到 KnowIt 服务器。
-- [网页图片与视频下载扩展 — KnowIt](https://knowit.nangxif.com/docs/media-downloader): 一键扫描并提取网页中的图片、视频等资源，支持预览与批量下载。 页面内容、选中文字和生成结果默认只留在本机，不上传到 KnowIt 服务器。
-- [网页去广告扩展 — KnowIt](https://knowit.nangxif.com/docs/ad-cleaner): 隐藏当前网页上的广告和推广浮层，让阅读更干净。打开即可自动清除，也可右键操作，支持撤销。 页面内容、选中文字和生成结果默认只留在本机，不上传到 KnowIt 服务器。
-- [网页元素检查与取色扩展 — KnowIt](https://knowit.nangxif.com/docs/element-inspector): 点击页面元素查看类似 Figma 的属性面板，并用取色器吸取页面任意像素色。 页面内容、选中文字和生成结果默认只留在本机，不上传到 KnowIt 服务器。
-- [网页正文导出 Markdown — KnowIt](https://knowit.nangxif.com/docs/page-export): 整理网页正文并导出为 Markdown，保存干净、可编辑的副本。 页面内容、选中文字和生成结果默认只留在本机，不上传到 KnowIt 服务器。
-- [网页 AI 总结扩展 — KnowIt](https://knowit.nangxif.com/docs/content-summary): 用 AI 总结整篇网页或选中内容，快速提炼重点与核心结论。 页面内容、选中文字和生成结果默认只留在本机，不上传到 KnowIt 服务器。
-- [划词翻译浏览器扩展 — KnowIt](https://knowit.nangxif.com/docs/selection-translate): 选中文字即时翻译；也可对整页进行 AI 对照翻译，减少来回切页。 页面内容、选中文字和生成结果默认只留在本机，不上传到 KnowIt 服务器。
-- [划词查词与拼音扩展 — KnowIt](https://knowit.nangxif.com/docs/word-inspector): 选中网页文字后，快速展示拼音与词义解释，辅助阅读与学习。 页面内容、选中文字和生成结果默认只留在本机，不上传到 KnowIt 服务器。
-- [网页输入框 AI 润色扩展 — KnowIt](https://knowit.nangxif.com/docs/smart-writer): 在网页输入框中调用 AI，进行润色、纠错、续写、扩写、精简或自定义创作。 页面内容、选中文字和生成结果默认只留在本机，不上传到 KnowIt 服务器。
+- [KnowIt — Chrome 划词翻译与网页 AI 总结插件](https://knowit.nangxif.com/): Chrome 与 Edge 插件，支持划词翻译、页内文字查找、网页 AI 总结和正文导出 Markdown。页面内容默认只在本地处理，模型使用你自己的 API Key。
+- [KnowIt 常见问题 — 隐私、API Key 与安装](https://knowit.nangxif.com/faq): KnowIt 会不会上传网页、划词翻译和 AI 总结如何使用自己的 API Key、哪些工具免费，以及怎么安装到 Chrome 和 Edge。
+- [KnowIt 隐私协议 — 网页内容默认不上传](https://knowit.nangxif.com/privacy): KnowIt 默认不上传网页内容。隐私协议说明本地数据、浏览器同步，以及你自行配置的模型服务之间的边界。
+- [KnowIt 用户协议 — 浏览器插件与终身版](https://knowit.nangxif.com/terms): 使用 KnowIt Chrome / Edge 插件的条款，包括本地处理、自备 API Key 和终身版授权。
+- [KnowIt 更新日志 — 浏览器插件版本记录](https://knowit.nangxif.com/changelog): KnowIt Chrome 与 Edge 浏览器插件的版本记录和功能变化。
+- [KnowIt 创作者的话](https://knowit.nangxif.com/docs): KnowIt 作者关于 3.0 排版问题修复，以及后续把精力放在现有浏览器插件上的说明。
+- [网页页内查找 Chrome 插件 — KnowIt](https://knowit.nangxif.com/docs/text-search): 在 Chrome 和 Edge 里按 Ctrl+F 查找网页文字，支持大小写、结果跳转和高亮。KnowIt 页内查找免费，记录只留在本地。
+- [网页图片与视频下载 Chrome 插件 — KnowIt](https://knowit.nangxif.com/docs/media-downloader): 扫描当前网页中的图片和视频，预览后批量下载。KnowIt 资源下载可装在 Chrome 与 Edge，免费使用。
+- [网页去广告 Chrome 插件 — KnowIt](https://knowit.nangxif.com/docs/ad-cleaner): 隐藏当前网页的广告和推广浮层，支持打开自动清除，也可以撤销。KnowIt 去广告工具免费，适用于 Chrome 与 Edge。
+- [网页取色与元素检查 Chrome 插件 — KnowIt](https://knowit.nangxif.com/docs/element-inspector): 查看网页元素属性，并用取色器吸取页面颜色。KnowIt 元素检查免费，可安装到 Chrome 与 Edge。
+- [网页导出 Markdown Chrome 插件 — KnowIt](https://knowit.nangxif.com/docs/page-export): 把网页正文整理成可编辑的 Markdown。KnowIt 页面导出面向 Chrome 与 Edge，内容默认只在本地处理。
+- [网页 AI 总结 Chrome 插件 — KnowIt](https://knowit.nangxif.com/docs/content-summary): 用你自己的 API Key 总结整页或选中文字。KnowIt 网页 AI 总结可装在 Chrome 与 Edge，内容不上传到 KnowIt。
+- [划词翻译 Chrome 插件 — KnowIt](https://knowit.nangxif.com/docs/selection-translate): 选中文字即时翻译，也可以做整页对照翻译。KnowIt 划词翻译面向 Chrome 与 Edge，模型调用使用你自己的 API Key。
+- [划词查词与拼音 Chrome 插件 — KnowIt](https://knowit.nangxif.com/docs/word-inspector): 选中生词后显示拼音和释义。KnowIt 划词查词可装在 Chrome 与 Edge，结果默认只留在本地。
+- [网页输入框 AI 润色 Chrome 插件 — KnowIt](https://knowit.nangxif.com/docs/smart-writer): 在网页输入框里润色、纠错、续写或精简。KnowIt 智能写作面向 Chrome 与 Edge，使用你自己的 API Key。
 
 ## 繁體中文
 
-- [KnowIt — 頁內搜尋、劃詞翻譯與 AI 總結的瀏覽器擴充功能](https://knowit.nangxif.com/zh-TW): KnowIt 是模組化、隱私優先的網頁閱讀擴充功能。支援頁內文字搜尋、劃詞翻譯、AI 總結和正文匯出。頁面內容預設只在本地處理。
-- [KnowIt 常見問題](https://knowit.nangxif.com/zh-TW/faq): KnowIt 是否上傳網頁內容、AI 功能如何使用自己的 API Key、哪些工具免費，以及 Chrome 與 Edge 的安裝方式。
-- [KnowIt 隱私協議](https://knowit.nangxif.com/zh-TW/privacy): KnowIt 預設不上傳網頁內容。隱私協議說明本地資料、瀏覽器同步，以及你自行設定的模型服務之間的邊界。
-- [KnowIt 使用者協議](https://knowit.nangxif.com/zh-TW/terms): 使用 KnowIt 瀏覽器擴充功能的條款，包括本地處理、自備 API Key 和終身版授權。
-- [KnowIt 更新日誌](https://knowit.nangxif.com/zh-TW/changelog): KnowIt 瀏覽器擴充功能的版本記錄。
-- [KnowIt 創作者的話](https://knowit.nangxif.com/zh-TW/docs): KnowIt 作者關於 3.0 排版問題修復，以及後續把精力放在現有工具上的說明。
-- [頁內文字搜尋瀏覽器擴充功能 — KnowIt](https://knowit.nangxif.com/zh-TW/docs/text-search): 像代碼編輯器一樣搜索網頁文字，支持大小寫匹配、結果跳轉與自定義高亮。 頁面內容、選取的文字和生成結果預設只留在本機，不上傳到 KnowIt 伺服器。
-- [網頁圖片與影片下載擴充功能 — KnowIt](https://knowit.nangxif.com/zh-TW/docs/media-downloader): 一鍵掃描並提取網頁中的圖片、視頻等資源，支持預覽與批量下載。 頁面內容、選取的文字和生成結果預設只留在本機，不上傳到 KnowIt 伺服器。
-- [網頁去廣告擴充功能 — KnowIt](https://knowit.nangxif.com/zh-TW/docs/ad-cleaner): 隱藏當前網頁上的廣告和推廣浮層，讓閱讀更乾淨。打開即可自動清除，也可右鍵操作，支持撤銷。 頁面內容、選取的文字和生成結果預設只留在本機，不上傳到 KnowIt 伺服器。
-- [網頁元素檢查與取色擴充功能 — KnowIt](https://knowit.nangxif.com/zh-TW/docs/element-inspector): 點擊頁面元素查看類似 Figma 的屬性面板，並用取色器吸取頁面任意像素色。 頁面內容、選取的文字和生成結果預設只留在本機，不上傳到 KnowIt 伺服器。
-- [網頁正文匯出 Markdown — KnowIt](https://knowit.nangxif.com/zh-TW/docs/page-export): 整理網頁正文並導出為 Markdown，保存乾淨、可編輯的副本。 頁面內容、選取的文字和生成結果預設只留在本機，不上傳到 KnowIt 伺服器。
-- [網頁 AI 總結擴充功能 — KnowIt](https://knowit.nangxif.com/zh-TW/docs/content-summary): 用 AI 總結整篇網頁或選中內容，快速提煉重點與核心結論。 頁面內容、選取的文字和生成結果預設只留在本機，不上傳到 KnowIt 伺服器。
-- [劃詞翻譯瀏覽器擴充功能 — KnowIt](https://knowit.nangxif.com/zh-TW/docs/selection-translate): 選中文字即時翻譯；也可對整頁進行 AI 對照翻譯，減少來回切頁。 頁面內容、選取的文字和生成結果預設只留在本機，不上傳到 KnowIt 伺服器。
-- [劃詞查詞與注音擴充功能 — KnowIt](https://knowit.nangxif.com/zh-TW/docs/word-inspector): 選中網頁文字後，快速展示拼音與詞義解釋，輔助閱讀與學習。 頁面內容、選取的文字和生成結果預設只留在本機，不上傳到 KnowIt 伺服器。
-- [網頁輸入框 AI 潤色擴充功能 — KnowIt](https://knowit.nangxif.com/zh-TW/docs/smart-writer): 在網頁輸入框中調用 AI，進行潤色、糾錯、續寫、擴寫、精簡或自定義創作。 頁面內容、選取的文字和生成結果預設只留在本機，不上傳到 KnowIt 伺服器。
+- [KnowIt — Chrome 劃詞翻譯與網頁 AI 總結擴充功能](https://knowit.nangxif.com/zh-TW): Chrome 與 Edge 擴充功能，支援劃詞翻譯、頁內文字搜尋、網頁 AI 總結和正文匯出 Markdown。頁面內容預設只在本地處理，模型使用你自己的 API Key。
+- [KnowIt 常見問題 — 隱私、API Key 與安裝](https://knowit.nangxif.com/zh-TW/faq): KnowIt 會不會上傳網頁、劃詞翻譯和 AI 總結如何使用自己的 API Key、哪些工具免費，以及怎麼安裝到 Chrome 和 Edge。
+- [KnowIt 隱私協議 — 網頁內容預設不上傳](https://knowit.nangxif.com/zh-TW/privacy): KnowIt 預設不上傳網頁內容。隱私協議說明本地資料、瀏覽器同步，以及你自行設定的模型服務之間的邊界。
+- [KnowIt 使用者協議 — 瀏覽器擴充功能與終身版](https://knowit.nangxif.com/zh-TW/terms): 使用 KnowIt Chrome / Edge 擴充功能的條款，包括本地處理、自備 API Key 和終身版授權。
+- [KnowIt 更新日誌 — 瀏覽器擴充功能版本記錄](https://knowit.nangxif.com/zh-TW/changelog): KnowIt Chrome 與 Edge 瀏覽器擴充功能的版本記錄和功能變化。
+- [KnowIt 創作者的話](https://knowit.nangxif.com/zh-TW/docs): KnowIt 作者關於 3.0 排版問題修復，以及後續把精力放在現有瀏覽器擴充功能上的說明。
+- [網頁頁內搜尋 Chrome 擴充功能 — KnowIt](https://knowit.nangxif.com/zh-TW/docs/text-search): 在 Chrome 和 Edge 裡按 Ctrl+F 搜尋網頁文字，支援大小寫、結果跳轉和高亮。KnowIt 頁內搜尋免費，記錄只留在本地。
+- [網頁圖片與影片下載 Chrome 擴充功能 — KnowIt](https://knowit.nangxif.com/zh-TW/docs/media-downloader): 掃描目前網頁中的圖片和影片，預覽後批量下載。KnowIt 資源下載可裝在 Chrome 與 Edge，免費使用。
+- [網頁去廣告 Chrome 擴充功能 — KnowIt](https://knowit.nangxif.com/zh-TW/docs/ad-cleaner): 隱藏目前網頁的廣告和推廣浮層，支援打開自動清除，也可以復原。KnowIt 去廣告工具免費，適用於 Chrome 與 Edge。
+- [網頁取色與元素檢查 Chrome 擴充功能 — KnowIt](https://knowit.nangxif.com/zh-TW/docs/element-inspector): 查看網頁元素屬性，並用取色器吸取頁面顏色。KnowIt 元素檢查免費，可安裝到 Chrome 與 Edge。
+- [網頁匯出 Markdown Chrome 擴充功能 — KnowIt](https://knowit.nangxif.com/zh-TW/docs/page-export): 把網頁正文整理成可編輯的 Markdown。KnowIt 頁面匯出面向 Chrome 與 Edge，內容預設只在本地處理。
+- [網頁 AI 總結 Chrome 擴充功能 — KnowIt](https://knowit.nangxif.com/zh-TW/docs/content-summary): 用你自己的 API Key 總結整頁或選取的文字。KnowIt 網頁 AI 總結可裝在 Chrome 與 Edge，內容不上傳到 KnowIt。
+- [劃詞翻譯 Chrome 擴充功能 — KnowIt](https://knowit.nangxif.com/zh-TW/docs/selection-translate): 選取文字即時翻譯，也可以做整頁對照翻譯。KnowIt 劃詞翻譯面向 Chrome 與 Edge，模型呼叫使用你自己的 API Key。
+- [劃詞查詞與注音 Chrome 擴充功能 — KnowIt](https://knowit.nangxif.com/zh-TW/docs/word-inspector): 選取生詞後顯示注音和釋義。KnowIt 劃詞查詞可裝在 Chrome 與 Edge，結果預設只留在本地。
+- [網頁輸入框 AI 潤色 Chrome 擴充功能 — KnowIt](https://knowit.nangxif.com/zh-TW/docs/smart-writer): 在網頁輸入框裡潤色、糾錯、續寫或精簡。KnowIt 智能寫作面向 Chrome 與 Edge，使用你自己的 API Key。
 
 ## English
 
-- [KnowIt — In-page find, selection translation, and AI summaries](https://knowit.nangxif.com/en): KnowIt is a modular, privacy-first browser extension for reading the web. In-page find, selection translation, AI summaries, and article export. Page content stays on your device by default.
-- [KnowIt FAQ](https://knowit.nangxif.com/en/faq): Whether KnowIt uploads page content, how AI tools use your own API key, which tools are free, and how to install on Chrome and Edge.
-- [KnowIt privacy policy](https://knowit.nangxif.com/en/privacy): KnowIt does not upload page content by default. The privacy policy explains local data, browser sync, and model services you configure yourself.
-- [KnowIt terms of use](https://knowit.nangxif.com/en/terms): Terms for the KnowIt browser extension, including local processing, your own API key, and the lifetime license.
-- [KnowIt changelog](https://knowit.nangxif.com/en/changelog): Version history for the KnowIt browser extension.
-- [A note from the KnowIt creator](https://knowit.nangxif.com/en/docs): The KnowIt creator on the 3.0 layout fix, and why later work stays on the tools that already exist.
-- [In-page text find for the browser — KnowIt](https://knowit.nangxif.com/en/docs/text-search): Search webpage text like a code editor, with case matching, result navigation, and custom highlights. Page content, selections, and generation results stay on this device by default and are not uploaded to KnowIt.
-- [Save images and videos from a page — KnowIt](https://knowit.nangxif.com/en/docs/media-downloader): Scan and extract images and videos from the current page, with preview and batch download. Page content, selections, and generation results stay on this device by default and are not uploaded to KnowIt.
-- [Hide ads on the page you are reading — KnowIt](https://knowit.nangxif.com/en/docs/ad-cleaner): Hide ads and promotional overlays on the current page. Auto-cleans on load, or right-click to clean, with undo. Page content, selections, and generation results stay on this device by default and are not uploaded to KnowIt.
-- [Inspect page elements and pick colors — KnowIt](https://knowit.nangxif.com/en/docs/element-inspector): Click a page element to view a Figma-like properties panel, and pick any on-screen pixel with the eyedropper. Page content, selections, and generation results stay on this device by default and are not uploaded to KnowIt.
-- [Export a web page to Markdown — KnowIt](https://knowit.nangxif.com/en/docs/page-export): Clean up page body content and export an editable Markdown copy. Page content, selections, and generation results stay on this device by default and are not uploaded to KnowIt.
-- [AI summary for web pages — KnowIt](https://knowit.nangxif.com/en/docs/content-summary): Summarize a full page or selection with AI and extract key points quickly. Page content, selections, and generation results stay on this device by default and are not uploaded to KnowIt.
-- [Selection translation browser extension — KnowIt](https://knowit.nangxif.com/en/docs/selection-translate): Translate selected text instantly, or run AI full-page translation under the originals. Page content, selections, and generation results stay on this device by default and are not uploaded to KnowIt.
-- [Pinyin and word lookup on a page — KnowIt](https://knowit.nangxif.com/en/docs/word-inspector): Show Pinyin and detailed definitions for selected text to aid reading and learning. Page content, selections, and generation results stay on this device by default and are not uploaded to KnowIt.
-- [AI rewrite inside page text fields — KnowIt](https://knowit.nangxif.com/en/docs/smart-writer): AI assistant for webpage inputs—polish, grammar fix, continue, expand, shorten, or custom prompts. Page content, selections, and generation results stay on this device by default and are not uploaded to KnowIt.
+- [KnowIt — selection translation and AI summary for Chrome](https://knowit.nangxif.com/en): Chrome and Edge extension for selection translation, in-page find, and AI page summaries. Export articles to Markdown. Page content stays local; AI uses your API key.
+- [KnowIt FAQ — privacy, API keys, and install](https://knowit.nangxif.com/en/faq): Whether KnowIt uploads pages, how selection translation and AI summaries use your API key, which tools are free, and how to install on Chrome and Edge.
+- [KnowIt privacy policy — page content stays local](https://knowit.nangxif.com/en/privacy): KnowIt does not upload page content by default. The privacy policy explains local data, browser sync, and model services you configure yourself.
+- [KnowIt terms of use — extension and lifetime license](https://knowit.nangxif.com/en/terms): Terms for the KnowIt Chrome and Edge extension, including local processing, your own API key, and the lifetime license.
+- [KnowIt changelog — browser extension releases](https://knowit.nangxif.com/en/changelog): Version history and feature changes for the KnowIt Chrome and Edge extension.
+- [A note from the KnowIt creator](https://knowit.nangxif.com/en/docs): The KnowIt creator on the 3.0 layout fix, and why later work stays on the browser extension tools that already exist.
+- [In-page find Chrome extension — KnowIt](https://knowit.nangxif.com/en/docs/text-search): Find text on a page with Ctrl+F in Chrome or Edge, including case match, result jumps, and highlights. KnowIt in-page find is free and stays on your device.
+- [Download page images and videos — KnowIt](https://knowit.nangxif.com/en/docs/media-downloader): Scan the current page for images and videos, preview them, and download in bulk. The KnowIt downloader is free on Chrome and Edge.
+- [Hide webpage ads Chrome extension — KnowIt](https://knowit.nangxif.com/en/docs/ad-cleaner): Hide ads and promo overlays on the page you are reading, with auto-clean and undo. KnowIt ad cleaning is free on Chrome and Edge.
+- [Inspect elements and pick colors — KnowIt](https://knowit.nangxif.com/en/docs/element-inspector): Inspect an element and pick any color on the page. The KnowIt inspector is free and installs on Chrome and Edge.
+- [Export a webpage to Markdown — KnowIt](https://knowit.nangxif.com/en/docs/page-export): Turn the article on a page into editable Markdown. KnowIt page export runs on Chrome and Edge, and the content stays on your device.
+- [AI webpage summary Chrome extension — KnowIt](https://knowit.nangxif.com/en/docs/content-summary): Summarize a full page or a selection with your own API key. KnowIt AI summaries run on Chrome and Edge and are not uploaded to KnowIt.
+- [Selection translation Chrome extension — KnowIt](https://knowit.nangxif.com/en/docs/selection-translate): Translate selected text instantly, or compare a full-page translation with the original. KnowIt on Chrome and Edge uses your own API key.
+- [Pinyin and word lookup extension — KnowIt](https://knowit.nangxif.com/en/docs/word-inspector): Show Pinyin and a definition for a selected word. KnowIt word lookup runs on Chrome and Edge, and results stay on your device.
+- [AI rewrite for webpage text fields — KnowIt](https://knowit.nangxif.com/en/docs/smart-writer): Polish, correct, continue, or shorten text in a webpage field. KnowIt smart writing on Chrome and Edge uses your own API key.
